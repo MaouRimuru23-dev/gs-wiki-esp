@@ -341,6 +341,55 @@
 
     // 👇 Cambia el token para borrar (debe coincidir con app.py)
     const ADMIN_TOKEN = 'token-secreto-maou';
+    // === Config Cloudinary ===
+const CLOUD_NAME   = "TU_CLOUD_NAME";       // ← cámbialo
+const UPLOAD_PRESET = "gswiki_unsigned";    // ← tu preset
+const CLOUD_FOLDER  = "gswiki/personajes";  // opcional
+
+async function uploadToCloudinary(file, publicId=""){
+  if(!file) throw new Error("Selecciona un archivo de imagen.");
+  const url = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
+  const fd  = new FormData();
+  fd.append("file", file);
+  fd.append("upload_preset", UPLOAD_PRESET);
+  if (CLOUD_FOLDER) fd.append("folder", CLOUD_FOLDER);
+  if (publicId) fd.append("public_id", publicId);
+
+  const res = await fetch(url, { method:"POST", body: fd });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data?.error?.message || "Error al subir a Cloudinary");
+
+  // Sugerencia: f_auto,q_auto para optimizar peso
+  const optimized = data.secure_url.replace("/upload/", "/upload/f_auto,q_auto/");
+  return optimized;
+}
+
+// Wiring del botón
+const $ = s => document.querySelector(s);
+$("#btnCloudinary")?.addEventListener("click", async ()=>{
+  try{
+    const file = $("#p_portada")?.files?.[0];
+    if (!file) { alert("Elige una imagen primero."); return; }
+
+    // Usa el slug si existe; si no, genera a partir del nombre
+    const nombre = $("#p_nombre")?.value?.trim() || "";
+    const slug = ($("#p_slug")?.value?.trim() || nombre.toLowerCase()
+                    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+                    .replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""));
+
+    // Subir y obtener URL pública
+    const url = await uploadToCloudinary(file, slug || undefined);
+    $("#p_portada_url").value = url;
+
+    // Preview
+    const img = $("#p_portada_prev");
+    img.src = url; img.style.display = "block";
+  }catch(err){
+    console.error(err);
+    alert("No se pudo subir: " + err.message);
+  }
+});
+
 
     initTheme();
     initAdmin(); // mantiene todo tu flujo de login/guardar/skills
@@ -488,4 +537,5 @@
   </script>
 </body>
 </html>
+
 
