@@ -226,14 +226,24 @@
               </div>
 
               <div class="col-md-8">
-                <label class="form-label">Portada (imagen)</label>
-                <input id="p_portada" type="file" accept="image/*" class="form-control">
-                <div class="form-text">Puedes usar ./img/... en pruebas o subir archivo.</div>
-              </div>
-              <div class="col-md-4 d-grid">
-                <label class="form-label invisible">.</label>
-                <button class="btn btn-primary">Guardar</button>
-              </div>
+  <label class="form-label">Portada (imagen)</label>
+
+  <!-- ① input de archivo local (solo para elegir la imagen a subir) -->
+  <input id="p_portada" type="file" accept="image/*" class="form-control mb-2">
+
+  <!-- ② URL final (se autollenará tras subir a Cloudinary) -->
+  <div class="input-group">
+    <input id="p_portada_url" class="form-control" placeholder="https://res.cloudinary.com/...">
+    <button class="btn btn-outline-secondary" type="button" id="btnCloudinary">
+      Subir a Cloudinary
+    </button>
+  </div>
+  <div class="form-text">Usa el botón para subir y obtener la URL pública.</div>
+
+  <!-- ③ vista previa -->
+  <img id="p_portada_prev" class="mt-2 rounded" style="max-height:140px; object-fit:contain; display:none">
+</div>
+
             </form>
 
             <hr class="my-4">
@@ -478,3 +488,4 @@
   </script>
 </body>
 </html>
+
