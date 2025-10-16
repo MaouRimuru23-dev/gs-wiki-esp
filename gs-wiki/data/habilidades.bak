@@ -1,0 +1,76 @@
+{
+  "war-hero-fen": [
+    {
+      "tipo": "Skill",
+      "nombre": "Nagle Walzer",
+      "descripcion": "CT 12s · +50 Arts a todos"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Nagle Blitz",
+      "descripcion": "+40% Precisión y +40% CT equip (20s)"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Nagle Freiheit",
+      "descripcion": "+100% CRI a aliados (20s) y Arts 4/s (Tipo A)"
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Leuchtendes Kreuz",
+      "descripcion": "+100% CRI/+40% Super CRI y +100% ATK (40s)"
+    }
+  ],
+  "yuna-gambler": [
+    {
+      "tipo": "Skill",
+      "nombre": "フォーチュンシャッフル",
+      "descripcion": "2,500% Luz; +30 Arts (si ‘爆運’, +30 extra)"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "アーレヤ・ヤクタ・エスト",
+      "descripcion": "25,000% Luz; +60% Precisión propia; +40% CR aliados (25s)"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "レッツ・ショーダウン",
+      "descripcion": "50,000% Luz; reduce res. física; más daño si HP enemigo ≤50%"
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "ファット・デッド・ポット",
+      "descripcion": "150,000% Luz; aplica ‘爆運’ (77.7s)"
+    }
+  ],
+  "ultimate-paladin-roy": [
+    {
+      "id": 1760631612331,
+      "tipo": "Arts",
+      "nombre": "Blue Dragon Sword “Sonic Roar”",
+      "descripcion": "23000% Agua (Físico), 80% Ultimate Freeze 7s, Break 1500.",
+      "orden": 0
+    },
+    {
+      "id": 1760631859096,
+      "tipo": "Skill",
+      "nombre": "Linked Slashes “Fanged Wolf”",
+      "descripcion": "3000% Agua (Físico), CT 12s, Break 800; cura estados (excepto Faint/Paralysis/Freeze/Seal).",
+      "orden": 0
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Secret Dragon Flight “Sky Majesty”",
+      "descripcion": "60000% Agua (Físico), +100% Break a unidades de Agua 30s, Break 3300.",
+      "orden": 0,
+      "id": 1760637232748
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Extreme Flash “Zero”",
+      "descripcion": "180000% Agua (Físico), +7 Arts/s a todos y +150% Daño Físico 20s, Break 4000.",
+      "orden": 0,
+      "id": 1760637337393
+    }
+  ]
+}

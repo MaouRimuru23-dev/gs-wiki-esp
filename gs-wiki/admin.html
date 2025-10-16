@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Admin • GS Wiki</title>
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Tu CSS (opcional) -->
+  <link href="./css/styles.css" rel="stylesheet">
+
+  <style>
+    /* Estética suave del admin */
+    .app-navbar { backdrop-filter: blur(6px); }
+    .app-navbar .navbar-brand { letter-spacing:.5px; font-weight:700; }
+    .card { border:0; border-radius: 16px; box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.06); }
+    .card-header { background: transparent; border-bottom: 0; }
+    .toolbar { gap:.5rem; }
+    .list-empty { padding:2rem; color: var(--bs-secondary); text-align: center; }
+    .table-sm td, .table-sm th { vertical-align: middle; }
+    .avatar-sm {
+      width: 40px; height: 40px; border-radius: 8px; object-fit: cover; background:#f1f3f5;
+    }
+    .badge-tierra { background:#7c8a3e; }   /* por si no la tenías aún */
+    .badge-fuego { background:#e8590c; }
+    .badge-agua { background:#228be6; }
+    .badge-viento { background:#12b886; }
+    .badge-luz { background:#fab005; color:#222; }
+    .badge-oscuridad { background:#5f3dc4; }
+    .sticky-col { position: sticky; top: 88px; }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top app-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="./">
+        <span class="me-2">⚔️</span> GS Wiki • Admin
+      </a>
+      <div class="ms-auto d-flex align-items-center toolbar">
+        <button id="themeBtn" class="btn btn-outline-secondary btn-sm">Tema</button>
+        <button id="logoutBtn" class="btn btn-outline-danger btn-sm d-none">Salir</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid" style="padding-top:92px; padding-bottom:32px;">
+
+    <div class="row g-3">
+      <!-- Columna izquierda: Lista de personajes -->
+      <div class="col-lg-5">
+        <div class="card sticky-col">
+          <div class="card-header">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <h5 class="m-0">Personajes</h5>
+                <small class="text-body-secondary">Busca, edita o elimina</small>
+              </div>
+              <div class="toolbar">
+                <button id="btnNuevo" class="btn btn-primary btn-sm">+ Nuevo</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body pt-0">
+            <div class="mb-3">
+              <input id="adminSearch" class="form-control" placeholder="Buscar por nombre..." />
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-sm align-middle">
+                <thead class="text-body-secondary">
+                  <tr>
+                    <th style="width:56px;">Img</th>
+                    <th>Nombre</th>
+                    <th style="width:90px;">Elemento</th>
+                    <th style="width:90px;">Rareza</th>
+                    <th class="text-end" style="width:120px;">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="adminList">
+                  <!-- JS pinta filas aquí -->
+                </tbody>
+              </table>
+            </div>
+
+            <div id="adminEmpty" class="list-empty d-none">
+              No hay personajes aún. Crea uno con “+ Nuevo”.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha: Formularios -->
+      <div class="col-lg-7">
+        <!-- Login / toggle (respetando IDs para ui.js) -->
+        <div id="loginBox" class="card mb-3">
+          <div class="card-body">
+            <h5 class="mb-3">Iniciar sesión</h5>
+            <div class="row g-2">
+              <div class="col-md-5">
+                <input id="email" type="email" class="form-control" placeholder="Correo">
+              </div>
+              <div class="col-md-5">
+                <input id="pass" type="password" class="form-control" placeholder="Contraseña">
+              </div>
+              <div class="col-md-2 d-grid">
+                <button id="loginBtn" class="btn btn-success">Entrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario personaje (IDs compatibles con ui.js) -->
+        <div class="card mb-3 d-none" id="formCard">
+          <div class="card-header">
+            <h5 class="m-0">Ficha de personaje</h5>
+          </div>
+          <div class="card-body">
+            <form id="formPersonaje" class="row g-3">
+              <div class="col-md-8">
+                <label class="form-label">Nombre</label>
+                <input id="p_nombre" class="form-control" placeholder="Ej. War Hero Fen">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Slug</label>
+                <input id="p_slug" class="form-control" placeholder="war-hero-fen">
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">Elemento</label>
+                <select id="p_elemento" class="form-select">
+                  <option>Fuego</option><option>Agua</option><option>Tierra</option>
+                  <option>Viento</option><option>Luz</option><option>Oscuridad</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Rol</label>
+                <select id="p_rol" class="form-select">
+                    <option>DPS</option><option>Tank</option><option>Support</option>
+                    <option>Sub DPS</option><option>Healer</option><option>Breaker</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Rareza</label>
+                <select id="p_rareza" class="form-select">
+                    <option>Ascend</option><option>Awaken</option><option>5 stars</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Raza</label>
+                <input id="p_raza" class="form-control" placeholder="Ej. Human, 精霊族">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Voz</label>
+                <input id="p_voz" class="form-control" placeholder="Seiyuu / VA">
+              </div>
+              
+              <!-- STATS -->
+              <div class="col-12"><hr><h6 class="mb-2">Stats base</h6></div>
+              <div class="col-4"><label class="form-label">HP</label><input id="p_hp" type="number" class="form-control" value="0"></div>
+              <div class="col-4"><label class="form-label">ATK</label><input id="p_atk" type="number" class="form-control" value="0"></div>
+              <div class="col-4"><label class="form-label">DEF</label><input id="p_def" type="number" class="form-control" value="0"></div>
+              <div class="col-4"><label class="form-label">+TAS HP</label><input id="p_tas_hp" type="number" class="form-control" value="0"></div>
+              <div class="col-4"><label class="form-label">+TAS ATK</label><input id="p_tas_atk" type="number" class="form-control" value="0"></div>
+              <div class="col-4"><label class="form-label">+TAS DEF</label><input id="p_tas_def" type="number" class="form-control" value="0"></div>
+              
+              <!-- SLOTS -->
+              <div class="col-12"><hr><h6 class="mb-2">Slots</h6></div>
+              <!-- Slot 1 -->
+              <div class="col-md-6">
+                <label class="form-label">Slot 1 — Tipo</label>
+                <select id="slot1_tipo" class="form-select">
+                  <option>Físico</option><option>Magia</option><option>Defensa</option>
+                  <option>Soporte</option><option>Curación</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Slot 1 — Nivel</label>
+                <input id="slot1_nivel" type="number" class="form-control" value="5">
+              </div>
+              <!-- Slot 2 -->
+              <div class="col-md-6">
+                <label class="form-label">Slot 2 — Tipo</label>
+                <select id="slot2_tipo" class="form-select">
+                  <option>Físico</option><option>Magia</option><option>Defensa</option>
+                  <option>Soporte</option><option>Curación</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Slot 2 — Nivel</label>
+                <input id="slot2_nivel" type="number" class="form-control" value="5">
+              </div>
+              <!-- Slot 3 (dual para ASND) -->
+              <div class="col-md-4">
+                <label class="form-label">Slot 3 — Tipo A</label>
+                <select id="slot3_tipoA" class="form-select">
+                  <option>Físico</option><option>Magia</option><option>Defensa</option>
+                  <option>Soporte</option><option>Curación</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Slot 3 — Tipo B (opcional)</label>
+                <select id="slot3_tipoB" class="form-select">
+                  <option value="">(solo uno)</option>
+                  <option>Físico</option><option>Magia</option><option>Defensa</option>
+                  <option>Soporte</option><option>Curación</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Slot 3 — Nivel</label>
+                <input id="slot3_nivel" type="number" class="form-control" value="4">
+                <div class="form-text">Si eliges Tipo B, alternará cada 3s (Ascend).</div>
+              </div>
+              
+
+              <div class="col-12">
+                <label class="form-label">Descripción</label>
+                <textarea id="p_descripcion" rows="3" class="form-control"
+                  placeholder="Descripción corta / notas..."></textarea>
+              </div>
+
+              <div class="col-md-8">
+                <label class="form-label">Portada (imagen)</label>
+                <input id="p_portada" type="file" accept="image/*" class="form-control">
+                <div class="form-text">Puedes usar ./img/... en pruebas o subir archivo.</div>
+              </div>
+              <div class="col-md-4 d-grid">
+                <label class="form-label invisible">.</label>
+                <button class="btn btn-primary">Guardar</button>
+              </div>
+            </form>
+
+            <hr class="my-4">
+
+            <!-- HABILIDADES -->
+            <div class="row g-3">
+              <div class="col-lg-5">
+                <h6 class="mb-2">Nueva habilidad</h6>
+                <form id="formHabilidad" class="row g-2">
+                  <input type="hidden" id="h_id">
+                  <div class="col-6">
+                    <label class="form-label">Tipo</label>
+                    <input id="h_tipo" class="form-control" list="tiposHabs" placeholder="Tipo (ej. Skill, True Arts, Cross Arts, Phantom Bullet, Liberation)">
+                    <datalist id="tiposHabs">
+                      <option value="Skill">
+                      <option value="Arts">
+                      <option value="True Arts">
+                      <option value="Super Arts">
+                      <option value="Passive">
+                      <option value="Phantom Bullet">
+                      <option value="Cross Arts">
+                      <option value="Liberation Skill">
+                      <option value="Mega Arts">
+                    </datalist>
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label">Orden</label>
+                    <input id="h_orden" type="number" class="form-control" value="0">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Nombre</label>
+                    <input id="h_nombre" class="form-control" placeholder="Nombre de habilidad">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Descripción</label>
+                    <textarea id="h_desc" rows="3" class="form-control"></textarea>
+                  </div>
+                  <div class="col-12 d-grid">
+                    <button class="btn btn-outline-primary">Guardar habilidad</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="col-lg-7">
+                <h6 class="mb-2">Habilidades guardadas</h6>
+                <div class="table-responsive">
+                  <table class="table table-sm">
+                    <thead class="text-body-secondary">
+                      <tr>
+                        <th>Tipo</th><th>Nombre</th><th>Descripción</th><th>Orden</th><th class="text-end">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="listHabilidades"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-end">
+              <small class="text-body-secondary">Slug actual: <span id="adminSlug">—</span></small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal eliminar -->
+  <div class="modal fade" id="modalDelete" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Eliminar personaje</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          ¿Seguro que deseas eliminar <strong id="delName">este personaje</strong>? Esta acción también borrará sus habilidades.
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" id="btnConfirmDelete">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Módulo: inicializa tema + admin (tu ui.js) y añade la lógica del panel izquierdo -->
+  <script type="module">
+    import { initTheme, initAdmin } from './js/ui.js';
+    import { listPersonajes, getPersonajeBySlug } from './js/api.js';
+
+    // 👇 Cambia el token para borrar (debe coincidir con app.py)
+    const ADMIN_TOKEN = 'token-secreto-maou';
+
+    initTheme();
+    initAdmin(); // mantiene todo tu flujo de login/guardar/skills
+
+    // ===== Lado izquierdo: lista con búsqueda y acciones =====
+    const $ = s => document.querySelector(s);
+    const $$ = s => Array.from(document.querySelectorAll(s));
+    const q = $('#adminSearch');
+    const tbody = $('#adminList');
+    const empty = $('#adminEmpty');
+
+    let state = { page:1, pageSize:999, q:'' };
+    let currentDeleteSlug = null;
+
+    async function loadList(){
+      const { rows } = await listPersonajes({
+        q: state.q, elemento:'', rol:'', order:'nombre', page:1, pageSize:state.pageSize
+      });
+      renderList(rows);
+    }
+
+    function badge(el){
+      const key = (el||'').toLowerCase();
+      return `<span class="badge badge-${key}">${el||''}</span>`;
+    }
+
+    function renderList(rows){
+      tbody.innerHTML = rows.map(r => `
+        <tr>
+          <td><img class="avatar-sm" src="${r.portada_url||''}" alt=""></td>
+          <td>
+            <div class="fw-semibold">${r.nombre||''}</div>
+            <div class="small text-body-secondary">${r.slug}</div>
+          </td>
+          <td>${badge(r.elemento)}</td>
+          <td><span class="badge bg-secondary-subtle text-body">${r.rareza||''}</span></td>
+          <td class="text-end">
+            <div class="btn-group btn-group-sm">
+              <button class="btn btn-outline-primary" data-act="edit" data-slug="${r.slug}">Editar</button>
+              <button class="btn btn-outline-danger" data-act="del" data-slug="${r.slug}" data-name="${r.nombre}">Borrar</button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+
+      empty.classList.toggle('d-none', rows.length>0);
+
+      // wiring acciones
+      tbody.querySelectorAll('button').forEach(b=>{
+        const act = b.dataset.act, slug = b.dataset.slug;
+        if (act === 'edit'){
+          b.onclick = ()=> selectForEdit(slug);
+        } else if (act === 'del'){
+          b.onclick = ()=> openDelete(slug, b.dataset.name);
+        }
+      });
+    }
+
+    async function selectForEdit(slug){
+      // Carga datos y llena el formulario de la derecha (IDs que usa tu ui.js)
+      const p = await getPersonajeBySlug(slug);
+      $('#p_nombre').value = p.nombre || '';
+      $('#p_slug').value = p.slug || '';
+      $('#p_elemento').value = p.elemento || 'Fuego';
+      $('#p_rol').value = p.rol || '';
+      $('#p_rareza').value = p.rareza || '';
+      $('#p_descripcion').value = p.descripcion || '';
+      // mostrarse form si estaba oculto
+      $('#formCard').classList.remove('d-none');
+      // Cambia la URL (sin recargar) para que ui.js use el slug en habilidades
+      history.replaceState({}, '', `?slug=${encodeURIComponent(slug)}`);
+      // Actualiza el slug visible
+      $('#adminSlug').textContent = slug;
+      // Opcional: scroll al form
+      document.getElementById('formCard')?.scrollIntoView({ behavior:'smooth', block:'start' });
+    }
+
+    // Buscar
+    q.addEventListener('input', ()=>{
+      state.q = q.value.trim();
+      loadList();
+    });
+
+    // Nuevo → limpia form para crear
+    $('#btnNuevo').onclick = ()=>{
+      $('#p_nombre').value = '';
+      $('#p_slug').value = '';
+      $('#p_elemento').value = 'Fuego';
+      $('#p_rol').value = '';
+      $('#p_rareza').value = '';
+      $('#p_descripcion').value = '';
+      $('#formCard').classList.remove('d-none');
+      history.replaceState({}, '', location.pathname); // sin slug
+      $('#adminSlug').textContent = '—';
+      document.getElementById('formCard')?.scrollIntoView({ behavior:'smooth', block:'start' });
+    };
+
+    // Eliminar con modal
+    const modal = new bootstrap.Modal('#modalDelete');
+    function openDelete(slug, name){
+      currentDeleteSlug = slug;
+      $('#delName').textContent = name || slug;
+      modal.show();
+    }
+    $('#btnConfirmDelete').onclick = async ()=>{
+      if (!currentDeleteSlug) return;
+      const res = await fetch(`/api/personajes/${encodeURIComponent(currentDeleteSlug)}`, {
+        method: 'DELETE',
+        headers: { 'X-ADMIN-TOKEN': ADMIN_TOKEN }
+      });
+      if (!res.ok){
+        alert(await res.text());
+        return;
+      }
+      modal.hide();
+      // limpiar si estás editando el que se borró
+      const currentSlug = new URLSearchParams(location.search).get('slug');
+      if (currentSlug === currentDeleteSlug){
+        history.replaceState({}, '', location.pathname);
+        $('#formCard').classList.add('d-none');
+      }
+      currentDeleteSlug = null;
+      loadList();
+    };
+
+    // Mostrar form si hay ?slug= al entrar
+    (function initFromQuery(){
+      const slug = new URLSearchParams(location.search).get('slug');
+      if (slug){
+        selectForEdit(slug).catch(console.error);
+      }
+    })();
+
+    // Mostrar formCard cuando se loguea (ui.js ya alterna loginBox/form)
+    const formCard = document.getElementById('formCard');
+    const observer = new MutationObserver(()=>{
+      // si form principal se muestra, muestra también la card contenedora
+      const formVisible = !document.getElementById('formPersonaje')?.classList.contains('d-none');
+      formCard.classList.toggle('d-none', !formVisible);
+    });
+    observer.observe(document.body, { attributes:true, subtree:true, attributeFilter:['class'] });
+
+    // Carga inicial
+    loadList();
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiki GS — Personajes</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/styles.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body border-bottom fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="./index.html">Wiki GS</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+<div id="nav" class="collapse navbar-collapse">
+<ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link active" href="./Personajes.html">Personajes</a></li>
+<li class="nav-item"><a class="nav-link" href="./admin.html">Admin</a></li>
+</ul>
+<button id="themeBtn" class="btn btn-outline-secondary btn-sm">🌗 Tema</button>
+</div>
+</div>
+</nav>
+
+
+<main class="container" style="padding-top:84px;">
+<section class="filters-sticky py-3 mb-3 border-bottom">
+<div class="row g-2 align-items-center">
+<div class="col-12 col-md-5"><input id="q" class="form-control" placeholder="Buscar personaje..."></div>
+<div class="col-6 col-md-3">
+<select id="fElemento" class="form-select">
+<option value="">Elemento (todos)</option>
+<option>Fuego</option><option>Agua</option><option>Viento</option><option>Luz</option><option>Oscuridad</option><option>Tierra</option>
+</select>
+</div>
+<div class="col-6 col-md-2">
+<select id="fRol" class="form-select">
+<option value="">Rol</option><option>DPS</option><option>Support</option><option>Tank</option>
+</select>
+</div>
+<div class="col-12 col-md-2 text-md-end">
+<select id="orden" class="form-select">
+<option value="recientes">Más recientes</option>
+<option value="nombre">Nombre A→Z</option>
+<option value="rareza">Rareza</option>
+</select>
+</div>
+</div>
+</section>
+
+ <!-- GRID DE TARJETAS -->
+  <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3" id="grid">
+    <!-- Aquí el JS inserta las tarjetas -->
+
+  </section>
+
+<section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3" id="grid"></section>
+<nav class="mt-4"><ul class="pagination justify-content-center" id="paginacion"></ul></nav>
+</main>
+
+
+<footer class="container py-4 text-center text-body-secondary"><small>© 2025 — Wiki GS no oficial.</small></footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="module">
+import { initTheme, initIndex } from './js/ui.js';
+initTheme();
+initIndex();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
