@@ -428,6 +428,7 @@ export function initAdmin(){
         descripcion: inputs.desc.value.trim(),
         raza: inputs.raza.value.trim(),
         voz: inputs.voz.value.trim(),
+        portada_url: $('#p_portada_url').value.trim(),
         stats, slots
       };
       if (portada_url) payload.portada_url = portada_url;
@@ -533,3 +534,4 @@ async function loadPersonajeForEdit(){
   showAuthUI();
   loadPersonajeForEdit().then(()=> reloadHabs());
 }
+
