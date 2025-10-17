@@ -11,6 +11,7 @@ const DATA_PATH = location.hostname.endsWith('github.io')
 
 // Rompe caché agresiva de móvil
 const NO_CACHE = `?_=${Date.now()}`;
+
 }
 
 export const TOKEN = "token-secreto-maou";
