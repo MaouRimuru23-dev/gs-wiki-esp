@@ -2,19 +2,13 @@
 // Lee directamente archivos JSON dentro del repo (sin backend)
 
 // Helper para rutas relativas según ubicación (index, subcarpeta, etc.)
-function getBasePath() {
-  // En móvil a veces abres /gs-wiki-esp/ sin /gs-wiki/
-// Usa URL ABSOLUTA cuando es GitHub Pages
-const DATA_PATH = location.hostname.endsWith('github.io')
-  ? 'https://maourimuru23-dev.github.io/gs-wiki-esp/data'
-  : './data';
 
-// Rompe caché agresiva de móvil
-const NO_CACHE = `?_=${Date.now()}`;
-
-}
 const BASE = getBasePath();
-const DATA_PATH = `${BASE}/data`;  // carpeta donde pondrás los JSON
+const isPages = location.hostname.endsWith('github.io');
+const DATA_PATH = isPages
+  ? 'https://maourimuru23-dev.github.io/gs-wiki-esp/data' // publica aquí tus JSON
+  : '/data'; // en local
+
 
 export const TOKEN = "token-secreto-maou";
 export const slugify = (s) => s
