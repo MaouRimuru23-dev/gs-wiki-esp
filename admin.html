@@ -35,7 +35,18 @@
   </style>
 </head>
 
+
+
 <body>
+  <div id="loginBox" class="container mt-5 text-center">
+  <h2>Acceso restringido</h2>
+  <p>Introduce tus credenciales de administrador</p>
+  <input type="text" id="user" class="form-control w-50 mx-auto my-2" placeholder="Usuario">
+  <input type="password" id="pass" class="form-control w-50 mx-auto my-2" placeholder="Contraseña">
+  <button id="btnLogin" class="btn btn-primary">Entrar</button>
+  <p id="loginMsg" class="text-danger mt-2"></p>
+</div>
+<div id="adminPanel" class="d-none">
   <!-- NAV -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top app-navbar">
     <div class="container-fluid">
@@ -49,44 +60,44 @@
     </div>
   </nav>
 
-  <main class="container-fluid" style="padding-top:92px; padding-bottom:32px;">
-
-    <div class="row g-3">
-      <!-- Columna izquierda: Lista de personajes -->
-      <div class="col-lg-5">
-        <div class="card sticky-col">
-          <div class="card-header">
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <h5 class="m-0">Personajes</h5>
-                <small class="text-body-secondary">Busca, edita o elimina</small>
+<main class="container-fluid" style="padding-top:92px; padding-bottom:32px;">
+      <div class="row g-3">
+        <!-- Columna izquierda: Lista -->
+        <div class="col-lg-5">
+          <div class="card sticky-col">
+            <div class="card-header">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <h5 class="m-0">Personajes</h5>
+                  <small class="text-body-secondary">Busca, edita o elimina</small>
+                </div>
+                <div class="toolbar">
+                  <button id="btnNuevo" class="btn btn-primary btn-sm">+ Nuevo</button>
+                </div>
               </div>
-              <div class="toolbar">
-                <button id="btnNuevo" class="btn btn-primary btn-sm">+ Nuevo</button>
+            </div>
+            <div class="card-body pt-0">
+              <div class="mb-3">
+                <input id="adminSearch" class="form-control" placeholder="Buscar por nombre..." />
               </div>
+              <div class="table-responsive">
+                <table class="table table-sm align-middle">
+                  <thead class="text-body-secondary">
+                    <tr>
+                      <th style="width:56px;">Img</th>
+                      <th>Nombre</th>
+                      <th style="width:90px;">Elemento</th>
+                      <th style="width:90px;">Rareza</th>
+                      <th class="text-end" style="width:120px;">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="adminList"><!-- JS pinta filas --></tbody>
+                </table>
+              </div>
+              <div id="adminEmpty" class="list-empty d-none">No hay personajes aún. Crea uno con “+ Nuevo”.</div>
             </div>
           </div>
-          <div class="card-body pt-0">
-            <div class="mb-3">
-              <input id="adminSearch" class="form-control" placeholder="Buscar por nombre..." />
-            </div>
-
-            <div class="table-responsive">
-              <table class="table table-sm align-middle">
-                <thead class="text-body-secondary">
-                  <tr>
-                    <th style="width:56px;">Img</th>
-                    <th>Nombre</th>
-                    <th style="width:90px;">Elemento</th>
-                    <th style="width:90px;">Rareza</th>
-                    <th class="text-end" style="width:120px;">Acciones</th>
-                  </tr>
-                </thead>
-                <tbody id="adminList">
-                  <!-- JS pinta filas aquí -->
-                </tbody>
-              </table>
-            </div>
+        </div>
 
             <div id="adminEmpty" class="list-empty d-none">
               No hay personajes aún. Crea uno con “+ Nuevo”.
@@ -97,23 +108,6 @@
 
       <!-- Columna derecha: Formularios -->
       <div class="col-lg-7">
-        <!-- Login / toggle (respetando IDs para ui.js) -->
-        <div id="loginBox" class="card mb-3">
-          <div class="card-body">
-            <h5 class="mb-3">Iniciar sesión</h5>
-            <div class="row g-2">
-              <div class="col-md-5">
-                <input id="email" type="email" class="form-control" placeholder="Correo">
-              </div>
-              <div class="col-md-5">
-                <input id="pass" type="password" class="form-control" placeholder="Contraseña">
-              </div>
-              <div class="col-md-2 d-grid">
-                <button id="loginBtn" class="btn btn-success">Entrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- Formulario personaje (IDs compatibles con ui.js) -->
         <div class="card mb-3 d-none" id="formCard">
@@ -299,7 +293,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </main>
@@ -322,236 +315,273 @@
       </div>
     </div>
   </div>
+</div>
 
   <!-- Bootstrap JS (modal) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Módulo: inicializa tema + admin (tu ui.js) y añade la lógica del panel izquierdo -->
   <script type="module">
-    import { initTheme, initAdmin } from './js/ui.js';
-    import { listPersonajes, getPersonajeBySlug, listHabilidades, deleteHabilidad } from './js/api.js';
+  import { initTheme, initAdmin } from './js/ui.js';
+  import {
+    listPersonajes,
+    getPersonajeBySlug,
+    listHabilidades,
+    deleteHabilidad,
+    TOKEN
+  } from './js/api.js';
 
-    // 👇 Cambia el token para borrar (debe coincidir con app.py)
-    const ADMIN_TOKEN = 'token-secreto-maou';
+  // ===== Inicialización UI base =====
+  initTheme();
+  initAdmin(); // deja tus flujos existentes (guardar/skills). Si luego prefieres, podemos mover el login solo aquí.
 
-    initTheme();
-    initAdmin(); // mantiene todo tu flujo de login/guardar/skills
+  // ===== Utilidades DOM =====
+  const $  = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
 
-    // ===== Lado izquierdo: lista con búsqueda y acciones =====
-    const $ = s => document.querySelector(s);
-    const $$ = s => Array.from(document.querySelectorAll(s));
-    const q = $('#adminSearch');
-    const tbody = $('#adminList');
-    const empty = $('#adminEmpty');
+  // ===== Lado izquierdo: lista con búsqueda y acciones =====
+  const q     = $('#adminSearch');
+  const tbody = $('#adminList');
+  const empty = $('#adminEmpty');
 
-    // Preview cuando pegas el link
-    const urlInput = $("#p_portada_url");
-    const urlPrev  = $("#p_portada_prev");
-    urlInput?.addEventListener("input", ()=>{
-      const v = (urlInput.value || "").trim();
-      if (!v) { urlPrev.style.display = "none"; return; }
-      // Tip: aplicar f_auto,q_auto para optimizar Cloudinary
-      const optimized = v.includes("/upload/") ? v.replace("/upload/", "/upload/f_auto,q_auto/") : v;
-      urlPrev.src = optimized;
-      urlPrev.style.display = "block";
-    });
-
-
-    let state = { page:1, pageSize:999, q:'' };
-    let currentDeleteSlug = null;
-
-    async function loadList(){
-      const { rows } = await listPersonajes({
-        q: state.q, elemento:'', rol:'', order:'nombre', page:1, pageSize:state.pageSize
-      });
-      renderList(rows);
-    }
-
-    function badge(el){
-      const key = (el||'').toLowerCase();
-      return `<span class="badge badge-${key}">${el||''}</span>`;
-    }
-
-    function renderList(rows){
-      tbody.innerHTML = rows.map(r => `
-        <tr>
-          <td><img class="avatar-sm" src="${r.portada_url||''}" alt=""></td>
-          <td>
-            <div class="fw-semibold">${r.nombre||''}</div>
-            <div class="small text-body-secondary">${r.slug}</div>
-          </td>
-          <td>${badge(r.elemento)}</td>
-          <td><span class="badge bg-secondary-subtle text-body">${r.rareza||''}</span></td>
-          <td class="text-end">
-            <div class="btn-group btn-group-sm">
-              <button class="btn btn-outline-primary" data-act="edit" data-slug="${r.slug}">Editar</button>
-              <button class="btn btn-outline-danger" data-act="del" data-slug="${r.slug}" data-name="${r.nombre}">Borrar</button>
-            </div>
-          </td>
-        </tr>
-      `).join('');
-
-      empty.classList.toggle('d-none', rows.length>0);
-
-      // wiring acciones
-      tbody.querySelectorAll('button').forEach(b=>{
-        const act = b.dataset.act, slug = b.dataset.slug;
-        if (act === 'edit'){
-          b.onclick = ()=> selectForEdit(slug);
-        } else if (act === 'del'){
-          b.onclick = ()=> openDelete(slug, b.dataset.name);
-        }
-      });
-    }
-
-    async function selectForEdit(slug){
-      // Carga datos y llena el formulario de la derecha (IDs que usa tu ui.js)
-      const p = await getPersonajeBySlug(slug);
-      $('#p_nombre').value = p.nombre || '';
-      $('#p_slug').value = p.slug || '';
-      $('#p_elemento').value = p.elemento || 'Fuego';
-      $('#p_rol').value = p.rol || '';
-      $('#p_rareza').value = p.rareza || '';
-      $('#p_descripcion').value = p.descripcion || '';
-      $('#p_portada_url').value = p.portada_url || '';
-      $('#p_raza').value = p.raza || '';
-      $('#p_voz').value  = p.voz || '';
-const prev = document.getElementById('p_portada_prev');
-if (prev) {
-  if (p.portada_url) { prev.src = p.portada_url; prev.style.display = 'block'; }
-  else { prev.src = ''; prev.style.display = 'none'; }
-}
-
- // stats
- const st = p.stats || {};
- $('#p_hp').value = st.hp || 0;
- $('#p_atk').value = st.atk || 0;
- $('#p_def').value = st.def || 0;
- $('#p_tas_hp').value = st.tas_hp || 0;
- $('#p_tas_atk').value = st.tas_atk || 0;
- $('#p_tas_def').value = st.tas_def || 0;
-
- // slots
- const sl = p.slots || [];
- if (sl[0]) {
-   const t0 = Array.isArray(sl[0].tipo) ? sl[0].tipo[0] : sl[0].tipo;
-   $('#slot1_tipo').value  = t0 || 'Físico';
-   $('#slot1_nivel').value = sl[0].nivel || 0;
- }
- if (sl[1]) {
-   const t1 = Array.isArray(sl[1].tipo) ? sl[1].tipo[0] : sl[1].tipo;
-   $('#slot2_tipo').value  = t1 || 'Magia';
-   $('#slot2_nivel').value = sl[1].nivel || 0;
- }
- if (sl[2]) {
-   const tipos3 = Array.isArray(sl[2].tipo) ? sl[2].tipo : [sl[2].tipo];
-   $('#slot3_tipoA').value = tipos3[0] || 'Soporte';
-   $('#slot3_tipoB').value = tipos3[1] || '';
-   $('#slot3_nivel').value = sl[2].nivel || 0;
- }
-
-      // mostrarse form si estaba oculto
-      $('#formCard').classList.remove('d-none');
-      // Cambia la URL (sin recargar) para que ui.js use el slug en habilidades
-      history.replaceState({}, '', `?slug=${encodeURIComponent(slug)}`);
-      // Actualiza el slug visible
-      $('#adminSlug').textContent = slug;
-      // Opcional: scroll al form
-      await loadHabs(slug);
-      document.getElementById('formCard')?.scrollIntoView({ behavior:'smooth', block:'start' });
-    }
-
-    // Buscar
-    q.addEventListener('input', ()=>{
-      state.q = q.value.trim();
-      loadList();
-    });
-
-    // Nuevo → limpia form para crear
-    $('#btnNuevo').onclick = ()=>{
-      $('#p_nombre').value = '';
-      $('#p_slug').value = '';
-      $('#p_elemento').value = 'Fuego';
-      $('#p_rol').value = '';
-      $('#p_rareza').value = '';
-      $('#p_descripcion').value = '';
-      $('#formCard').classList.remove('d-none');
-      history.replaceState({}, '', location.pathname); // sin slug
-      $('#adminSlug').textContent = '—';
-      document.getElementById('formCard')?.scrollIntoView({ behavior:'smooth', block:'start' });
-      $('#p_portada_url').value = '';
-const prev = document.getElementById('p_portada_prev');
-if (prev) { prev.src = ''; prev.style.display = 'none'; }
-
-    };
-
-    // Eliminar con modal
-    const modal = new bootstrap.Modal('#modalDelete');
-    function openDelete(slug, name){
-      currentDeleteSlug = slug;
-      $('#delName').textContent = name || slug;
-      modal.show();
-    }
-    $('#btnConfirmDelete').onclick = async ()=>{
-      if (!currentDeleteSlug) return;
-      const res = await fetch(`/api/personajes/${encodeURIComponent(currentDeleteSlug)}`, {
-        method: 'DELETE',
-        headers: { 'X-ADMIN-TOKEN': ADMIN_TOKEN }
-      });
-      if (!res.ok){
-        alert(await res.text());
-        return;
-      }
-      modal.hide();
-      // limpiar si estás editando el que se borró
-      const currentSlug = new URLSearchParams(location.search).get('slug');
-      if (currentSlug === currentDeleteSlug){
-        history.replaceState({}, '', location.pathname);
-        $('#formCard').classList.add('d-none');
-      }
-      currentDeleteSlug = null;
-      loadList();
-    };
-
-    // Mostrar form si hay ?slug= al entrar
-    (function initFromQuery(){
-      const slug = new URLSearchParams(location.search).get('slug');
-      if (slug){
-        selectForEdit(slug).catch(console.error);
-      }
-    })();
-
-    // Mostrar formCard cuando se loguea (ui.js ya alterna loginBox/form)
-    const formCard = document.getElementById('formCard');
-    const observer = new MutationObserver(()=>{
-      // si form principal se muestra, muestra también la card contenedora
-      const formVisible = !document.getElementById('formPersonaje')?.classList.contains('d-none');
-      formCard.classList.toggle('d-none', !formVisible);
-    });
-    observer.observe(document.body, { attributes:true, subtree:true, attributeFilter:['class'] });
-async function loadHabs(slug){
-  const habs = await listHabilidades(slug);
-  const list = document.getElementById('listHabilidades');
-  list.innerHTML = habs.map(h=>`
-    <tr>
-      <td>${h.tipo||''}</td>
-      <td>${h.nombre||''}</td>
-      <td>${h.descripcion||''}</td>
-      <td>${h.orden||0}</td>
-      <td class="text-end">
-        ${h.id ? `<button class="btn btn-sm btn-outline-danger" data-id="${h.id}">Borrar</button>`:''}
-      </td>
-    </tr>`).join('');
-  list.querySelectorAll('button[data-id]').forEach(b=>{
-    b.onclick = async ()=>{
-      await deleteHabilidad(parseInt(b.dataset.id));
-      await loadHabs(slug);
-    };
+  // Preview cuando pegas el link (optimiza Cloudinary)
+  const urlInput = $("#p_portada_url");
+  const urlPrev  = $("#p_portada_prev");
+  urlInput?.addEventListener("input", ()=>{
+    const v = (urlInput.value || "").trim();
+    if (!v) { urlPrev.style.display = "none"; return; }
+    const optimized = v.includes("/upload/")
+      ? v.replace("/upload/", "/upload/f_auto,q_auto/")
+      : v;
+    urlPrev.src = optimized;
+    urlPrev.style.display = "block";
   });
-}
 
-    // Carga inicial
+  let state = { page:1, pageSize:999, q:'' };
+  let currentDeleteSlug = null;
+
+  async function loadList(){
+    const { rows } = await listPersonajes({
+      q: state.q, elemento:'', rol:'', order:'nombre', page:1, pageSize:state.pageSize
+    });
+    renderList(rows);
+  }
+
+  function badge(el){
+    const key = (el||'').toLowerCase();
+    return `<span class="badge badge-${key}">${el||''}</span>`;
+  }
+
+  function renderList(rows){
+    tbody.innerHTML = rows.map(r => `
+      <tr>
+        <td><img class="avatar-sm" src="${r.portada_url||''}" alt=""></td>
+        <td>
+          <div class="fw-semibold">${r.nombre||''}</div>
+          <div class="small text-body-secondary">${r.slug}</div>
+        </td>
+        <td>${badge(r.elemento)}</td>
+        <td><span class="badge bg-secondary-subtle text-body">${r.rareza||''}</span></td>
+        <td class="text-end">
+          <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-primary" data-act="edit" data-slug="${r.slug}">Editar</button>
+            <button class="btn btn-outline-danger" data-act="del" data-slug="${r.slug}" data-name="${r.nombre}">Borrar</button>
+          </div>
+        </td>
+      </tr>
+    `).join('');
+
+    empty.classList.toggle('d-none', rows.length>0);
+
+    // wiring acciones
+    tbody.querySelectorAll('button').forEach(b=>{
+      const act = b.dataset.act, slug = b.dataset.slug;
+      if (act === 'edit'){
+        b.onclick = ()=> selectForEdit(slug);
+      } else if (act === 'del'){
+        b.onclick = ()=> openDelete(slug, b.dataset.name);
+      }
+    });
+  }
+
+  async function selectForEdit(slug){
+    // Carga datos y llena el formulario de la derecha (IDs que usa tu ui.js)
+    const p = await getPersonajeBySlug(slug);
+    $('#p_nombre').value        = p.nombre || '';
+    $('#p_slug').value          = p.slug || '';
+    $('#p_elemento').value      = p.elemento || 'Fuego';
+    $('#p_rol').value           = p.rol || '';
+    $('#p_rareza').value        = p.rareza || '';
+    $('#p_descripcion').value   = p.descripcion || '';
+    $('#p_portada_url').value   = p.portada_url || '';
+    $('#p_raza').value          = p.raza || '';
+    $('#p_voz').value           = p.voz || '';
+
+    const prev = document.getElementById('p_portada_prev');
+    if (prev) {
+      if (p.portada_url) { prev.src = p.portada_url; prev.style.display = 'block'; }
+      else { prev.src = ''; prev.style.display = 'none'; }
+    }
+
+    // stats
+    const st = p.stats || {};
+    $('#p_hp').value      = st.hp || 0;
+    $('#p_atk').value     = st.atk || 0;
+    $('#p_def').value     = st.def || 0;
+    $('#p_tas_hp').value  = st.tas_hp || 0;
+    $('#p_tas_atk').value = st.tas_atk || 0;
+    $('#p_tas_def').value = st.tas_def || 0;
+
+    // slots
+    const sl = p.slots || [];
+    if (sl[0]) {
+      const t0 = Array.isArray(sl[0].tipo) ? sl[0].tipo[0] : sl[0].tipo;
+      $('#slot1_tipo').value  = t0 || 'Físico';
+      $('#slot1_nivel').value = sl[0].nivel || 0;
+    }
+    if (sl[1]) {
+      const t1 = Array.isArray(sl[1].tipo) ? sl[1].tipo[0] : sl[1].tipo;
+      $('#slot2_tipo').value  = t1 || 'Magia';
+      $('#slot2_nivel').value = sl[1].nivel || 0;
+    }
+    if (sl[2]) {
+      const tipos3 = Array.isArray(sl[2].tipo) ? sl[2].tipo : [sl[2].tipo];
+      $('#slot3_tipoA').value = tipos3[0] || 'Soporte';
+      $('#slot3_tipoB').value = tipos3[1] || '';
+      $('#slot3_nivel').value = sl[2].nivel || 0;
+    }
+
+    // mostrar form si estaba oculto
+    $('#formCard').classList.remove('d-none');
+
+    // Cambia la URL (sin recargar) para que ui.js use el slug en habilidades
+    history.replaceState({}, '', `?slug=${encodeURIComponent(slug)}`);
+    // Actualiza el slug visible
+    $('#adminSlug').textContent = slug;
+
+    // Tabla de habilidades del panel derecho
+    await loadHabs(slug);
+
+    // Scroll al form
+    document.getElementById('formCard')?.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+
+  // Buscar
+  q?.addEventListener('input', ()=>{
+    state.q = q.value.trim();
     loadList();
-  </script>
+  });
+
+  // Nuevo → limpia form para crear
+  $('#btnNuevo')?.addEventListener('click', ()=>{
+    $('#p_nombre').value      = '';
+    $('#p_slug').value        = '';
+    $('#p_elemento').value    = 'Fuego';
+    $('#p_rol').value         = '';
+    $('#p_rareza').value      = '';
+    $('#p_descripcion').value = '';
+    $('#p_portada_url').value = '';
+    const prev = document.getElementById('p_portada_prev');
+    if (prev) { prev.src = ''; prev.style.display = 'none'; }
+
+    $('#formCard').classList.remove('d-none');
+    history.replaceState({}, '', location.pathname); // sin slug
+    $('#adminSlug').textContent = '—';
+    document.getElementById('formCard')?.scrollIntoView({ behavior:'smooth', block:'start' });
+  });
+
+  // Eliminar con modal (en Pages solo informamos)
+  const modal = new bootstrap.Modal('#modalDelete');
+  function openDelete(slug, name){
+    currentDeleteSlug = slug;
+    $('#delName').textContent = name || slug;
+    modal.show();
+  }
+  $('#btnConfirmDelete')?.addEventListener('click', async ()=>{
+    // En GitHub Pages no hay backend: desactivar o simular
+    alert('Borrar personaje requiere backend. (En Pages no está disponible)');
+    modal.hide();
+  });
+
+  // Mostrar form si hay ?slug= al entrar (cuando ya hay sesión)
+  function initFromQuery(){
+    const slug = new URLSearchParams(location.search).get('slug');
+    if (slug){
+      selectForEdit(slug).catch(console.error);
+    }
+  }
+
+  // Sincroniza visibilidad del contenedor card con el form interno de ui.js
+  const formCard = document.getElementById('formCard');
+  const observer = new MutationObserver(()=>{
+    const formVisible = !document.getElementById('formPersonaje')?.classList.contains('d-none');
+    formCard?.classList.toggle('d-none', !formVisible);
+  });
+  observer.observe(document.body, { attributes:true, subtree:true, attributeFilter:['class'] });
+
+  // ===== Habilidades (tabla derecha) =====
+  async function loadHabs(slug){
+    const habs = await listHabilidades(slug);
+    const list = document.getElementById('listHabilidades');
+    list.innerHTML = habs.map(h=>`
+      <tr>
+        <td>${h.tipo||''}</td>
+        <td>${h.nombre||''}</td>
+        <td>${h.descripcion||''}</td>
+        <td>${h.orden||0}</td>
+        <td class="text-end">
+          ${h.id ? `<button class="btn btn-sm btn-outline-danger" data-id="${h.id}">Borrar</button>`:''}
+        </td>
+      </tr>`).join('');
+    list.querySelectorAll('button[data-id]').forEach(b=>{
+      b.onclick = async ()=>{
+        await deleteHabilidad(parseInt(b.dataset.id));
+        await loadHabs(slug);
+      };
+    });
+  }
+
+  // ===== Validación local (login sin backend) =====
+  const adminUser = "maou";
+  const adminPass = "b0xtest"; // cámbialo por algo propio
+  const LS_KEY    = "gs_admin_logged";
+
+  const loginBox   = document.getElementById('loginBox');
+  const adminPanel = document.getElementById('adminPanel');
+  const msg        = document.getElementById('loginMsg');
+  const btnLogin   = document.getElementById('btnLogin');
+
+  function showPanel() {
+    loginBox?.classList.add('d-none');
+    adminPanel?.classList.remove('d-none');
+    // Ahora que hay sesión, carga lista y valida query
+    loadList();
+    initFromQuery();
+  }
+  function logout() {
+    localStorage.removeItem(LS_KEY);
+    location.reload();
+  }
+
+  btnLogin?.addEventListener('click', ()=>{
+    const u = document.getElementById('user').value.trim();
+    const p = document.getElementById('pass').value.trim();
+    if (u === adminUser && p === adminPass) {
+      localStorage.setItem(LS_KEY, TOKEN); // guardamos el token
+      showPanel();
+    } else {
+      msg.textContent = "Usuario o contraseña incorrectos.";
+    }
+  });
+
+  // Autologin: si ya hay token, mostrar y cargar lista
+  if (localStorage.getItem(LS_KEY) === TOKEN) {
+    showPanel();
+  }
+
+  // Cierre automático al cerrar pestaña
+  window.addEventListener('beforeunload', () => localStorage.removeItem(LS_KEY));
+</script>
 </body>
+</div>
 </html>
