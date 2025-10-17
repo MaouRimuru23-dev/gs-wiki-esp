@@ -345,11 +345,6 @@
       "tipo": "True Arts",
       "nombre": "Eternal Cocytus",
       "descripcion": "35,000 % Agua (Mágico). Congela al enemigo con probabilidad del 100 %. Aumenta la carga Arts de todos los aliados en 20. Break 4,800."  
-    },
-    {
-      "tipo": "Super Arts",
-      "nombre": null,
-      "descripcion": null
     }
   ],
   "pasivas": [
@@ -378,6 +373,253 @@
     }
   ],
   "galeria": []
+},
+{
+  "slug": "arth",
+  "nombre": "アース (Arth)",
+  "elemento": "Tierra",
+  "rol": "Atacante Físico",
+  "rareza": "Awaken",
+  "descripcion": "El Emperador de la Espada Esmeralda. Maestro de técnicas con la espada y de manipulación de la energía de tierra, inspira respeto y temor por igual.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760642081/15_q4ftxz.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Katsuyuki Konishi",
+  "raza": "Humano",
+  "lanzamiento": {
+    "jp": null,
+    "gl": null
+  },
+  "true_weapon": "True Arth Weapon",
+  "slots": [
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": 6546,
+    "atk": 2268,
+    "def": 2074,
+    "tas_hp": 991,
+    "tas_atk": 350,
+    "tas_def": 321
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Evergreen Chain Strike",
+      "descripcion": "1,900 % Tierra (Físico). Break 2,100. CT 6 s."  
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Karmic Blade: Infinity Style",
+      "descripcion": "11,000 % Tierra (Físico). Break 4,200."  
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Jadeath Geminion",
+      "descripcion": "30,000 % Tierra (Físico). Aumenta la carga Arts de todos los aliados +20. Break 9,500."  
+    }
+  ],
+  "pasivas": [
+    "Earth BE Output Lv4: +20 % BE Output para unidades Tierra. :contentReference[oaicite:0]{index=0}",
+    "Earth Master Lv3: +30 % daño de Tierra para todos los aliados. :contentReference[oaicite:1]{index=1}",
+    "Dream Awakening — Crimson Dream: Auto-fills Arts Gauge de todos los aliados (+1) (solo una vez). :contentReference[oaicite:2]{index=2}",
+    "Dream Awakening — Verdant Dream: Water Killer Lv14 (+70 % daño contra enemigos Agua) y Water Breaker Lv7 (+70 % Break contra Agua). :contentReference[oaicite:3]{index=3}"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Muy útil con generadores de Arts para aprovechar el auto-fill.",
+    "Brilla especialmente contra enemigos de Agua si se elige la ruta Verdant en Dream Awakening."
+  ],
+  "notas": "Arth no tiene Super Arts documentada. Sus pasivas Dream Awakening ofrecen dos rutas: Crimson (mejora de gauge) o Verdant (ventaja contra Agua).",
+  "fuentes": [
+    {
+      "nombre": "Grand Summoners Wiki – Arth",
+      "url": "https://grandsummoners.fandom.com/wiki/Arth"
+    }
+  ],
+  "galeria": []
+},
+{
+  "slug": "feena",
+  "nombre": "フィーナ (Feena)",
+  "elemento": "Luz",
+  "rol": "Sub-Atacante / Apoyo",
+  "rareza": "Awaken / True",
+  "descripcion": "Caballera de la Luz que lucha contra la oscuridad y protege a sus aliados con su poder divino. Puede sanar, limpiar estados y aumentar el daño contra demonios.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664895/20_uwnzlh.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Madoka Yonezawa",
+  "raza": "Dios",
+  "lanzamiento": {
+    "jp": null,
+    "gl": null
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": 6059,
+    "atk": 2423,
+    "def": 2280,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Santuario",
+      "descripcion": "1,400 % Luz (Mágico). Restaura HP gradualmente al usuario (mismo). CT: 9 s. Break: 1,000"  
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Diospada",
+      "descripcion": "11,500 % Luz (Mágico). Todos los aliados se vuelven resistentes a estados alterados (excepto desmayo) por 10 s. Break: 2,600"  
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Finale Spada",
+      "descripcion": "22,500 % Luz (Mágico). Limpia todos los estados alterados de los aliados y los hace inmune (excepto desmayo); además recupera 300 HP/s por 20 s. Break: 4,500"  
+    }
+  ],
+  "pasivas": [
+    "Demon Killer Lv8: daño incrementado contra enemigos de tipo demonio +80 % (nivel máximo) :contentReference[oaicite:0]{index=0}",
+    "Divine Light: mientras HP ≥ 80 %, niega estados alterados (excepto desmayo) :contentReference[oaicite:1]{index=1}",
+    "Pray: revive a un aliado caído con 33 % de HP (una sola vez por misión) :contentReference[oaicite:2]{index=2}"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Ideal en equipos en los que se necesita limpieza de estados alterados y curación constante",
+    "Complementa bien a unidades DPS que sufren de efectos de estado o que dependen de estar intactas para maximizar su daño"
+  ],
+  "notas": "Feena no tiene Super Arts documentadas. Su rol híbrido de sub-atacante / apoyo le permite aportar utilidad mientras sigue siendo ofensiva en contenido demoníaco. Su True Arts la hace una de las mejores unidades para lidiar con estados alterados y mantener al grupo funcionando. :contentReference[oaicite:3]{index=3}",
+  "fuentes": [
+    {
+      "nombre": "Grand Summoners Wiki – Feena, Knight of Heaven",
+      "url": "https://grandsummoners.fandom.com/wiki/Feena%2C_Knight_of_Heaven"
+    },
+    {
+      "nombre": "GS Utopia Wiki – Feena",
+      "url": "https://gsutopia.fandom.com/wiki/Feena"
+    },
+    {
+      "nombre": "Grand Summoners Database – Feena",
+      "url": "https://www.grandsummoners.info/units/Feena/"
+    }
+  ],
+  "galeria": []
+},
+{
+  "slug": "regulus",
+  "nombre": "レグルス (Regulus)",
+  "elemento": "Oscuridad",
+  "rol": "Atacante Físico",
+  "rareza": "Dream Awaken",
+  "descripcion": "El ‘Demon Sealer’ que domina la espada oscura. Su poder proviene del equilibrio entre la oscuridad interna y la luz sellada en su alma. Tras su despertar en el Sueño, puede amplificar su daño o volverse un soporte ofensivo devastador.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664895/24_vcgnun.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Masuo Amada",
+  "raza": "Demonio",
+  "lanzamiento": {
+    "jp": "2018-03-05",
+    "gl": "2019-02-14"
+  },
+  "true_weapon": "True “Abyssal Edge”",
+  "slots": [
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": 6030,
+    "atk": 2570,
+    "def": 2100,
+    "tas_hp": 980,
+    "tas_atk": 495,
+    "tas_def": 372
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Dragon Killer",
+      "descripcion": "1,400% Oscuridad (Físico). +2% robo de vida. CT 9 s. Break 1,250."
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Deep Shadow Sword “Chaos King”",
+      "descripcion": "5,850% Oscuridad (Físico). Aumenta la tasa CRI de todos los aliados +50% (5 s). Break 2,400."
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Deep Shadow Sword “Hades Emperor”",
+      "descripcion": "25,550% Oscuridad (Físico). +100% tasa CRI a todos los aliados (8 s). Si el enemigo es de Luz, daño ×1.5. Break 3,800."
+    }
+  ],
+  "pasivas": [
+    "Light Resistance Lv6: +30% resistencia a ataques de Luz.",
+    "Dark Mastery Lv3: +30% daño de Oscuridad a todo el grupo.",
+    "Dream Awakening rutas disponibles:",
+    "• Verdant Dream — ‘Dark Devourer’: +60% daño y +40% tasa CRI a unidades Oscuridad; +30% reducción de daño recibido de Luz.",
+    "• Luminous Dream — ‘Hero of Balance’: al inicio, +100 Arts a todos; +30% daño crítico permanente.",
+    "• Spectral Dream — ‘Void Slayer’: +80% daño a enemigos con desventaja elemental y +50% daño si el enemigo tiene resistencia reducida."
+  ],
+  "resistencias": [
+    "Luz +30%",
+    "Quemadura +50%"
+  ],
+  "sinergias": [
+    "Funciona excelentemente con buffers de CRI (Vox, Yuna Gambler).",
+    "Ideal para equipos centrados en daño Oscuro o híbridos ofensivos.",
+    "Su ruta Luminous lo hace un soporte de Arts rápido, mientras que Verdant es su forma más pura de DPS."
+  ],
+  "notas": "Regulus es una unidad de daño físico puro con autosuficiencia y sin necesidad de Super Arts. Su Dream Awakening permite adaptar su estilo: ofensivo (Verdant), equilibrado (Luminous) o situacional (Spectral).",
+  "fuentes": [
+    {
+      "nombre": "Grand Summoners Wiki – Regulus, Demon Sealer",
+      "url": "https://grandsummoners.fandom.com/wiki/Regulus%2C_Demon_Sealer"
+    },
+    {
+      "nombre": "Grand Summoners Info – Regulus (Dream Evolution)",
+      "url": "https://www.grandsummoners.info/units/Regulus/"
+    },
+    {
+      "nombre": "Grand Summoners Utopia Wiki",
+      "url": "https://gsutopia.fandom.com/wiki/Regulus"
+    }
+  ],
+  "galeria": []
 }
+
 
 ]
