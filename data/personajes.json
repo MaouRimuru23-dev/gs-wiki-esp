@@ -619,6 +619,713 @@
     }
   ],
   "galeria": []
+},
+{
+  "slug": "dargeon",
+  "nombre": "ダージオン (Dargeon)",
+  "elemento": "Fuego",
+  "rol": "Atacante",
+  "rareza": "Dream Awaken",
+  "descripcion": "Un dragón de llamas que reinaba sobre Famelle Rock. Su fuerza desenfrenada lo llevó a un despertar superior. Tras superar sus límites, ahora puede elegir nuevas pasivas en su Dream Awakening.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664895/134_h1sgzl.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Takahiro Fujiwara",
+  "raza": "Dragón",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": 6090,
+    "atk": 2100,
+    "def": 2046,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Blazing Breath",
+      "descripcion": "2,190% Fuego (Físico). Aplica quemadura aleatoria. CT 10 s. Break 900."  
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Blazing Agni",
+      "descripcion": "23,500% Fuego (Mágico)."  
+    }
+  ],
+  "pasivas": [
+    "Indomitable Fighting Spirit: Resistencia a congelamiento y parálisis +100%, evita ser repelido por daño.",
+    "Dragon Killer Lv5: +50% daño contra dragones.",
+    "Dark Resistance Lv6: +30% resistencia al elemento Oscuridad.",
+    "Dream Awakening rutas disponibles:",
+    "• Ruta A — opción de daño de fuego mejorado / buffs ofensivos",
+    "• Ruta B — opción de soporte / utilidad para el equipo",
+    "• Ruta C — balance entre daño y supervivencia"
+  ],
+  "resistencias": [
+    "Oscuridad +30%"
+  ],
+  "sinergias": [
+    "Funciona bien en equipos que refuercen daño de fuego o que aprovechen efectos de quemadura",
+    "Puede complementar unidades que debilitan resistencias oscuras"
+  ],
+  "notas": "Dargeon está marcado para recibir Dream Awakening según anuncios oficiales. :contentReference[oaicite:1]{index=1}",
+  "fuentes": [
+    {
+      "nombre": "Grand Summoners Wiki – Godwyrm Dargeon",
+      "url": "https://grandsummoners.fandom.com/wiki/Godwyrm_Dargeon"
+    },
+    {
+      "nombre": "Anuncio Dream Awakening Dargeon",
+      "url": "https://x.com/GRDSMN_GLOBAL/status/1762522989499953575"
+    }
+  ],
+  "galeria": []
+},
+{
+  "slug": "herck",
+  "nombre": "ハーク (Herck)",
+  "elemento": "Oscuridad",
+  "rol": "Breaker / Atacante",
+  "rareza": "Awaken",
+  "descripcion": "Una entidad poderosa de oscuridad que destaca en romper resistencias. Especializado en debilitar al enemigo para que otros lo rematen.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714391/unit_detail_100576212_etgvqo.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Desconocido",
+  "raza": "Demonio / Oscuro",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    }
+  ],
+  "pasivas": [
+    "Pasiva típica de breaker (aumenta daño a break / debilita resistencias)",
+    "Otras pasivas de utilidad ofensiva"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Brilla en equipos con unidades que aprovechen break alto",
+    "Complementa bien unidades de daño puro que puedan rematar"
+  ],
+  "notas": "No encontré datos concretos sobre Herck con Dream Awakening o estadísticas confiables en mis búsquedas rápidas.",
+  "fuentes": [],
+  "galeria": []
+},
+{
+  "slug": "valhalla",
+  "nombre": "ヴァルハラ (Valhalla)",
+  "elemento": "Agua",
+  "rol": "Sub-atacante / Soporte",
+  "rareza": "Awaken",
+  "descripcion": "Un espíritu oceánico que defiende los límites del reino acuático. Sus técnicas pueden controlar la marea y apoyar al equipo.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714425/unit_detail_100586312_ain1pl.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Desconocido",
+  "raza": "Espíritu / Ser Acuático",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    }
+  ],
+  "pasivas": [
+    "Pasivas de soporte / aumento de daño acuático",
+    "Probable mejora de BE o carga Arts para aliados Agua"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Ideal en equipos con unidades Agua fuertes",
+    "Complementa unidades que dependen de buffs o control de estado"
+  ],
+  "notas": "No hallé confirmación de Dream Awakening para Valhalla ni estadísticas completas.",
+  "fuentes": [],
+  "galeria": []
+},
+{
+  "slug": "eden-typeΩ",
+  "nombre": "EDEN-typeΩ",
+  "elemento": "Luz",
+  "rol": "Atacante / Mágico",
+  "rareza": "Awaken",
+  "descripcion": "Una forma especial de EDEN con mejoras avanzadas. Combina poderes de luz con alta capacidad ofensiva.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714454/unit_detail_100596412_kgjgzj.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Desconocido",
+  "raza": "Ángel / Entidad de Luz",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    }
+  ],
+  "pasivas": [
+    "Probables pasivas de luz / amplificación de daño",
+    "Posible efecto de soporte lumínico"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Sinergiza con unidades de luz y equipos balanceados",
+    "Puede apoyar DPS puros con sus buffs"
+  ],
+  "notas": "No encontré confirmación de Dream Awakening para EDEN-typeΩ ni datos detallados en las fuentes que revisé.",
+  "fuentes": [],
+  "galeria": []
+},
+{
+  "slug": "abaddon",
+  "nombre": "アバドン (Abaddon)",
+  "elemento": "Oscuridad",
+  "rol": "Atacante / Invocador",
+  "rareza": "Awaken",
+  "descripcion": "Entidad oscura que canaliza energías prohibidas. Capaz de invocar sombras y lanzar ataques devastadores desde las profundidades.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714487/unit_detail_100606512_qs58ek.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Desconocido",
+  "raza": "Demonio / Entidad Oscura",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    }
+  ],
+  "pasivas": [
+    "Pasivas de oscuridad / amplificación de daño mágico",
+    "Probables mejoras de estado alterado o daño sobre tiempo"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Funciona bien con unidades de daño en el tiempo o que aprovechen estados alterados",
+    "Puede complementar equipos oscuros pesados"
+  ],
+  "notas": "No encontré confirmación de Dream Awakening para Abaddon ni estadísticas confiables en mis búsquedas rápidas.",
+  "fuentes": [],
+  "galeria": []
+},
+{
+  "slug": "ragna",
+  "nombre": "インフェルノ皇帝ラグナ (Inferno Emperor Ragna)",
+  "elemento": "Fuego",
+  "rol": "Breaker",
+  "rareza": "Dream Awaken",
+  "descripcion": "Un caballero divino que combina fuego y autoridad. Tras su despertar, puede elegir rutas que mejoren su poder de apoyo o su daño puro.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714514/unit_detail_100616112_dadxn4.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Shoya Chiba",
+  "raza": "Dios",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "Ragna Ignis",
+  "slots": [
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": 6300,
+    "atk": 3060,
+    "def": 2304,
+    "tas_hp": 955,
+    "tas_atk": 469,
+    "tas_def": 355
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Eruption Blade",
+      "descripcion": "1,800% Fuego (Físico). Probabilidad de aplicar quemadura al enemigo. CT 8 s. Break 2,500."  
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Swift Ignition",
+      "descripcion": "12,000% Fuego (Físico). Aumenta el daño de todos los aliados +20% por 10 s; unidades de fuego obtienen +30% adicional. Break 2,500."  
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Ragna Ignis",
+      "descripcion": "24,950% Fuego (Físico). Aumenta el daño y poder de Break de todos +20% por 10 s; unidades de Fuego +30%. Break 5,500."  
+    }
+  ],
+  "pasivas": [
+    "Fire & Light: reduce el daño de Oscuridad recibido 10%, aumenta el daño de Oscuridad infligido 20%. :contentReference[oaicite:1]{index=1}",
+    "Resistencia a Parálisis Lv5: reduce duración y evasa parálisis +50%. :contentReference[oaicite:2]{index=2}",
+    "Resistencia a Ceguera Lv5: similar efecto para ceguera. :contentReference[oaicite:3]{index=3}",
+    "Dream Awakening rutas disponibles:",
+    "• Ruta ofensiva — mejora adicional de daño / Break buffs",
+    "• Ruta de apoyo — refuerzos para el equipo en daño / supervivencia",
+    "• Ruta híbrida — balance entre ambos estilos"
+  ],
+  "resistencias": [
+    "Daño de Oscuridad reducido 10%"
+  ],
+  "sinergias": [
+    "Ideal en equipos con unidades de fuego, dada su habilidad para buffear daño y Break.",
+    "Funciona bien con personajes que también aprovechan buffs de daño general."
+  ],
+  "notas": "Ragna recibió recientemente anuncio de Dream Awakening junto a Abaddon. :contentReference[oaicite:4]{index=4}",
+  "fuentes": [
+    {
+      "nombre": "Grand Summoners Wiki – Inferno Emperor Ragna",
+      "url": "https://grandsummoners.fandom.com/wiki/Inferno_Emperor_Ragna"
+    },
+    {
+      "nombre": "Anuncio Dream Awakening de Ragna",
+      "url": "https://twitter.com/GRDSMN_GLOBAL/status/1786787878724595714"
+    }
+  ],
+  "galeria": []
+},
+{
+  "slug": "yomi",
+  "nombre": "アクアロード ヨミ (Aqua Lord Yomi)",
+  "elemento": "Agua",
+  "rol": "Atacante / Sub-atacante",
+  "rareza": "Awaken",
+  "descripcion": "Señor acuático con dominio de olas. Aporta daño de agua elevado y potencial para burst acuático.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664895/158_tpjvom.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Desconocido",
+  "raza": "Ser acuático / Dios",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    }
+  ],
+  "pasivas": [
+    "Pasivas de refuerzo de daño de Agua",
+    "Probables mejoras de estado acuático"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Ideal con unidades de agua pura",
+    "Complementa bien equipos que aprovechan buffs de agua"
+  ],
+  "notas": "No encontré confirmación de Dream Awakening para Yomi en las fuentes que revisé.",
+  "fuentes": [],
+  "galeria": []
+},
+{
+  "slug": "vaid",
+  "nombre": "ディヴィニティ デストロイヤー ヴェイド (Divinity Destroyer Vaid)",
+  "elemento": "Tierra",
+  "rol": "Breaker",
+  "rareza": "Awaken",
+  "descripcion": "Destructora divina de la tierra. Especialista en romper defensas con poder bruto y efectos terrestres.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714545/unit_detail_100636312_ql13qi.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Desconocido",
+  "raza": "Divino",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    }
+  ],
+  "pasivas": [
+    "Pasivas de daño terrestre / rompimiento",
+    "Probables mejoras de Break para unidades tierra"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Brilla como breaker en equipos de tierra",
+    "Complementa unidades de daño puro"
+  ],
+  "notas": "No encontré confirmación de Dream Awakening para Vaid.",
+  "fuentes": [],
+  "galeria": []
+},
+{
+  "slug": "elfalla",
+  "nombre": "エンプリアル ビースト エルファラ (Empyreal Beast Elfalla)",
+  "elemento": "Luz",
+  "rol": "Soporte / Sub-atacante",
+  "rareza": "Awaken",
+  "descripcion": "Una bestia divina de luz que trae armonía al campo. Puede fortalecer al equipo mientras asesta daño moderado.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664896/166_szz7qq.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Desconocido",
+  "raza": "Bestia divina",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Soporte",
+      "nivel": 5
+    },
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    }
+  ],
+  "pasivas": [
+    "Posibles pasivas de apoyo / regeneración de luz",
+    "Potencial para buffs de equipo"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Buena en equipos donde el apoyo de luz es vital",
+    "Complementa bien DPS que dependen de buffs"
+  ],
+  "notas": "No hallé confirmación de Dream Awakening para Elfalla.",
+  "fuentes": [],
+  "galeria": []
+},
+{
+  "slug": "lily",
+  "nombre": "デスサイズ クイーン リリー (Death Sickle Queen Lily)",
+  "elemento": "Oscuridad",
+  "rol": "Atacante",
+  "rareza": "Awaken",
+  "descripcion": "Reina de la guadaña y las sombras. Especialista en ataques oscuros potentes y habilidades de interrupción.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664896/170_teierj.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "Desconocido",
+  "raza": "Oscura / Demonio",
+  "lanzamiento": {
+    "jp": "??",
+    "gl": "??"
+  },
+  "true_weapon": "—",
+  "slots": [
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Desconocido",
+      "descripcion": "Desconocido"
+    }
+  ],
+  "pasivas": [
+    "Potenciadoras de daño oscuro",
+    "Probables mejoras de daño crítico / estado alterado"
+  ],
+  "resistencias": [],
+  "sinergias": [
+    "Excelente complementaria en equipos con daño oscuro pesado",
+    "Complementa DPS que dependen de efectos de sombra"
+  ],
+  "notas": "No encontré evidencia fiable de Dream Awakening para Lily en mis búsquedas rápidas.",
+  "fuentes": [],
+  "galeria": []
 }
 
 
