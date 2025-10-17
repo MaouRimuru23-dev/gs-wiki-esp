@@ -191,7 +191,7 @@ export async function initPersonaje(){
                 ? slots.map((s,i)=>slotHtml(s,i)).join('')
                 : '<span class="text-body-secondary small">Sin datos</span>'}
             </div>
-            
+            <small>El segundo equipo solo esta disponible en personajes \n Ascend en Limit Break 7</small>
           </div></div>
 
           <!-- Carrusel de ARTS -->
