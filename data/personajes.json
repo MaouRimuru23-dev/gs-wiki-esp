@@ -292,5 +292,92 @@
     "./img/clyde_1.webp",
     "./img/clyde_2.webp"
   ]
+},{
+  "slug": "corsair",
+  "nombre": "コルセア (Corsair)",
+  "elemento": "Agua",
+  "rol": "Atacante Mágico",
+  "rareza": "Awaken / Dream Awaken",
+  "descripcion": "Una de las tres Maestras de la Espada. Se dice que fue parte de lo que provocó la caída de la familia real. Experta en hielo y congelación.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664894/10_b90jvg.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "伊藤静 (Shizuka Itoh)",  
+  "raza": "Humano",
+  "lanzamiento": {
+    "jp": null,
+    "gl": null
+  },
+  "true_weapon": "True Corsair Weapon",
+  "slots": [
+    {
+      "tipo": "Mágico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Defensa",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": 6708,
+    "atk": 2074,
+    "def": 2203,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "Snow Blood",
+      "descripcion": "1,800 % Agua (Físico). 10 % de probabilidad de congelar al enemigo. Break 1,300. CT 6 s. "  
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Freezing Nova",
+      "descripcion": "14,000 % Agua (Mágico). Break 2,400."  
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Eternal Cocytus",
+      "descripcion": "35,000 % Agua (Mágico). Congela al enemigo con probabilidad del 100 %. Aumenta la carga Arts de todos los aliados en 20. Break 4,800."  
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": null,
+      "descripcion": null
+    }
+  ],
+  "pasivas": [
+    "Water BE Output Lv4: +20 % BE Output para unidades Agua (solo una vez).",
+    "Water Elemental Mastery Lv3: +30 % daño de Agua para todos los aliados (solo una vez).",
+    "Dream Awakening (Aqueous Dream) — Royal Ice Blade: agrega efecto adicional a sus Arts: reduce resistencia al congelamiento del enemigo 30 % por 30 s.",
+    "Dream Awakening (Spectral Dream) — Arts Gauge UP Lv20: +200 carga Arts al inicio de la misión (solo una vez)."
+  ],
+  "resistencias": [
+    "Congelamiento resistido (modificada por pasivas y efectos)",
+    "Veneno (valor no documentado)"
+  ],
+  "sinergias": [
+    "Sinergiza bien con unidades que benefician efectos de congelamiento o daño de Agua.",
+    "Útil en equipos que pueden explotar estados de congelamiento."
+  ],
+  "notas": "Corsair destaca por su capacidad de congelar enemigos y aumentar la carga de Arts del equipo. En su Dream Awakening tiene rutas Aqueous o Spectral para escoger entre control de estado o ventaja de gauge. :contentReference[oaicite:0]{index=0}",
+  "fuentes": [
+    {
+      "nombre": "Grand Summoners Wiki – Corsair",
+      "url": "https://grandsummoners.fandom.com/wiki/Corsair"
+    },
+    {
+      "nombre": "Awakened Corsair – Grand Summoners Global Wiki",
+      "url": "https://gurasama.fandom.com/wiki/Awakened_Corsair"
+    }
+  ],
+  "galeria": []
 }
+
 ]
