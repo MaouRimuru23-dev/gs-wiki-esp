@@ -200,5 +200,95 @@
       }
     ],
     "actualizado_en": "2025-10-17T01:07:07Z"
-  }
+  },
+  {
+  "slug": "clyde",
+  "nombre": "クライド (Clyde)",
+  "elemento": "Fuego",
+  "rol": "Atacante Físico",
+  "rareza": "Awaken",
+  "descripcion": "Espadachín del Reino de Feorg que blande su espada con un ardiente sentido de justicia. Especialista en ataques críticos y daño de fuego continuo.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760667901/clyde_kkz9uf.png",
+  "actualizado_en": "2025-10-17T00:00:00Z",
+  "voz": "松岡禎丞 (Yoshitsugu Matsuoka)",
+  "raza": "Humano",
+  "lanzamiento": {
+    "jp": "2016-12-01",
+    "gl": "2018-02-01"
+  },
+  "true_weapon": "True “Ignis Sword”",
+  "slots": [
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Físico",
+      "nivel": 5
+    },
+    {
+      "tipo": "Soporte",
+      "nivel": 4
+    }
+  ],
+  "stats": {
+    "hp": 6750,
+    "atk": 2900,
+    "def": 2250,
+    "tas_hp": 1045,
+    "tas_atk": 540,
+    "tas_def": 410
+  },
+  "habilidades": [
+    {
+      "tipo": "Skill",
+      "nombre": "ブレイジング・スラッシュ (Blazing Slash)",
+      "descripcion": "2,000% Fuego (Físico). Aumenta el daño CRIT propio 20% (6s). CT 8s."
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "フレア・インパクト (Flare Impact)",
+      "descripcion": "13,000% Fuego (Físico). Aumenta daño CRIT propio 50% (10s). Break 1,200."
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "バーン・ブレイバー (Burn Braver)",
+      "descripcion": "48,000% Fuego (Físico). Aumenta daño de Fuego del grupo 40% (15s). Si se equipa su True Weapon, +50% daño CRIT (15s). Break 2,800."
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "インフェルノ・レクイエム (Inferno Requiem)",
+      "descripcion": "120,000% Fuego (Físico). Aumenta daño CRIT de aliados 100% (20s) y otorga resistencia a Fuego +30%."
+    }
+  ],
+  "pasivas": [
+    "Fuego Maestro Lv7: +30% daño de Fuego.",
+    "Espíritu del Guerrero: +20% daño CRIT.",
+    "Cuando HP ≥80%: +20% ATK y +15% DEF."
+  ],
+  "resistencias": [
+    "Quemadura +100%",
+    "Veneno +50%"
+  ],
+  "sinergias": [
+    "Excelente con generadores de Arts Tipo A (Fen, Weaver).",
+    "Sinergiza bien con unidades que buffean daño CRIT."
+  ],
+  "notas": "Clyde es un DPS de fuego enfocado en daño crítico sostenido. Su True Arts es su fuente principal de daño y soporte elemental.",
+  "fuentes": [
+    {
+      "nombre": "Altema",
+      "url": "https://altema.jp/grandsummoners/unit/18"
+    },
+    {
+      "nombre": "Wiki comunidad",
+      "url": "https://grand-summoners.fandom.com/wiki/Clyde"
+    }
+  ],
+  "galeria": [
+    "./img/clyde_1.webp",
+    "./img/clyde_2.webp"
+  ]
+}
+
 ]
