@@ -7,6 +7,13 @@ const DATA_PATH = location.hostname.endsWith('github.io')
 
 // 2) Romper caché en móvil (iOS/Android cachean ES modules y fetch agresivamente)
 const NO_CACHE = `?_=${Date.now()}`;
+// Overlay local para habilidades durante pruebas en Pages
+const LS_HABS = 'gs_habs_overrides';
+const _readHabs = () => {
+  try { return JSON.parse(localStorage.getItem(LS_HABS) || '{}'); }
+  catch { return {}; }
+};
+const _writeHabs = (obj) => localStorage.setItem(LS_HABS, JSON.stringify(obj));
 
 export const TOKEN = "token-secreto-maou";
 export const slugify = (s) => s
@@ -69,7 +76,15 @@ export async function listHabilidades(slug) {
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error("No se pudieron cargar habilidades.json");
   const all = await res.json();
-  return all[slug] || [];
+  const base = all[slug] || [];
+   const overlay = _readHabs()[slug] || [];
+   // merge por id si existe; si no, clave por "tipo-nombre"
+   const map = new Map();
+   [...base, ...overlay].forEach(h=>{
+     const key = (h.id != null) ? `id:${h.id}` : `${(h.tipo||'').toLowerCase()}|${h.nombre||''}`;
+     map.set(key, h);
+   });
+   return Array.from(map.values()).sort((a,b)=>(a.orden||0)-(b.orden||0));
 }
 
 // -----------------------------------------------------
@@ -77,8 +92,26 @@ export async function listHabilidades(slug) {
 // -----------------------------------------------------
 export async function upsertPersonaje(p){ console.log("upsert demo", p); return p; }
 export async function uploadImage(f){ return null; }
-export async function saveHabilidad(h){ console.log("save hab demo", h); return h; }
-export async function deleteHabilidad(id){ console.log("delete hab demo", id); return true; }
 export async function signIn(email){ localStorage.setItem("demo_user", email); return { data:{ user:{ email } } }; }
 export async function signOut(){ localStorage.removeItem("demo_user"); }
 export async function currentUser(){ const u = localStorage.getItem("demo_user"); return u ? { email:u } : null; }
+export async function saveHabilidad(h){
+  const slug = new URLSearchParams(location.search).get('slug');
+  if (!slug) throw new Error('No hay slug activo en la URL');
+  const all = _readHabs();
+  const arr = all[slug] || [];
+  const out = h.id ? { ...h } : { ...h, id: Date.now() };
+  const i = arr.findIndex(x => x.id === out.id);
+  if (i >= 0) arr[i] = out; else arr.push(out);
+  all[slug] = arr;
+  _writeHabs(all);
+  return out;
+}
+export async function deleteHabilidad(id){
+  const slug = new URLSearchParams(location.search).get('slug');
+  if (!slug) return false;
+  const all = _readHabs();
+  all[slug] = (all[slug]||[]).filter(x => x.id !== id);
+  _writeHabs(all);
+  return true;
+}
