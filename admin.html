@@ -32,6 +32,24 @@
       .badge-luz { background:#fab005; color:#222; }
       .badge-oscuridad { background:#5f3dc4; }
       .sticky-col { position: sticky; top: 88px; }
+      /* Ficha de personaje – pulido */
+      #formCard .card-body { padding-top: 1.25rem; }
+      #formCard h6 { font-weight: 700; opacity:.9; }
+      #formCard hr { margin: .75rem 0 1rem; opacity:.12; }
+      #formCard .form-label { font-weight: 600; }
+      #formCard .form-text { opacity:.7; }
+      #formCard .form-control, 
+      #formCard .form-select { min-height: 40px; }
+      #p_portada_prev { max-height: 140px; object-fit: contain; display:none; }
+
+      /* compactar filas */
+      #formPersonaje .col-md-4, 
+      #formPersonaje .col-md-6, 
+      #formPersonaje .col-4 { margin-bottom: .35rem; }
+
+      /* tablas de habilidades */
+      #listHabilidades + * { margin-top: .25rem; }
+
     </style>
   </head>
 
@@ -106,7 +124,7 @@
         <div class="col-lg-7">
 
           <!-- Formulario personaje (IDs compatibles con ui.js) -->
-          <div class="card mb-3 d-none" id="formCard">
+          <div class="card mb-3" id="formCard">
             <div class="card-header">
               <h5 class="m-0">Ficha de personaje</h5>
             </div>
@@ -317,6 +335,7 @@
 
     <!-- Módulo: inicializa tema + admin (tu ui.js) y añade la lógica del panel izquierdo -->
     <script type="module">
+    import { slugify } from './js/api.js';
     import { initTheme, initAdmin } from './js/ui.js';
     import {
       listPersonajes,
@@ -351,6 +370,14 @@
       urlPrev.src = optimized;
       urlPrev.style.display = "block";
     });
+
+    const inNombre = document.getElementById('p_nombre');
+const inSlug   = document.getElementById('p_slug');
+inNombre?.addEventListener('input', ()=>{
+  const v = (inNombre.value || '').trim();
+  if (!v) return;
+  inSlug.value = slugify(v);
+});
 
     let state = { page:1, pageSize:999, q:'' };
     let currentDeleteSlug = null;
