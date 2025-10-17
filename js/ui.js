@@ -191,7 +191,7 @@ export async function initPersonaje(){
                 ? slots.map((s,i)=>slotHtml(s,i)).join('')
                 : '<span class="text-body-secondary small">Sin datos</span>'}
             </div>
-            
+            <small class="text-body-secondary">EL CAMBIO DE SLOT SOLO ES EN PERSONAJES ASCEND EN LIMIT BREAK 7</small>
           </div></div>
 
           <!-- Carrusel de ARTS -->
@@ -386,62 +386,54 @@ export function initAdmin(){
   });
 
   form?.addEventListener('submit', async (e)=>{
-    e.preventDefault();
-    try{
-      let portada_url = null;
-      const file = inputs.file.files[0];
-      const slug = (inputs.slug.value || slugify(inputs.nombre.value));
-      if (file){
-        const path = `personajes/${slug}/${Date.now()}_${file.name}`;
-        portada_url = await uploadImage(file, path);
-      }
-      
-      // armar stats
-      const stats = {
-        hp: parseInt(inputs.hp.value||'0'),
-        atk: parseInt(inputs.atk.value||'0'),
-        def: parseInt(inputs.def.value||'0'),
-        tas_hp: parseInt(inputs.tas_hp.value||'0'),
-        tas_atk: parseInt(inputs.tas_atk.value||'0'),
-        tas_def: parseInt(inputs.tas_def.value||'0')
-      };
-      
-      // armar slots (3ro puede ser dual)
-      const slots = [
-        { tipo: inputs.slot1_tipo.value, nivel: parseInt(inputs.slot1_nivel.value||'0') },
-        { tipo: inputs.slot2_tipo.value, nivel: parseInt(inputs.slot2_nivel.value||'0') }
-      ];
-      const s3A = inputs.slot3_tipoA.value;
-      const s3B = (inputs.slot3_tipoB.value||'').trim();
-      slots.push({
-        tipo: s3B ? [s3A, s3B] : s3A,
-        nivel: parseInt(inputs.slot3_nivel.value||'0')
-      });
-      
-      // payload final
-      const payload = {
-        slug,
-        nombre: inputs.nombre.value.trim(),
-        elemento: inputs.elemento.value,
-        rol: inputs.rol.value.trim(),
-        rareza: inputs.rareza.value.trim(),
-        descripcion: inputs.desc.value.trim(),
-        raza: inputs.raza.value.trim(),
-        voz: inputs.voz.value.trim(),
-        portada_url: $('#p_portada_url').value.trim(),
-        stats, slots
-      };
-      if (portada_url) payload.portada_url = portada_url;
-      
-      const p = await upsertPersonaje(payload);
-      
-      alert('Guardado: '+p.nombre);
-      history.replaceState({}, '', `?slug=${encodeURIComponent(p.slug)}`);
-      $('#adminSlug').textContent = p.slug;
-      await loadPersonajeForEdit();   // ← recarga el form con lo que quedó guardado
-      await reloadHabs();
-    }catch(err){ alert(err.message||err); }
-  });
+  e.preventDefault();
+  try{
+    // usa SOLO la URL de Cloudinary
+    const portadaUrl = ($('#p_portada_url')?.value || '').trim();
+
+    // stats
+    const stats = {
+      hp: parseInt(inputs.hp.value||'0'),
+      atk: parseInt(inputs.atk.value||'0'),
+      def: parseInt(inputs.def.value||'0'),
+      tas_hp: parseInt(inputs.tas_hp.value||'0'),
+      tas_atk: parseInt(inputs.tas_atk.value||'0'),
+      tas_def: parseInt(inputs.tas_def.value||'0')
+    };
+
+    // slots
+    const slots = [
+      { tipo: inputs.slot1_tipo.value, nivel: parseInt(inputs.slot1_nivel.value||'0') },
+      { tipo: inputs.slot2_tipo.value, nivel: parseInt(inputs.slot2_nivel.value||'0') }
+    ];
+    const s3A = inputs.slot3_tipoA.value;
+    const s3B = (inputs.slot3_tipoB.value||'').trim();
+    slots.push({ tipo: s3B ? [s3A, s3B] : s3A, nivel: parseInt(inputs.slot3_nivel.value||'0') });
+
+    // payload final
+    const slug = (inputs.slug.value || slugify(inputs.nombre.value));
+    const payload = {
+      slug,
+      nombre: inputs.nombre.value.trim(),
+      elemento: inputs.elemento.value,
+      rol: inputs.rol.value.trim(),
+      rareza: inputs.rareza.value.trim(),
+      descripcion: inputs.desc.value.trim(),
+      raza: inputs.raza.value.trim(),
+      voz: inputs.voz.value.trim(),
+      portada_url: portadaUrl,  // ← AQUÍ usamos la URL pegada
+      stats, slots
+    };
+
+    const p = await upsertPersonaje(payload);
+
+    alert('Guardado: '+p.nombre);
+    history.replaceState({}, '', `?slug=${encodeURIComponent(p.slug)}`);
+    $('#adminSlug').textContent = p.slug;
+    await loadPersonajeForEdit();
+    await reloadHabs();
+  }catch(err){ alert(err.message||err); }
+});
 
   formHab?.addEventListener('submit', async (e)=>{
     e.preventDefault();
@@ -521,6 +513,15 @@ function fillPersonajeForm(p){
   // etiqueta de slug visible (si la tienes)
   const lbl = $('#adminSlug');
   if (lbl) lbl.textContent = p.slug || '';
+  // URL de portada + preview
+const urlInput = document.getElementById('p_portada_url');
+const urlPrev  = document.getElementById('p_portada_prev');
+if (urlInput) urlInput.value = p.portada_url || '';
+if (urlPrev) {
+  if (p.portada_url) { urlPrev.src = p.portada_url; urlPrev.style.display = 'block'; }
+  else { urlPrev.src = ''; urlPrev.style.display = 'none'; }
+}
+
 }
 
 async function loadPersonajeForEdit(){
@@ -534,4 +535,3 @@ async function loadPersonajeForEdit(){
   showAuthUI();
   loadPersonajeForEdit().then(()=> reloadHabs());
 }
-
