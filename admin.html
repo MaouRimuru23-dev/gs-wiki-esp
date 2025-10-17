@@ -328,7 +328,7 @@
 
     // ===== Inicialización UI base =====
     initTheme();
-    initAdmin(); // deja tus flujos existentes (guardar/skills). Si luego prefieres, podemos mover el login solo aquí.
+    //initAdmin(); // deja tus flujos existentes (guardar/skills). Si luego prefieres, podemos mover el login solo aquí.
 
     // ===== Utilidades DOM =====
     const $  = s => document.querySelector(s);
@@ -537,6 +537,7 @@
     }
 
     // ===== Validación local (login sin backend) =====
+    let adminInited = false;
     const adminUser = "maou";
     const adminPass = "b0xtest"; // cámbialo por algo propio
     const LS_KEY    = "gs_admin_logged";
@@ -545,11 +546,17 @@
     const adminPanel = document.getElementById('adminPanel');
     const msg        = document.getElementById('loginMsg');
     const btnLogin   = document.getElementById('btnLogin');
+    
 
     function showPanel() {
       loginBox?.classList.add('d-none');
       adminPanel?.classList.remove('d-none');
       // Ahora que hay sesión, carga lista y valida query
+       // Inicializa admin sólo una vez y DESPUÉS del login
+      if (!adminInited) {
+        initAdmin();
+        adminInited = true;
+      }
       loadList();
       initFromQuery();
     }
@@ -576,6 +583,13 @@
 
     // Cierre automático al cerrar pestaña
     window.addEventListener('beforeunload', () => localStorage.removeItem(LS_KEY));
+    // Si la página vuelve desde el Back/Forward Cache, limpia el login
+window.addEventListener('pageshow', (ev) => {
+  if (ev.persisted) {
+    localStorage.removeItem(LS_KEY);
+  }
+});
+
   </script>
   </body>
   </div>
