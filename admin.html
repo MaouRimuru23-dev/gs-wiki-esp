@@ -329,7 +329,7 @@
   <!-- Módulo: inicializa tema + admin (tu ui.js) y añade la lógica del panel izquierdo -->
   <script type="module">
     import { initTheme, initAdmin } from './js/ui.js';
-    import { listPersonajes, getPersonajeBySlug } from './js/api.js';
+    import { listPersonajes, getPersonajeBySlug, listHabilidades, deleteHabilidad } from './js/api.js';
 
     // 👇 Cambia el token para borrar (debe coincidir con app.py)
     const ADMIN_TOKEN = 'token-secreto-maou';
@@ -414,11 +414,41 @@
       $('#p_rareza').value = p.rareza || '';
       $('#p_descripcion').value = p.descripcion || '';
       $('#p_portada_url').value = p.portada_url || '';
+      $('#p_raza').value = p.raza || '';
+      $('#p_voz').value  = p.voz || '';
 const prev = document.getElementById('p_portada_prev');
 if (prev) {
   if (p.portada_url) { prev.src = p.portada_url; prev.style.display = 'block'; }
   else { prev.src = ''; prev.style.display = 'none'; }
 }
+
+ // stats
+ const st = p.stats || {};
+ $('#p_hp').value = st.hp || 0;
+ $('#p_atk').value = st.atk || 0;
+ $('#p_def').value = st.def || 0;
+ $('#p_tas_hp').value = st.tas_hp || 0;
+ $('#p_tas_atk').value = st.tas_atk || 0;
+ $('#p_tas_def').value = st.tas_def || 0;
+
+ // slots
+ const sl = p.slots || [];
+ if (sl[0]) {
+   const t0 = Array.isArray(sl[0].tipo) ? sl[0].tipo[0] : sl[0].tipo;
+   $('#slot1_tipo').value  = t0 || 'Físico';
+   $('#slot1_nivel').value = sl[0].nivel || 0;
+ }
+ if (sl[1]) {
+   const t1 = Array.isArray(sl[1].tipo) ? sl[1].tipo[0] : sl[1].tipo;
+   $('#slot2_tipo').value  = t1 || 'Magia';
+   $('#slot2_nivel').value = sl[1].nivel || 0;
+ }
+ if (sl[2]) {
+   const tipos3 = Array.isArray(sl[2].tipo) ? sl[2].tipo : [sl[2].tipo];
+   $('#slot3_tipoA').value = tipos3[0] || 'Soporte';
+   $('#slot3_tipoB').value = tipos3[1] || '';
+   $('#slot3_nivel').value = sl[2].nivel || 0;
+ }
 
       // mostrarse form si estaba oculto
       $('#formCard').classList.remove('d-none');
@@ -427,6 +457,7 @@ if (prev) {
       // Actualiza el slug visible
       $('#adminSlug').textContent = slug;
       // Opcional: scroll al form
+      await loadHabs(slug);
       document.getElementById('formCard')?.scrollIntoView({ behavior:'smooth', block:'start' });
     }
 
@@ -498,6 +529,26 @@ if (prev) { prev.src = ''; prev.style.display = 'none'; }
       formCard.classList.toggle('d-none', !formVisible);
     });
     observer.observe(document.body, { attributes:true, subtree:true, attributeFilter:['class'] });
+async function loadHabs(slug){
+  const habs = await listHabilidades(slug);
+  const list = document.getElementById('listHabilidades');
+  list.innerHTML = habs.map(h=>`
+    <tr>
+      <td>${h.tipo||''}</td>
+      <td>${h.nombre||''}</td>
+      <td>${h.descripcion||''}</td>
+      <td>${h.orden||0}</td>
+      <td class="text-end">
+        ${h.id ? `<button class="btn btn-sm btn-outline-danger" data-id="${h.id}">Borrar</button>`:''}
+      </td>
+    </tr>`).join('');
+  list.querySelectorAll('button[data-id]').forEach(b=>{
+    b.onclick = async ()=>{
+      await deleteHabilidad(parseInt(b.dataset.id));
+      await loadHabs(slug);
+    };
+  });
+}
 
     // Carga inicial
     loadList();
