@@ -3,9 +3,11 @@
 
 // Helper para rutas relativas según ubicación (index, subcarpeta, etc.)
 function getBasePath() {
-  const repoBase = "/gs-wiki-esp/";  // cambia según tu ruta real en GitHub Pages
-  return location.pathname.startsWith(repoBase) ? repoBase : "";
-}
+  const isPages = location.hostname.endsWith('github.io');
+  const DATA_PATH = isPages
+  ? 'https://maourimuru23-dev.github.io/gs-wiki-esp/data' // publica aquí tus JSON
+  : '/data'; // en local
+
 const BASE = getBasePath();
 const DATA_PATH = `${BASE}/data`;  // carpeta donde pondrás los JSON
 
@@ -87,4 +89,5 @@ export async function deleteHabilidad(id){ console.log("delete hab demo",id); re
 export async function signIn(email){ localStorage.setItem("demo_user",email); return {data:{user:{email}}}; }
 export async function signOut(){ localStorage.removeItem("demo_user"); }
 export async function currentUser(){ const u=localStorage.getItem("demo_user"); return u?{email:u}:{email:null}; }
+
 
