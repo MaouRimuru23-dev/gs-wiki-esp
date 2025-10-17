@@ -33,7 +33,7 @@ export function initIndex(){
   const grid = $('#grid'), pag = $('#paginacion');
   if (!grid) return;
 
-  let state = { page:1, pageSize:12 };
+  let state = { page:1, pageSize:50 };
 
   const card = (r)=>`
     <div class="col">
