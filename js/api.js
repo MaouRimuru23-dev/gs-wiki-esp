@@ -13,6 +13,8 @@ const DATA_PATH = location.hostname.endsWith('github.io')
 const NO_CACHE = `?_=${Date.now()}`;
 
 }
+const BASE = getBasePath();
+const DATA_PATH = `${BASE}/data`;  // carpeta donde pondrás los JSON
 
 export const TOKEN = "token-secreto-maou";
 export const slugify = (s) => s
