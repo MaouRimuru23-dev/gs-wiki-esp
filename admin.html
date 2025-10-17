@@ -226,24 +226,16 @@
               </div>
 
               <div class="col-md-8">
-                <label class="form-label">Portada (imagen)</label>
+                <label class="form-label">Portada (URL de Cloudinary)</label>
+                <input id="p_portada_url" class="form-control" placeholder="https://res.cloudinary.com/tu_cloud/image/upload/.../personajes/fen.webp">
+                <div class="form-text">Pega aquí el enlace público de Cloudinary.</div>
+                <img id="p_portada_prev" class="mt-2 rounded" style="max-height:140px; object-fit:contain; display:none">
+              </div>
 
-                <!-- ① input de archivo local (solo para elegir la imagen a subir) -->
-                <input id="p_portada" type="file" accept="image/*" class="form-control mb-2">
-
-                <!-- ② URL final (se autollenará tras subir a Cloudinary) -->
-                <div class="input-group">
-                  <input id="p_portada_url" class="form-control" placeholder="https://res.cloudinary.com/...">
-                  <button class="btn btn-outline-secondary" type="button" id="btnCloudinary">
-                    Subir a Cloudinary
-                  </button>
-                </div>
-              <div class="form-text">Usa el botón para subir y obtener la URL pública.</div>
-
-              <!-- ③ vista previa -->
-              <img id="p_portada_prev" class="mt-2 rounded" style="max-height:140px; object-fit:contain; display:none">
-            </div>
-
+              <div class="col-md-4 d-grid">
+                <label class="form-label invisible">.</label>
+                <button class="btn btn-primary">Guardar</button>
+              </div>
             </form>
 
             <hr class="my-4">
@@ -341,65 +333,29 @@
 
     // 👇 Cambia el token para borrar (debe coincidir con app.py)
     const ADMIN_TOKEN = 'token-secreto-maou';
-    // === Config Cloudinary ===
-const CLOUD_NAME   = "TU_CLOUD_NAME";       // ← cámbialo
-const UPLOAD_PRESET = "gswiki_unsigned";    // ← tu preset
-const CLOUD_FOLDER  = "gswiki/personajes";  // opcional
-
-async function uploadToCloudinary(file, publicId=""){
-  if(!file) throw new Error("Selecciona un archivo de imagen.");
-  const url = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
-  const fd  = new FormData();
-  fd.append("file", file);
-  fd.append("upload_preset", UPLOAD_PRESET);
-  if (CLOUD_FOLDER) fd.append("folder", CLOUD_FOLDER);
-  if (publicId) fd.append("public_id", publicId);
-
-  const res = await fetch(url, { method:"POST", body: fd });
-  const data = await res.json();
-  if (!res.ok) throw new Error(data?.error?.message || "Error al subir a Cloudinary");
-
-  // Sugerencia: f_auto,q_auto para optimizar peso
-  const optimized = data.secure_url.replace("/upload/", "/upload/f_auto,q_auto/");
-  return optimized;
-}
-
-// Wiring del botón
-const $ = s => document.querySelector(s);
-$("#btnCloudinary")?.addEventListener("click", async ()=>{
-  try{
-    const file = $("#p_portada")?.files?.[0];
-    if (!file) { alert("Elige una imagen primero."); return; }
-
-    // Usa el slug si existe; si no, genera a partir del nombre
-    const nombre = $("#p_nombre")?.value?.trim() || "";
-    const slug = ($("#p_slug")?.value?.trim() || nombre.toLowerCase()
-                    .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
-                    .replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""));
-
-    // Subir y obtener URL pública
-    const url = await uploadToCloudinary(file, slug || undefined);
-    $("#p_portada_url").value = url;
-
-    // Preview
-    const img = $("#p_portada_prev");
-    img.src = url; img.style.display = "block";
-  }catch(err){
-    console.error(err);
-    alert("No se pudo subir: " + err.message);
-  }
-});
-
 
     initTheme();
     initAdmin(); // mantiene todo tu flujo de login/guardar/skills
 
     // ===== Lado izquierdo: lista con búsqueda y acciones =====
-    //const $ = s => document.querySelector(s);
+    const $ = s => document.querySelector(s);
     const $$ = s => Array.from(document.querySelectorAll(s));
     const q = $('#adminSearch');
     const tbody = $('#adminList');
     const empty = $('#adminEmpty');
+
+    // Preview cuando pegas el link
+    const urlInput = $("#p_portada_url");
+    const urlPrev  = $("#p_portada_prev");
+    urlInput?.addEventListener("input", ()=>{
+      const v = (urlInput.value || "").trim();
+      if (!v) { urlPrev.style.display = "none"; return; }
+      // Tip: aplicar f_auto,q_auto para optimizar Cloudinary
+      const optimized = v.includes("/upload/") ? v.replace("/upload/", "/upload/f_auto,q_auto/") : v;
+      urlPrev.src = optimized;
+      urlPrev.style.display = "block";
+    });
+
 
     let state = { page:1, pageSize:999, q:'' };
     let currentDeleteSlug = null;
@@ -457,6 +413,13 @@ $("#btnCloudinary")?.addEventListener("click", async ()=>{
       $('#p_rol').value = p.rol || '';
       $('#p_rareza').value = p.rareza || '';
       $('#p_descripcion').value = p.descripcion || '';
+      $('#p_portada_url').value = p.portada_url || '';
+const prev = document.getElementById('p_portada_prev');
+if (prev) {
+  if (p.portada_url) { prev.src = p.portada_url; prev.style.display = 'block'; }
+  else { prev.src = ''; prev.style.display = 'none'; }
+}
+
       // mostrarse form si estaba oculto
       $('#formCard').classList.remove('d-none');
       // Cambia la URL (sin recargar) para que ui.js use el slug en habilidades
@@ -485,6 +448,10 @@ $("#btnCloudinary")?.addEventListener("click", async ()=>{
       history.replaceState({}, '', location.pathname); // sin slug
       $('#adminSlug').textContent = '—';
       document.getElementById('formCard')?.scrollIntoView({ behavior:'smooth', block:'start' });
+      $('#p_portada_url').value = '';
+const prev = document.getElementById('p_portada_prev');
+if (prev) { prev.src = ''; prev.style.display = 'none'; }
+
     };
 
     // Eliminar con modal
@@ -537,5 +504,3 @@ $("#btnCloudinary")?.addEventListener("click", async ()=>{
   </script>
 </body>
 </html>
-
-
