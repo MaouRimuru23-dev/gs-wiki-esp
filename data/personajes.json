@@ -1,1329 +1,1698 @@
 [
   {
-    "slug": "war-hero-fen",
-    "nombre": "War Hero Fen",
-    "elemento": "Tierra",
-    "rol": "Support",
-    "rareza": "Ascend",
-    "voz": "—",
-    "raza": "Human",
-    "true_weapon": "True “Euthanasia”",
-    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760665926/1116_jrckfi.png",
-    "actualizado_en": "2025-10-15T00:00:00Z",
-    "slots": [
-      {
-        "tipo": "Físico",
-        "nivel": 5
-      },
-      {
-        "tipo": "Soporte",
-        "nivel": 5
-      },
-      {
-        "tipo": [
-          "Soporte",
-          "Defensa"
-        ],
-        "nivel": 4
-      }
-    ],
-    "stats": {
-      "hp": 0,
-      "atk": 0,
-      "def": 0,
-      "tas_hp": 0,
-      "tas_atk": 0,
-      "tas_def": 0
-    },
-    "pasivas": [
-      "Tactics: +50 Arts a todos al inicio (una vez)",
-      "Thirsting Beast: +30% daño a enemigos ≤50% HP (una vez)",
-      "Leader: −30% daño recibido (45s) al equipo (si líder)"
-    ]
+    "slug": "clyde",
+    "nombre": "Clyde"
   },
   {
-    "slug": "yuna-gambler",
-    "nombre": "ユナ (Yuna)",
-    "elemento": "Luz",
-    "rol": "Atacante Físico",
-    "rareza": "Ascend",
-    "descripcion": "Vagabunda tahúr. El estado ‘爆運’ potencia sus ultimates.",
-    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760666722/yuna_s0dpm3.png",
-    "actualizado_en": "2025-10-15T00:00:00Z",
-    "voz": "田辺留依",
-    "raza": "精霊族",
-    "lanzamiento": {
-      "jp": "2024-09-01",
-      "gl": null
-    },
-    "true_weapon": "—",
-    "slots": [
-      {
-        "tipo": "Físico",
-        "nivel": 5
-      },
-      {
-        "tipo": "Soporte",
-        "nivel": 5
-      },
-      {
-        "tipo": "Defensa",
-        "nivel": 4
-      }
-    ],
-    "stats": {
-      "hp": 7469,
-      "atk": 3953,
-      "def": 2803,
-      "tas_hp": 1408,
-      "tas_atk": 682,
-      "tas_def": 584
-    },
-    "habilidades": [
-      {
-        "tipo": "Skill",
-        "nombre": "フォーチュンシャッフル",
-        "descripcion": "2,500% Luz; +30 Arts (si ‘爆運’, +30 extra)"
-      },
-      {
-        "tipo": "Arts",
-        "nombre": "アーレヤ・ヤクタ・エスト",
-        "descripcion": "25,000% Luz; +60% precisión; +40% CR aliados (25s)"
-      },
-      {
-        "tipo": "True Arts",
-        "nombre": "レッツ・ショーダウン",
-        "descripcion": "50,000% Luz; reduce res. física; +daño si HP enemigo ≤50%"
-      },
-      {
-        "tipo": "Super Arts",
-        "nombre": "ファット・デッド・ポット",
-        "descripcion": "150,000% Luz; aplica ‘爆運’ (77.7s)"
-      }
-    ],
-    "pasivas": [
-      "致命の一撃Lv7: daño CR +70%",
-      "HP≥80%: CR +100%",
-      "爆運: Super CR +70% y duplica TA"
-    ],
-    "resistencias": [
-      "Veneno +100%",
-      "Quemadura +50%"
-    ],
-    "sinergias": [
-      "Funciona con generadores de Arts Tipo B",
-      "Mejor como DPS secundario"
-    ],
-    "notas": "Foco en uptime de ‘爆運’.",
-    "fuentes": [
-      {
-        "nombre": "Altema",
-        "url": "https://altema.jp/grandsummoners/unit/466"
-      },
-      {
-        "nombre": "Wiki comunidad",
-        "url": "https://…"
-      }
-    ],
-    "galeria": [
-      "./img/yuna_1.webp",
-      "./img/yuna_2.webp"
-    ]
+    "slug": "corsair",
+    "nombre": "Corsair"
+  },
+  {
+    "slug": "arth",
+    "nombre": "Arth"
+  },
+  {
+    "slug": "feena",
+    "nombre": "Feena"
+  },
+  {
+    "slug": "regulus",
+    "nombre": "Regulus"
+  },
+  {
+    "slug": "dargeon",
+    "nombre": "Dargeon"
+  },
+  {
+    "slug": "herck",
+    "nombre": "Herck"
+  },
+  {
+    "slug": "valhalla",
+    "nombre": "Valhalla"
+  },
+  {
+    "slug": "eden-typeω",
+    "nombre": "EDEN-typeΩ"
+  },
+  {
+    "slug": "abaddon",
+    "nombre": "Abaddon"
+  },
+  {
+    "slug": "ragna",
+    "nombre": "Ragna"
+  },
+  {
+    "slug": "yomi",
+    "nombre": "Yomi"
+  },
+  {
+    "slug": "vaid",
+    "nombre": "Vaid"
+  },
+  {
+    "slug": "elfalla",
+    "nombre": "Elfalla"
+  },
+  {
+    "slug": "lily",
+    "nombre": "Lily"
+  },
+  {
+    "slug": "rayas",
+    "nombre": "Rayas"
+  },
+  {
+    "slug": "iris",
+    "nombre": "Iris"
+  },
+  {
+    "slug": "roy-water",
+    "nombre": "Roy (Water)"
+  },
+  {
+    "slug": "mira-fire",
+    "nombre": "Mira (Fire)"
+  },
+  {
+    "slug": "fen-earth",
+    "nombre": "Fen (Earth)"
+  },
+  {
+    "slug": "zeorg-light",
+    "nombre": "Zeorg (Light)"
+  },
+  {
+    "slug": "melia-dark",
+    "nombre": "Melia (Dark)"
+  },
+  {
+    "slug": "ragsherum",
+    "nombre": "Ragsherum"
+  },
+  {
+    "slug": "grad",
+    "nombre": "Grad"
+  },
+  {
+    "slug": "nier",
+    "nombre": "Nier"
+  },
+  {
+    "slug": "ganan",
+    "nombre": "Ganan"
+  },
+  {
+    "slug": "gilliam",
+    "nombre": "Gilliam"
+  },
+  {
+    "slug": "liese-light",
+    "nombre": "Liese (Light)"
+  },
+  {
+    "slug": "est",
+    "nombre": "Est"
+  },
+  {
+    "slug": "sophie",
+    "nombre": "Sophie"
+  },
+  {
+    "slug": "rem-gs",
+    "nombre": "Rem (GS)"
+  },
+  {
+    "slug": "arosdea",
+    "nombre": "Arosdea"
+  },
+  {
+    "slug": "selia",
+    "nombre": "Selia"
+  },
+  {
+    "slug": "ashe-toto",
+    "nombre": "Ashe Toto"
+  },
+  {
+    "slug": "duran",
+    "nombre": "Duran"
+  },
+  {
+    "slug": "zenon",
+    "nombre": "Zenon"
+  },
+  {
+    "slug": "soleil",
+    "nombre": "Soleil"
+  },
+  {
+    "slug": "saar",
+    "nombre": "Saar"
+  },
+  {
+    "slug": "pola",
+    "nombre": "Pola"
+  },
+  {
+    "slug": "leon",
+    "nombre": "Leon"
+  },
+  {
+    "slug": "zoroas",
+    "nombre": "Zoroas"
+  },
+  {
+    "slug": "zechsia",
+    "nombre": "Zechsia"
+  },
+  {
+    "slug": "zecht",
+    "nombre": "Zecht"
+  },
+  {
+    "slug": "aristela",
+    "nombre": "Aristela"
+  },
+  {
+    "slug": "zoldes",
+    "nombre": "Zoldes"
+  },
+  {
+    "slug": "rhodia",
+    "nombre": "Rhodia"
+  },
+  {
+    "slug": "olgeth",
+    "nombre": "Olgeth"
+  },
+  {
+    "slug": "riffili",
+    "nombre": "Riffili"
+  },
+  {
+    "slug": "shadie",
+    "nombre": "Shadie"
+  },
+  {
+    "slug": "rhiothis",
+    "nombre": "Rhiothis"
+  },
+  {
+    "slug": "teriodos",
+    "nombre": "Teriodos"
+  },
+  {
+    "slug": "keiones",
+    "nombre": "Keiones"
+  },
+  {
+    "slug": "elmessio",
+    "nombre": "Elmessio"
+  },
+  {
+    "slug": "lione",
+    "nombre": "Lione"
+  },
+  {
+    "slug": "reyon",
+    "nombre": "Reyon"
+  },
+  {
+    "slug": "nerim",
+    "nombre": "Nerim"
+  },
+  {
+    "slug": "quon",
+    "nombre": "Quon"
+  },
+  {
+    "slug": "feld",
+    "nombre": "Feld"
+  },
+  {
+    "slug": "edram",
+    "nombre": "Edram"
+  },
+  {
+    "slug": "favelle",
+    "nombre": "Favelle"
+  },
+  {
+    "slug": "catilou",
+    "nombre": "Catilou"
+  },
+  {
+    "slug": "rasaou",
+    "nombre": "Rasaou"
+  },
+  {
+    "slug": "yumi",
+    "nombre": "Yumi"
+  },
+  {
+    "slug": "keit",
+    "nombre": "Keit"
+  },
+  {
+    "slug": "cathemilla",
+    "nombre": "Cathemilla"
+  },
+  {
+    "slug": "mizyna",
+    "nombre": "Mizyna"
+  },
+  {
+    "slug": "nies",
+    "nombre": "Nies"
+  },
+  {
+    "slug": "sanstone",
+    "nombre": "Sanstone"
+  },
+  {
+    "slug": "platina",
+    "nombre": "Platina"
+  },
+  {
+    "slug": "parlot",
+    "nombre": "Parlot"
+  },
+  {
+    "slug": "dahlia",
+    "nombre": "Dahlia"
+  },
+  {
+    "slug": "gaia",
+    "nombre": "Gaia"
+  },
+  {
+    "slug": "millenia",
+    "nombre": "Millenia"
+  },
+  {
+    "slug": "alche",
+    "nombre": "Alche"
+  },
+  {
+    "slug": "louvet",
+    "nombre": "Louvet"
+  },
+  {
+    "slug": "gran-brave",
+    "nombre": "Gran Brave"
+  },
+  {
+    "slug": "kazlaser",
+    "nombre": "Kazlaser"
+  },
+  {
+    "slug": "marzex-light",
+    "nombre": "Marzex (Light)"
+  },
+  {
+    "slug": "number-2",
+    "nombre": "Number 2"
+  },
+  {
+    "slug": "lian",
+    "nombre": "Lian"
+  },
+  {
+    "slug": "daisy",
+    "nombre": "Daisy"
+  },
+  {
+    "slug": "musse",
+    "nombre": "Musse"
+  },
+  {
+    "slug": "freed",
+    "nombre": "Freed"
+  },
+  {
+    "slug": "grohl",
+    "nombre": "Grohl"
+  },
+  {
+    "slug": "rishley",
+    "nombre": "Rishley"
+  },
+  {
+    "slug": "lapleh",
+    "nombre": "Lapleh"
+  },
+  {
+    "slug": "alma",
+    "nombre": "Alma"
+  },
+  {
+    "slug": "sonije",
+    "nombre": "Sonije"
+  },
+  {
+    "slug": "onfuan",
+    "nombre": "Onfuan"
+  },
+  {
+    "slug": "kayas",
+    "nombre": "Kayas"
+  },
+  {
+    "slug": "end",
+    "nombre": "End"
+  },
+  {
+    "slug": "coco",
+    "nombre": "Coco"
+  },
+  {
+    "slug": "anna",
+    "nombre": "Anna"
+  },
+  {
+    "slug": "sly",
+    "nombre": "Sly"
+  },
+  {
+    "slug": "vogue",
+    "nombre": "Vogue"
+  },
+  {
+    "slug": "voghan",
+    "nombre": "Voghan"
+  },
+  {
+    "slug": "diaz",
+    "nombre": "Diaz"
+  },
+  {
+    "slug": "mamori",
+    "nombre": "Mamori"
+  },
+  {
+    "slug": "melody",
+    "nombre": "Melody"
+  },
+  {
+    "slug": "rohst",
+    "nombre": "Rohst"
+  },
+  {
+    "slug": "gerald",
+    "nombre": "Gerald"
+  },
+  {
+    "slug": "zeela",
+    "nombre": "Zeela"
+  },
+  {
+    "slug": "fosly",
+    "nombre": "Fosly"
+  },
+  {
+    "slug": "jack",
+    "nombre": "Jack"
+  },
+  {
+    "slug": "celia-light",
+    "nombre": "Celia (Light)"
+  },
+  {
+    "slug": "ashe",
+    "nombre": "Ashe"
+  },
+  {
+    "slug": "norn",
+    "nombre": "Norn"
+  },
+  {
+    "slug": "riana",
+    "nombre": "Riana"
+  },
+  {
+    "slug": "kane-earth",
+    "nombre": "Kane (Earth)"
+  },
+  {
+    "slug": "courtney",
+    "nombre": "Courtney"
+  },
+  {
+    "slug": "marzex-dark",
+    "nombre": "Marzex (Dark)"
+  },
+  {
+    "slug": "mako",
+    "nombre": "Mako"
+  },
+  {
+    "slug": "satsuki",
+    "nombre": "Satsuki"
+  },
+  {
+    "slug": "ryuko",
+    "nombre": "Ryuko"
+  },
+  {
+    "slug": "pientz",
+    "nombre": "Pientz"
+  },
+  {
+    "slug": "mixie",
+    "nombre": "Mixie"
+  },
+  {
+    "slug": "pheles",
+    "nombre": "Pheles"
+  },
+  {
+    "slug": "vicious",
+    "nombre": "Vicious"
+  },
+  {
+    "slug": "tallis",
+    "nombre": "Tallis"
+  },
+  {
+    "slug": "lozze",
+    "nombre": "Lozze"
+  },
+  {
+    "slug": "jill",
+    "nombre": "Jill"
+  },
+  {
+    "slug": "alvina",
+    "nombre": "Alvina"
+  },
+  {
+    "slug": "palamicia",
+    "nombre": "Palamicia"
+  },
+  {
+    "slug": "ifrit",
+    "nombre": "Ifrit"
+  },
+  {
+    "slug": "nogia",
+    "nombre": "Nogia"
+  },
+  {
+    "slug": "daki",
+    "nombre": "Daki"
+  },
+  {
+    "slug": "raki",
+    "nombre": "Raki"
+  },
+  {
+    "slug": "zerkalo",
+    "nombre": "Zerkalo"
+  },
+  {
+    "slug": "valentia",
+    "nombre": "Valentia"
+  },
+  {
+    "slug": "mira-earth",
+    "nombre": "Mira (Earth)"
+  },
+  {
+    "slug": "zeorg-dark",
+    "nombre": "Zeorg (Dark)"
+  },
+  {
+    "slug": "badoul",
+    "nombre": "Badoul"
+  },
+  {
+    "slug": "strife",
+    "nombre": "Strife"
+  },
+  {
+    "slug": "weaver",
+    "nombre": "Weaver"
+  },
+  {
+    "slug": "wargul",
+    "nombre": "Wargul"
+  },
+  {
+    "slug": "granith",
+    "nombre": "Granith"
+  },
+  {
+    "slug": "altie",
+    "nombre": "Altie"
+  },
+  {
+    "slug": "berwick",
+    "nombre": "Berwick"
+  },
+  {
+    "slug": "riviera-earth",
+    "nombre": "Riviera (Earth)"
+  },
+  {
+    "slug": "thetis",
+    "nombre": "Thetis"
+  },
+  {
+    "slug": "vox",
+    "nombre": "Vox"
+  },
+  {
+    "slug": "duke",
+    "nombre": "Duke"
+  },
+  {
+    "slug": "melia-water",
+    "nombre": "Melia (Water)"
+  },
+  {
+    "slug": "celia-dark",
+    "nombre": "Celia (Dark)"
+  },
+  {
+    "slug": "vitz",
+    "nombre": "Vitz"
+  },
+  {
+    "slug": "maquiness",
+    "nombre": "Maquiness"
+  },
+  {
+    "slug": "eternia",
+    "nombre": "Eternia"
+  },
+  {
+    "slug": "kurt",
+    "nombre": "Kurt"
+  },
+  {
+    "slug": "aesis",
+    "nombre": "Aesis"
+  },
+  {
+    "slug": "luda",
+    "nombre": "Luda"
+  },
+  {
+    "slug": "lygor",
+    "nombre": "Lygor"
+  },
+  {
+    "slug": "tia",
+    "nombre": "Tia"
+  },
+  {
+    "slug": "shasha",
+    "nombre": "Shasha"
+  },
+  {
+    "slug": "kush",
+    "nombre": "Kush"
+  },
+  {
+    "slug": "rebol",
+    "nombre": "Rebol"
+  },
+  {
+    "slug": "swordsman-berwick",
+    "nombre": "Swordsman Berwick"
+  },
+  {
+    "slug": "rosetta-water",
+    "nombre": "Rosetta (Water)"
+  },
+  {
+    "slug": "leone",
+    "nombre": "Leone"
+  },
+  {
+    "slug": "belle",
+    "nombre": "Belle"
+  },
+  {
+    "slug": "honoka",
+    "nombre": "Honoka"
+  },
+  {
+    "slug": "io",
+    "nombre": "Io"
+  },
+  {
+    "slug": "miri-nyan",
+    "nombre": "Miri-nyan"
+  },
+  {
+    "slug": "tami-nyan",
+    "nombre": "Tami-nyan"
+  },
+  {
+    "slug": "fen-dark",
+    "nombre": "Fen (Dark)"
+  },
+  {
+    "slug": "kane-dark",
+    "nombre": "Kane (Dark)"
+  },
+  {
+    "slug": "sybil",
+    "nombre": "Sybil"
+  },
+  {
+    "slug": "sai",
+    "nombre": "Sai"
+  },
+  {
+    "slug": "cynthia",
+    "nombre": "Cynthia"
+  },
+  {
+    "slug": "melissa",
+    "nombre": "Melissa"
+  },
+  {
+    "slug": "barossa",
+    "nombre": "Barossa"
+  },
+  {
+    "slug": "mizuki",
+    "nombre": "Mizuki"
+  },
+  {
+    "slug": "ginzo",
+    "nombre": "Ginzo"
+  },
+  {
+    "slug": "shiki",
+    "nombre": "Shiki"
+  },
+  {
+    "slug": "shuri",
+    "nombre": "Shuri"
+  },
+  {
+    "slug": "amane",
+    "nombre": "Amane"
+  },
+  {
+    "slug": "kisaragi",
+    "nombre": "Kisaragi"
+  },
+  {
+    "slug": "saku",
+    "nombre": "Saku"
+  },
+  {
+    "slug": "tamae",
+    "nombre": "Tamae"
+  },
+  {
+    "slug": "orgah",
+    "nombre": "Orgah"
+  },
+  {
+    "slug": "adele",
+    "nombre": "Adele"
+  },
+  {
+    "slug": "vermilia",
+    "nombre": "Vermilia"
+  },
+  {
+    "slug": "filia",
+    "nombre": "Filia"
+  },
+  {
+    "slug": "garlan",
+    "nombre": "Garlan"
+  },
+  {
+    "slug": "aluze",
+    "nombre": "Aluze"
+  },
+  {
+    "slug": "veronica",
+    "nombre": "Veronica"
+  },
+  {
+    "slug": "roy-fire",
+    "nombre": "Roy (Fire)"
+  },
+  {
+    "slug": "cestina-earth",
+    "nombre": "Cestina (Earth)"
+  },
+  {
+    "slug": "radak",
+    "nombre": "Radak"
+  },
+  {
+    "slug": "liza",
+    "nombre": "Liza"
+  },
+  {
+    "slug": "cygnet",
+    "nombre": "Cygnet"
+  },
+  {
+    "slug": "orvell-light",
+    "nombre": "Orvell (Light)"
+  },
+  {
+    "slug": "virago",
+    "nombre": "Virago"
+  },
+  {
+    "slug": "luahn",
+    "nombre": "Luahn"
+  },
+  {
+    "slug": "chloe-gs",
+    "nombre": "Chloe (GS)"
+  },
+  {
+    "slug": "angelas",
+    "nombre": "Angelas"
+  },
+  {
+    "slug": "eagle",
+    "nombre": "Eagle"
+  },
+  {
+    "slug": "bakoo",
+    "nombre": "Bakoo"
+  },
+  {
+    "slug": "victoire",
+    "nombre": "Victoire"
+  },
+  {
+    "slug": "forte",
+    "nombre": "Forte"
+  },
+  {
+    "slug": "sumire",
+    "nombre": "Sumire"
+  },
+  {
+    "slug": "arcana",
+    "nombre": "Arcana"
+  },
+  {
+    "slug": "ashleigh",
+    "nombre": "Ashleigh"
+  },
+  {
+    "slug": "salyssa",
+    "nombre": "Salyssa"
+  },
+  {
+    "slug": "sharon",
+    "nombre": "Sharon"
+  },
+  {
+    "slug": "rits",
+    "nombre": "Rits"
+  },
+  {
+    "slug": "raine",
+    "nombre": "Raine"
+  },
+  {
+    "slug": "alulu",
+    "nombre": "Alulu"
+  },
+  {
+    "slug": "marika",
+    "nombre": "Marika"
+  },
+  {
+    "slug": "noel",
+    "nombre": "Noel"
+  },
+  {
+    "slug": "batiste",
+    "nombre": "Batiste"
+  },
+  {
+    "slug": "juno",
+    "nombre": "Juno"
+  },
+  {
+    "slug": "liese-dark",
+    "nombre": "Liese (Dark)"
+  },
+  {
+    "slug": "emi",
+    "nombre": "Emi"
+  },
+  {
+    "slug": "groitz",
+    "nombre": "Groitz"
+  },
+  {
+    "slug": "hart-earth",
+    "nombre": "Hart (Earth)"
+  },
+  {
+    "slug": "hart-dark",
+    "nombre": "Hart (Dark)"
+  },
+  {
+    "slug": "miranda",
+    "nombre": "Miranda"
+  },
+  {
+    "slug": "simon",
+    "nombre": "Simon"
+  },
+  {
+    "slug": "vultee-earth",
+    "nombre": "Vultee (Earth)"
+  },
+  {
+    "slug": "priscilla",
+    "nombre": "Priscilla"
+  },
+  {
+    "slug": "luana",
+    "nombre": "Luana"
+  },
+  {
+    "slug": "serah",
+    "nombre": "Serah"
+  },
+  {
+    "slug": "airi",
+    "nombre": "Airi"
+  },
+  {
+    "slug": "lyla",
+    "nombre": "Lyla"
+  },
+  {
+    "slug": "summer-juno",
+    "nombre": "Summer Juno"
+  },
+  {
+    "slug": "summer-leone",
+    "nombre": "Summer Leone"
+  },
+  {
+    "slug": "elizabeth",
+    "nombre": "Elizabeth"
+  },
+  {
+    "slug": "vultee",
+    "nombre": "Vultee"
+  },
+  {
+    "slug": "priscilla-water",
+    "nombre": "Priscilla (Water)"
+  },
+  {
+    "slug": "emperor-isliid",
+    "nombre": "Emperor Isliid"
+  },
+  {
+    "slug": "beguiler-selia",
+    "nombre": "Beguiler Selia"
+  },
+  {
+    "slug": "rosetta-earth",
+    "nombre": "Rosetta (Earth)"
+  },
+  {
+    "slug": "orvell-fire",
+    "nombre": "Orvell (Fire)"
+  },
+  {
+    "slug": "cestina-light",
+    "nombre": "Cestina (Light)"
+  },
+  {
+    "slug": "charlotte",
+    "nombre": "Charlotte"
+  },
+  {
+    "slug": "valerie",
+    "nombre": "Valerie"
+  },
+  {
+    "slug": "mizuki-the-twelfth",
+    "nombre": "Mizuki the Twelfth"
+  },
+  {
+    "slug": "ginzo-battle-form",
+    "nombre": "Ginzo: Battle Form"
+  },
+  {
+    "slug": "sakuya",
+    "nombre": "Sakuya"
+  },
+  {
+    "slug": "kirisame",
+    "nombre": "Kirisame"
+  },
+  {
+    "slug": "kokuri",
+    "nombre": "Kokuri"
+  },
+  {
+    "slug": "hazuki",
+    "nombre": "Hazuki"
+  },
+  {
+    "slug": "long",
+    "nombre": "Long"
+  },
+  {
+    "slug": "hakuro",
+    "nombre": "Hakuro"
+  },
+  {
+    "slug": "riviera-dark",
+    "nombre": "Riviera (Dark)"
+  },
+  {
+    "slug": "thetis-light",
+    "nombre": "Thetis (Light)"
+  },
+  {
+    "slug": "summer-cestina",
+    "nombre": "Summer Cestina"
+  },
+  {
+    "slug": "summer-liza",
+    "nombre": "Summer Liza"
+  },
+  {
+    "slug": "war-hero-fen",
+    "nombre": "War Hero Fen"
+  },
+  {
+    "slug": "cosmo",
+    "nombre": "Cosmo"
+  },
+  {
+    "slug": "demon-edge-berwick",
+    "nombre": "Demon Edge Berwick"
+  },
+  {
+    "slug": "sublime-supernova-liza",
+    "nombre": "Sublime Supernova Liza"
+  },
+  {
+    "slug": "noble-flare-mira",
+    "nombre": "Noble Flare Mira"
+  },
+  {
+    "slug": "miranda-valentines",
+    "nombre": "Miranda (Valentines)"
+  },
+  {
+    "slug": "priscilla-valentines",
+    "nombre": "Priscilla (Valentines)"
+  },
+  {
+    "slug": "aristela-orbis",
+    "nombre": "Aristela Orbis"
+  },
+  {
+    "slug": "demon-lord-vox",
+    "nombre": "Demon Lord Vox"
+  },
+  {
+    "slug": "jay",
+    "nombre": "Jay"
+  },
+  {
+    "slug": "canaria",
+    "nombre": "Canaria"
+  },
+  {
+    "slug": "summer-iris",
+    "nombre": "Summer Iris"
+  },
+  {
+    "slug": "summer-fen",
+    "nombre": "Summer Fen"
+  },
+  {
+    "slug": "summer-riviera",
+    "nombre": "Summer Riviera"
+  },
+  {
+    "slug": "summer-rosetta",
+    "nombre": "Summer Rosetta"
+  },
+  {
+    "slug": "goddess-celia",
+    "nombre": "Goddess Celia"
+  },
+  {
+    "slug": "halloween-charlotte",
+    "nombre": "Halloween Charlotte"
+  },
+  {
+    "slug": "halloween-valerie",
+    "nombre": "Halloween Valerie"
+  },
+  {
+    "slug": "halloween-forte",
+    "nombre": "Halloween Forte"
+  },
+  {
+    "slug": "isliid,-human-pinnacle",
+    "nombre": "Isliid, Human Pinnacle"
+  },
+  {
+    "slug": "anti-heroine-pola",
+    "nombre": "Anti-Heroine Pola"
   },
   {
     "slug": "ultimate-paladin-roy",
-    "nombre": "Ultimate Paladin Roy",
-    "elemento": "Agua",
-    "rol": "DPS",
-    "rareza": "Ascend",
-    "descripcion": "",
-    "raza": "Humano",
-    "voz": "",
-    "stats": {
-      "hp": 7480,
-      "atk": 3875,
-      "def": 2835,
-      "tas_hp": 1410,
-      "tas_atk": 670,
-      "tas_def": 590
-    },
-    "slots": [
-      {
-        "tipo": "Físico",
-        "nivel": 5
-      },
-      {
-        "tipo": "Defensa",
-        "nivel": 5
-      },
-      {
-        "tipo": [
-          "Curación",
-          "Soporte"
-        ],
-        "nivel": 4
-      }
-    ],
-    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760666320/1203_gb3as9.png",
-    "actualizado_en": "2025-10-16T16:19:22Z"
+    "nombre": "Ultimate Paladin Roy"
   },
   {
-    "slug": "awoken-emperor-isliid",
-    "nombre": "Awoken Emperor Isliid",
-    "elemento": "Luz",
-    "rol": "DPS",
-    "rareza": "Awaken",
-    "descripcion": "",
-    "raza": "Humano",
-    "voz": "",
-    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760665706/735_r748en.png",
-    "stats": {
-      "hp": 6745,
-      "atk": 3143,
-      "def": 2431,
-      "tas_hp": 999,
-      "tas_atk": 481,
-      "tas_def": 374
-    },
-    "slots": [
-      {
-        "tipo": "Magia",
-        "nivel": 5
-      },
-      {
-        "tipo": "Soporte",
-        "nivel": 5
-      },
-      {
-        "tipo": "Físico",
-        "nivel": 5
-      }
-    ],
-    "actualizado_en": "2025-10-17T01:07:07Z"
+    "slug": "merlette",
+    "nombre": "Merlette"
   },
   {
-  "slug": "clyde",
-  "nombre": "クライド (Clyde)",
-  "elemento": "Fuego",
-  "rol": "Atacante Físico",
-  "rareza": "Dream Awaken",
-  "descripcion": "Espadachín del Reino de Feorg que ha trascendido sus límites a través del 'Sueño Ardiente'. Maestro del combate cuerpo a cuerpo y del daño crítico explosivo.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664894/5_jpbhtz.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "松岡禎丞 (Yoshitsugu Matsuoka)",
-  "raza": "Humano",
-  "lanzamiento": {
-    "jp": "2016-12-01",
-    "gl": "2018-02-01"
+    "slug": "hart-the-fabricator",
+    "nombre": "Hart the Fabricator"
   },
-  "true_weapon": "True “Ignis Sword”",
-  "slots": [
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": 6950,
-    "atk": 3150,
-    "def": 2380,
-    "tas_hp": 1080,
-    "tas_atk": 565,
-    "tas_def": 430
+  {
+    "slug": "liza-valentines",
+    "nombre": "Liza (Valentines)"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "ブレイジング・スラッシュ (Blazing Slash)",
-      "descripcion": "2,000% Fuego (Físico). Aumenta el daño crítico propio 20% (6s). CT 8s."
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "フレア・インパクト (Flare Impact)",
-      "descripcion": "13,000% Fuego (Físico). Aumenta daño crítico propio 50% (10s). Break 1,200."
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "バーン・ブレイバー (Burn Braver)",
-      "descripcion": "48,000% Fuego (Físico). Aumenta daño de Fuego del grupo 40% (15s). Si porta su True Weapon, +50% daño crítico (15s). Break 2,800."
-    },
-    {
-      "tipo": "Super Arts",
-      "nombre": "インフェルノ・レクイエム (Inferno Requiem)",
-      "descripcion": "120,000% Fuego (Físico). +100% daño crítico a aliados (20s) y resistencia a Fuego +30%."
-    }
-  ],
-  "pasivas": [
-    "Dream Awakening: Al activarse, Clyde obtiene una de las siguientes rutas:",
-    "• Crimson Dream — Earth Killer Lv40: +200% daño contra enemigos de Tierra.",
-    "• Luminous Dream — Fine Condition CRI Rate UP Lv10: +100% tasa CRI cuando HP ≥80%.",
-    "Fuego Maestro Lv7: +30% daño de Fuego.",
-    "Espíritu del Guerrero: +20% daño CRI.",
-    "Cuando HP ≥80%: +20% ATK y +15% DEF."
-  ],
-  "resistencias": [
-    "Quemadura +100%",
-    "Veneno +50%"
-  ],
-  "sinergias": [
-    "Ideal con generadores de Arts Tipo A (Fen, Weaver).",
-    "Sinergiza con buffers de daño crítico como Vox y Yuna (Gambler)."
-  ],
-  "notas": "Clyde en su forma Dream Awaken obtiene una de dos rutas: Crimson (ofensiva) o Luminous (precisión y supervivencia). Ambas potencian su rol como DPS físico de fuego.",
-  "fuentes": [
-    {
-      "nombre": "Altema",
-      "url": "https://altema.jp/grandsummoners/unit/18"
-    },
-    {
-      "nombre": "Wiki comunidad",
-      "url": "https://grand-summoners.fandom.com/wiki/Clyde"
-    }
-  ],
-  "galeria": [
-    "./img/clyde_1.webp",
-    "./img/clyde_2.webp"
-  ]
-},{
-  "slug": "corsair",
-  "nombre": "コルセア (Corsair)",
-  "elemento": "Agua",
-  "rol": "Atacante Mágico",
-  "rareza": "Awaken / Dream Awaken",
-  "descripcion": "Una de las tres Maestras de la Espada. Se dice que fue parte de lo que provocó la caída de la familia real. Experta en hielo y congelación.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664894/10_b90jvg.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "伊藤静 (Shizuka Itoh)",  
-  "raza": "Humano",
-  "lanzamiento": {
-    "jp": null,
-    "gl": null
+  {
+    "slug": "cestina-valentines",
+    "nombre": "Cestina (Valentines)"
   },
-  "true_weapon": "True Corsair Weapon",
-  "slots": [
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": 6708,
-    "atk": 2074,
-    "def": 2203,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "lark",
+    "nombre": "Lark"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Snow Blood",
-      "descripcion": "1,800 % Agua (Físico). 10 % de probabilidad de congelar al enemigo. Break 1,300. CT 6 s. "  
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Freezing Nova",
-      "descripcion": "14,000 % Agua (Mágico). Break 2,400."  
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Eternal Cocytus",
-      "descripcion": "35,000 % Agua (Mágico). Congela al enemigo con probabilidad del 100 %. Aumenta la carga Arts de todos los aliados en 20. Break 4,800."  
-    }
-  ],
-  "pasivas": [
-    "Water BE Output Lv4: +20 % BE Output para unidades Agua (solo una vez).",
-    "Water Elemental Mastery Lv3: +30 % daño de Agua para todos los aliados (solo una vez).",
-    "Dream Awakening (Aqueous Dream) — Royal Ice Blade: agrega efecto adicional a sus Arts: reduce resistencia al congelamiento del enemigo 30 % por 30 s.",
-    "Dream Awakening (Spectral Dream) — Arts Gauge UP Lv20: +200 carga Arts al inicio de la misión (solo una vez)."
-  ],
-  "resistencias": [
-    "Congelamiento resistido (modificada por pasivas y efectos)",
-    "Veneno (valor no documentado)"
-  ],
-  "sinergias": [
-    "Sinergiza bien con unidades que benefician efectos de congelamiento o daño de Agua.",
-    "Útil en equipos que pueden explotar estados de congelamiento."
-  ],
-  "notas": "Corsair destaca por su capacidad de congelar enemigos y aumentar la carga de Arts del equipo. En su Dream Awakening tiene rutas Aqueous o Spectral para escoger entre control de estado o ventaja de gauge. :contentReference[oaicite:0]{index=0}",
-  "fuentes": [
-    {
-      "nombre": "Grand Summoners Wiki – Corsair",
-      "url": "https://grandsummoners.fandom.com/wiki/Corsair"
-    },
-    {
-      "nombre": "Awakened Corsair – Grand Summoners Global Wiki",
-      "url": "https://gurasama.fandom.com/wiki/Awakened_Corsair"
-    }
-  ],
-  "galeria": []
-},
-{
-  "slug": "arth",
-  "nombre": "アース (Arth)",
-  "elemento": "Tierra",
-  "rol": "Atacante Físico",
-  "rareza": "Awaken",
-  "descripcion": "El Emperador de la Espada Esmeralda. Maestro de técnicas con la espada y de manipulación de la energía de tierra, inspira respeto y temor por igual.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760642081/15_q4ftxz.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Katsuyuki Konishi",
-  "raza": "Humano",
-  "lanzamiento": {
-    "jp": null,
-    "gl": null
+  {
+    "slug": "elenore",
+    "nombre": "Elenore"
   },
-  "true_weapon": "True Arth Weapon",
-  "slots": [
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": 6546,
-    "atk": 2268,
-    "def": 2074,
-    "tas_hp": 991,
-    "tas_atk": 350,
-    "tas_def": 321
+  {
+    "slug": "cometstreak-valerie",
+    "nombre": "Cometstreak Valerie"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Evergreen Chain Strike",
-      "descripcion": "1,900 % Tierra (Físico). Break 2,100. CT 6 s."  
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Karmic Blade: Infinity Style",
-      "descripcion": "11,000 % Tierra (Físico). Break 4,200."  
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Jadeath Geminion",
-      "descripcion": "30,000 % Tierra (Físico). Aumenta la carga Arts de todos los aliados +20. Break 9,500."  
-    }
-  ],
-  "pasivas": [
-    "Earth BE Output Lv4: +20 % BE Output para unidades Tierra. :contentReference[oaicite:0]{index=0}",
-    "Earth Master Lv3: +30 % daño de Tierra para todos los aliados. :contentReference[oaicite:1]{index=1}",
-    "Dream Awakening — Crimson Dream: Auto-fills Arts Gauge de todos los aliados (+1) (solo una vez). :contentReference[oaicite:2]{index=2}",
-    "Dream Awakening — Verdant Dream: Water Killer Lv14 (+70 % daño contra enemigos Agua) y Water Breaker Lv7 (+70 % Break contra Agua). :contentReference[oaicite:3]{index=3}"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Muy útil con generadores de Arts para aprovechar el auto-fill.",
-    "Brilla especialmente contra enemigos de Agua si se elige la ruta Verdant en Dream Awakening."
-  ],
-  "notas": "Arth no tiene Super Arts documentada. Sus pasivas Dream Awakening ofrecen dos rutas: Crimson (mejora de gauge) o Verdant (ventaja contra Agua).",
-  "fuentes": [
-    {
-      "nombre": "Grand Summoners Wiki – Arth",
-      "url": "https://grandsummoners.fandom.com/wiki/Arth"
-    }
-  ],
-  "galeria": []
-},
-{
-  "slug": "feena",
-  "nombre": "フィーナ (Feena)",
-  "elemento": "Luz",
-  "rol": "Sub-Atacante / Apoyo",
-  "rareza": "Awaken / True",
-  "descripcion": "Caballera de la Luz que lucha contra la oscuridad y protege a sus aliados con su poder divino. Puede sanar, limpiar estados y aumentar el daño contra demonios.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664895/20_uwnzlh.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Madoka Yonezawa",
-  "raza": "Dios",
-  "lanzamiento": {
-    "jp": null,
-    "gl": null
+  {
+    "slug": "verzard",
+    "nombre": "Verzard"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": 6059,
-    "atk": 2423,
-    "def": 2280,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "azel",
+    "nombre": "Azel"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Santuario",
-      "descripcion": "1,400 % Luz (Mágico). Restaura HP gradualmente al usuario (mismo). CT: 9 s. Break: 1,000"  
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Diospada",
-      "descripcion": "11,500 % Luz (Mágico). Todos los aliados se vuelven resistentes a estados alterados (excepto desmayo) por 10 s. Break: 2,600"  
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Finale Spada",
-      "descripcion": "22,500 % Luz (Mágico). Limpia todos los estados alterados de los aliados y los hace inmune (excepto desmayo); además recupera 300 HP/s por 20 s. Break: 4,500"  
-    }
-  ],
-  "pasivas": [
-    "Demon Killer Lv8: daño incrementado contra enemigos de tipo demonio +80 % (nivel máximo) :contentReference[oaicite:0]{index=0}",
-    "Divine Light: mientras HP ≥ 80 %, niega estados alterados (excepto desmayo) :contentReference[oaicite:1]{index=1}",
-    "Pray: revive a un aliado caído con 33 % de HP (una sola vez por misión) :contentReference[oaicite:2]{index=2}"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Ideal en equipos en los que se necesita limpieza de estados alterados y curación constante",
-    "Complementa bien a unidades DPS que sufren de efectos de estado o que dependen de estar intactas para maximizar su daño"
-  ],
-  "notas": "Feena no tiene Super Arts documentadas. Su rol híbrido de sub-atacante / apoyo le permite aportar utilidad mientras sigue siendo ofensiva en contenido demoníaco. Su True Arts la hace una de las mejores unidades para lidiar con estados alterados y mantener al grupo funcionando. :contentReference[oaicite:3]{index=3}",
-  "fuentes": [
-    {
-      "nombre": "Grand Summoners Wiki – Feena, Knight of Heaven",
-      "url": "https://grandsummoners.fandom.com/wiki/Feena%2C_Knight_of_Heaven"
-    },
-    {
-      "nombre": "GS Utopia Wiki – Feena",
-      "url": "https://gsutopia.fandom.com/wiki/Feena"
-    },
-    {
-      "nombre": "Grand Summoners Database – Feena",
-      "url": "https://www.grandsummoners.info/units/Feena/"
-    }
-  ],
-  "galeria": []
-},
-{
-  "slug": "regulus",
-  "nombre": "レグルス (Regulus)",
-  "elemento": "Oscuridad",
-  "rol": "Atacante Físico",
-  "rareza": "Dream Awaken",
-  "descripcion": "El ‘Demon Sealer’ que domina la espada oscura. Su poder proviene del equilibrio entre la oscuridad interna y la luz sellada en su alma. Tras su despertar en el Sueño, puede amplificar su daño o volverse un soporte ofensivo devastador.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664895/24_vcgnun.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Masuo Amada",
-  "raza": "Demonio",
-  "lanzamiento": {
-    "jp": "2018-03-05",
-    "gl": "2019-02-14"
+  {
+    "slug": "venna",
+    "nombre": "Venna"
   },
-  "true_weapon": "True “Abyssal Edge”",
-  "slots": [
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": 6030,
-    "atk": 2570,
-    "def": 2100,
-    "tas_hp": 980,
-    "tas_atk": 495,
-    "tas_def": 372
+  {
+    "slug": "yuna",
+    "nombre": "Yuna"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Dragon Killer",
-      "descripcion": "1,400% Oscuridad (Físico). +2% robo de vida. CT 9 s. Break 1,250."
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Deep Shadow Sword “Chaos King”",
-      "descripcion": "5,850% Oscuridad (Físico). Aumenta la tasa CRI de todos los aliados +50% (5 s). Break 2,400."
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Deep Shadow Sword “Hades Emperor”",
-      "descripcion": "25,550% Oscuridad (Físico). +100% tasa CRI a todos los aliados (8 s). Si el enemigo es de Luz, daño ×1.5. Break 3,800."
-    }
-  ],
-  "pasivas": [
-    "Light Resistance Lv6: +30% resistencia a ataques de Luz.",
-    "Dark Mastery Lv3: +30% daño de Oscuridad a todo el grupo.",
-    "Dream Awakening rutas disponibles:",
-    "• Verdant Dream — ‘Dark Devourer’: +60% daño y +40% tasa CRI a unidades Oscuridad; +30% reducción de daño recibido de Luz.",
-    "• Luminous Dream — ‘Hero of Balance’: al inicio, +100 Arts a todos; +30% daño crítico permanente.",
-    "• Spectral Dream — ‘Void Slayer’: +80% daño a enemigos con desventaja elemental y +50% daño si el enemigo tiene resistencia reducida."
-  ],
-  "resistencias": [
-    "Luz +30%",
-    "Quemadura +50%"
-  ],
-  "sinergias": [
-    "Funciona excelentemente con buffers de CRI (Vox, Yuna Gambler).",
-    "Ideal para equipos centrados en daño Oscuro o híbridos ofensivos.",
-    "Su ruta Luminous lo hace un soporte de Arts rápido, mientras que Verdant es su forma más pura de DPS."
-  ],
-  "notas": "Regulus es una unidad de daño físico puro con autosuficiencia y sin necesidad de Super Arts. Su Dream Awakening permite adaptar su estilo: ofensivo (Verdant), equilibrado (Luminous) o situacional (Spectral).",
-  "fuentes": [
-    {
-      "nombre": "Grand Summoners Wiki – Regulus, Demon Sealer",
-      "url": "https://grandsummoners.fandom.com/wiki/Regulus%2C_Demon_Sealer"
-    },
-    {
-      "nombre": "Grand Summoners Info – Regulus (Dream Evolution)",
-      "url": "https://www.grandsummoners.info/units/Regulus/"
-    },
-    {
-      "nombre": "Grand Summoners Utopia Wiki",
-      "url": "https://gsutopia.fandom.com/wiki/Regulus"
-    }
-  ],
-  "galeria": []
-},
-{
-  "slug": "dargeon",
-  "nombre": "ダージオン (Dargeon)",
-  "elemento": "Fuego",
-  "rol": "Atacante",
-  "rareza": "Dream Awaken",
-  "descripcion": "Un dragón de llamas que reinaba sobre Famelle Rock. Su fuerza desenfrenada lo llevó a un despertar superior. Tras superar sus límites, ahora puede elegir nuevas pasivas en su Dream Awakening.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664895/134_h1sgzl.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Takahiro Fujiwara",
-  "raza": "Dragón",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "dragon-authority-luahn",
+    "nombre": "Dragon Authority Luahn"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": 6090,
-    "atk": 2100,
-    "def": 2046,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "summer-mira",
+    "nombre": "Summer Mira"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Blazing Breath",
-      "descripcion": "2,190% Fuego (Físico). Aplica quemadura aleatoria. CT 10 s. Break 900."  
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Blazing Agni",
-      "descripcion": "23,500% Fuego (Mágico)."  
-    }
-  ],
-  "pasivas": [
-    "Indomitable Fighting Spirit: Resistencia a congelamiento y parálisis +100%, evita ser repelido por daño.",
-    "Dragon Killer Lv5: +50% daño contra dragones.",
-    "Dark Resistance Lv6: +30% resistencia al elemento Oscuridad.",
-    "Dream Awakening rutas disponibles:",
-    "• Ruta A — opción de daño de fuego mejorado / buffs ofensivos",
-    "• Ruta B — opción de soporte / utilidad para el equipo",
-    "• Ruta C — balance entre daño y supervivencia"
-  ],
-  "resistencias": [
-    "Oscuridad +30%"
-  ],
-  "sinergias": [
-    "Funciona bien en equipos que refuercen daño de fuego o que aprovechen efectos de quemadura",
-    "Puede complementar unidades que debilitan resistencias oscuras"
-  ],
-  "notas": "Dargeon está marcado para recibir Dream Awakening según anuncios oficiales. :contentReference[oaicite:1]{index=1}",
-  "fuentes": [
-    {
-      "nombre": "Grand Summoners Wiki – Godwyrm Dargeon",
-      "url": "https://grandsummoners.fandom.com/wiki/Godwyrm_Dargeon"
-    },
-    {
-      "nombre": "Anuncio Dream Awakening Dargeon",
-      "url": "https://x.com/GRDSMN_GLOBAL/status/1762522989499953575"
-    }
-  ],
-  "galeria": []
-},
-{
-  "slug": "herck",
-  "nombre": "オーシャン・ユニファイアー ハーク (Ocean Unifier Herck)",
-  "elemento": "Agua",
-  "rol": "Breaker",
-  "rareza": "Awaken",
-  "descripcion": "Rey de los Gigantes del Mar. Maneja una lanza colosal y congela a sus enemigos con mareas gélidas. Especialista en Break y control por congelación.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714391/unit_detail_100576212_etgvqo.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "最上嗣生 (Tsuguo Mogami)",
-  "raza": "Gigante",
-  "lanzamiento": {
-    "jp": null,
-    "gl": null
+  {
+    "slug": "summer-celia",
+    "nombre": "Summer Celia"
   },
-  "true_weapon": "—",
-  "slots": [
-    { "tipo": "Físico", "nivel": 5 },
-    { "tipo": "Defensa", "nivel": 5 },
-    { "tipo": "Soporte", "nivel": 4 }
-  ],
-  "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "fiery-platoon-leader-charlotte",
+    "nombre": "Fiery Platoon Leader Charlotte"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "パイクストリーム (Pike Stream)",
-      "descripcion": "1,800% Agua (Físico). Congela aleatoriamente al enemigo. CT 8s. Break 2,050."
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "カラミティウェイブ (Calamity Wave)",
-      "descripcion": "12,600% Agua (Mágico). −10% daño recibido por unidades de Agua (15s). Break 3,100."
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "カオスディザスター (Chaos Disaster)",
-      "descripcion": "28,000% Agua (Mágico). Durante 15s todos los ataques aliados pueden congelar al enemigo. Break 7,000."
-    }
-  ],
-  "pasivas": [
-    "Human Killer Lv8: +80% daño contra Humanos.",
-    "Spirit Killer Lv8: +80% daño contra Espíritus.",
-    "HP≥50%: +80% daño propio (no acumula)."
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Encaja en equipos de Agua que aprovechen Congelación.",
-    "Aporta Break altísimo para jefes susceptibles a control."
-  ],
-  "notas": "No se documenta Super Arts ni Dream Awakening en las fuentes consultadas para esta variante.",
-  "fuentes": [
-    { "nombre": "Grand Summoners Wiki – Ocean Unifier Herck", "url": "https://grandsummoners.fandom.com/wiki/Ocean_Unifier_Herck" },
-    { "nombre": "Grand Summoners Wiki – Sea Lord Herck (línea evolutiva)", "url": "https://grandsummoners.fandom.com/wiki/Sea_Lord_Herck" },
-    { "nombre": "GS Utopia – Herck (valores de Skill/Arts/True Arts)", "url": "https://gsutopia.fandom.com/wiki/Herck" },
-    { "nombre": "Grand Summoners Database – Herck (pasiva HP≥50%)", "url": "https://www.grandsummoners.info/units/Herck" }
-  ],
-  "galeria": []
-},
-{
-  "slug": "valhalla",
-  "nombre": "ヴァルハラ (Valhalla)",
-  "elemento": "Agua",
-  "rol": "Sub-atacante / Soporte",
-  "rareza": "Awaken",
-  "descripcion": "Un espíritu oceánico que defiende los límites del reino acuático. Sus técnicas pueden controlar la marea y apoyar al equipo.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714425/unit_detail_100586312_ain1pl.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Desconocido",
-  "raza": "Espíritu / Ser Acuático",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "misette",
+    "nombre": "Misette"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "phantom-saintess-platina",
+    "nombre": "Phantom Saintess Platina"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    }
-  ],
-  "pasivas": [
-    "Pasivas de soporte / aumento de daño acuático",
-    "Probable mejora de BE o carga Arts para aliados Agua"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Ideal en equipos con unidades Agua fuertes",
-    "Complementa unidades que dependen de buffs o control de estado"
-  ],
-  "notas": "No hallé confirmación de Dream Awakening para Valhalla ni estadísticas completas.",
-  "fuentes": [],
-  "galeria": []
-},
-{
-  "slug": "eden-typeΩ",
-  "nombre": "EDEN-typeΩ",
-  "elemento": "Luz",
-  "rol": "Atacante / Mágico",
-  "rareza": "Awaken",
-  "descripcion": "Una forma especial de EDEN con mejoras avanzadas. Combina poderes de luz con alta capacidad ofensiva.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714454/unit_detail_100596412_kgjgzj.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Desconocido",
-  "raza": "Ángel / Entidad de Luz",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "natasha-spiritia-05",
+    "nombre": "Natasha: Spiritia 05"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "orvell-d.-granverge",
+    "nombre": "Orvell D. Granverge"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    }
-  ],
-  "pasivas": [
-    "Probables pasivas de luz / amplificación de daño",
-    "Posible efecto de soporte lumínico"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Sinergiza con unidades de luz y equipos balanceados",
-    "Puede apoyar DPS puros con sus buffs"
-  ],
-  "notas": "No encontré confirmación de Dream Awakening para EDEN-typeΩ ni datos detallados en las fuentes que revisé.",
-  "fuentes": [],
-  "galeria": []
-},
-{
-  "slug": "abaddon",
-  "nombre": "アバドン (Abaddon)",
-  "elemento": "Oscuridad",
-  "rol": "Atacante / Invocador",
-  "rareza": "Awaken",
-  "descripcion": "Entidad oscura que canaliza energías prohibidas. Capaz de invocar sombras y lanzar ataques devastadores desde las profundidades.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714487/unit_detail_100606512_qs58ek.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Desconocido",
-  "raza": "Demonio / Entidad Oscura",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "menas",
+    "nombre": "Menas"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "star-swordswoman-rosetta",
+    "nombre": "Star Swordswoman Rosetta"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    }
-  ],
-  "pasivas": [
-    "Pasivas de oscuridad / amplificación de daño mágico",
-    "Probables mejoras de estado alterado o daño sobre tiempo"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Funciona bien con unidades de daño en el tiempo o que aprovechen estados alterados",
-    "Puede complementar equipos oscuros pesados"
-  ],
-  "notas": "No encontré confirmación de Dream Awakening para Abaddon ni estadísticas confiables en mis búsquedas rápidas.",
-  "fuentes": [],
-  "galeria": []
-},
-{
-  "slug": "ragna",
-  "nombre": "インフェルノ皇帝ラグナ (Inferno Emperor Ragna)",
-  "elemento": "Fuego",
-  "rol": "Breaker",
-  "rareza": "Dream Awaken",
-  "descripcion": "Un caballero divino que combina fuego y autoridad. Tras su despertar, puede elegir rutas que mejoren su poder de apoyo o su daño puro.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714514/unit_detail_100616112_dadxn4.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Shoya Chiba",
-  "raza": "Dios",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "erens",
+    "nombre": "Erens"
   },
-  "true_weapon": "Ragna Ignis",
-  "slots": [
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": 6300,
-    "atk": 3060,
-    "def": 2304,
-    "tas_hp": 955,
-    "tas_atk": 469,
-    "tas_def": 355
+  {
+    "slug": "original-witch-selia",
+    "nombre": "Original Witch Selia"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Eruption Blade",
-      "descripcion": "1,800% Fuego (Físico). Probabilidad de aplicar quemadura al enemigo. CT 8 s. Break 2,500."  
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Swift Ignition",
-      "descripcion": "12,000% Fuego (Físico). Aumenta el daño de todos los aliados +20% por 10 s; unidades de fuego obtienen +30% adicional. Break 2,500."  
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Ragna Ignis",
-      "descripcion": "24,950% Fuego (Físico). Aumenta el daño y poder de Break de todos +20% por 10 s; unidades de Fuego +30%. Break 5,500."  
-    }
-  ],
-  "pasivas": [
-    "Fire & Light: reduce el daño de Oscuridad recibido 10%, aumenta el daño de Oscuridad infligido 20%. :contentReference[oaicite:1]{index=1}",
-    "Resistencia a Parálisis Lv5: reduce duración y evasa parálisis +50%. :contentReference[oaicite:2]{index=2}",
-    "Resistencia a Ceguera Lv5: similar efecto para ceguera. :contentReference[oaicite:3]{index=3}",
-    "Dream Awakening rutas disponibles:",
-    "• Ruta ofensiva — mejora adicional de daño / Break buffs",
-    "• Ruta de apoyo — refuerzos para el equipo en daño / supervivencia",
-    "• Ruta híbrida — balance entre ambos estilos"
-  ],
-  "resistencias": [
-    "Daño de Oscuridad reducido 10%"
-  ],
-  "sinergias": [
-    "Ideal en equipos con unidades de fuego, dada su habilidad para buffear daño y Break.",
-    "Funciona bien con personajes que también aprovechan buffs de daño general."
-  ],
-  "notas": "Ragna recibió recientemente anuncio de Dream Awakening junto a Abaddon. :contentReference[oaicite:4]{index=4}",
-  "fuentes": [
-    {
-      "nombre": "Grand Summoners Wiki – Inferno Emperor Ragna",
-      "url": "https://grandsummoners.fandom.com/wiki/Inferno_Emperor_Ragna"
-    },
-    {
-      "nombre": "Anuncio Dream Awakening de Ragna",
-      "url": "https://twitter.com/GRDSMN_GLOBAL/status/1786787878724595714"
-    }
-  ],
-  "galeria": []
-},
-{
-  "slug": "yomi",
-  "nombre": "アクアロード ヨミ (Aqua Lord Yomi)",
-  "elemento": "Agua",
-  "rol": "Atacante / Sub-atacante",
-  "rareza": "Awaken",
-  "descripcion": "Señor acuático con dominio de olas. Aporta daño de agua elevado y potencial para burst acuático.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664895/158_tpjvom.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Desconocido",
-  "raza": "Ser acuático / Dios",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "young-isliid",
+    "nombre": "Young Isliid"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "huma",
+    "nombre": "Huma"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    }
-  ],
-  "pasivas": [
-    "Pasivas de refuerzo de daño de Agua",
-    "Probables mejoras de estado acuático"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Ideal con unidades de agua pura",
-    "Complementa bien equipos que aprovechan buffs de agua"
-  ],
-  "notas": "No encontré confirmación de Dream Awakening para Yomi en las fuentes que revisé.",
-  "fuentes": [],
-  "galeria": []
-},
-{
-  "slug": "vaid",
-  "nombre": "ディヴィニティ デストロイヤー ヴェイド (Divinity Destroyer Vaid)",
-  "elemento": "Tierra",
-  "rol": "Breaker",
-  "rareza": "Awaken",
-  "descripcion": "Destructora divina de la tierra. Especialista en romper defensas con poder bruto y efectos terrestres.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714545/unit_detail_100636312_ql13qi.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Desconocido",
-  "raza": "Divino",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "zephyr",
+    "nombre": "Zephyr"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "shaula",
+    "nombre": "Shaula"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    }
-  ],
-  "pasivas": [
-    "Pasivas de daño terrestre / rompimiento",
-    "Probables mejoras de Break para unidades tierra"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Brilla como breaker en equipos de tierra",
-    "Complementa unidades de daño puro"
-  ],
-  "notas": "No encontré confirmación de Dream Awakening para Vaid.",
-  "fuentes": [],
-  "galeria": []
-},
-{
-  "slug": "elfalla",
-  "nombre": "エンプリアル ビースト エルファラ (Empyreal Beast Elfalla)",
-  "elemento": "Luz",
-  "rol": "Soporte / Sub-atacante",
-  "rareza": "Awaken",
-  "descripcion": "Una bestia divina de luz que trae armonía al campo. Puede fortalecer al equipo mientras asesta daño moderado.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664896/166_szz7qq.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Desconocido",
-  "raza": "Bestia divina",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "world's-end-leone",
+    "nombre": "World's End Leone"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Soporte",
-      "nivel": 5
-    },
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Defensa",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "zinogre-armor-rayas",
+    "nombre": "Zinogre Armor Rayas"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    }
-  ],
-  "pasivas": [
-    "Posibles pasivas de apoyo / regeneración de luz",
-    "Potencial para buffs de equipo"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Buena en equipos donde el apoyo de luz es vital",
-    "Complementa bien DPS que dependen de buffs"
-  ],
-  "notas": "No hallé confirmación de Dream Awakening para Elfalla.",
-  "fuentes": [],
-  "galeria": []
-},
-{
-  "slug": "lily",
-  "nombre": "デスサイズ クイーン リリー (Death Sickle Queen Lily)",
-  "elemento": "Oscuridad",
-  "rol": "Atacante",
-  "rareza": "Awaken",
-  "descripcion": "Reina de la guadaña y las sombras. Especialista en ataques oscuros potentes y habilidades de interrupción.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664896/170_teierj.png",
-  "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Desconocido",
-  "raza": "Oscura / Demonio",
-  "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+  {
+    "slug": "mizutsune-armor-roy",
+    "nombre": "Mizutsune Armor Roy"
   },
-  "true_weapon": "—",
-  "slots": [
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Mágico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
-      "nivel": 4
-    }
-  ],
-  "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+  {
+    "slug": "rathian-armor-iris",
+    "nombre": "Rathian Armor Iris"
   },
-  "habilidades": [
-    {
-      "tipo": "Skill",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    },
-    {
-      "tipo": "True Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
-    }
-  ],
-  "pasivas": [
-    "Potenciadoras de daño oscuro",
-    "Probables mejoras de daño crítico / estado alterado"
-  ],
-  "resistencias": [],
-  "sinergias": [
-    "Excelente complementaria en equipos con daño oscuro pesado",
-    "Complementa DPS que dependen de efectos de sombra"
-  ],
-  "notas": "No encontré evidencia fiable de Dream Awakening para Lily en mis búsquedas rápidas.",
-  "fuentes": [],
-  "galeria": []
-}
-
-
+  {
+    "slug": "teostra-armor-ganan",
+    "nombre": "Teostra Armor Ganan"
+  },
+  {
+    "slug": "kirin-armor-liese",
+    "nombre": "Kirin Armor Liese"
+  },
+  {
+    "slug": "felyne-armor-sophie",
+    "nombre": "Felyne Armor Sophie"
+  },
+  {
+    "slug": "rathalos-armor-palico",
+    "nombre": "Rathalos Armor Palico"
+  },
+  {
+    "slug": "saitama",
+    "nombre": "Saitama"
+  },
+  {
+    "slug": "genos",
+    "nombre": "Genos"
+  },
+  {
+    "slug": "terrible-tornado",
+    "nombre": "Terrible Tornado"
+  },
+  {
+    "slug": "boros",
+    "nombre": "Boros"
+  },
+  {
+    "slug": "sugimoto",
+    "nombre": "Sugimoto"
+  },
+  {
+    "slug": "asirpa",
+    "nombre": "Asirpa"
+  },
+  {
+    "slug": "hijikata",
+    "nombre": "Hijikata"
+  },
+  {
+    "slug": "rimuru-slime-form",
+    "nombre": "Rimuru (Slime form)"
+  },
+  {
+    "slug": "rimuru-human-form",
+    "nombre": "Rimuru (Human form)"
+  },
+  {
+    "slug": "milim",
+    "nombre": "Milim"
+  },
+  {
+    "slug": "benimaru",
+    "nombre": "Benimaru"
+  },
+  {
+    "slug": "goblin-slayer",
+    "nombre": "Goblin Slayer"
+  },
+  {
+    "slug": "priestess",
+    "nombre": "Priestess"
+  },
+  {
+    "slug": "high-elf-archer",
+    "nombre": "High Elf Archer"
+  },
+  {
+    "slug": "sonic",
+    "nombre": "Sonic"
+  },
+  {
+    "slug": "hellish-blizzard",
+    "nombre": "Hellish Blizzard"
+  },
+  {
+    "slug": "garou",
+    "nombre": "Garou"
+  },
+  {
+    "slug": "crunchyroll-hime",
+    "nombre": "Crunchyroll-Hime"
+  },
+  {
+    "slug": "naofumi",
+    "nombre": "Naofumi"
+  },
+  {
+    "slug": "raphtalia",
+    "nombre": "Raphtalia"
+  },
+  {
+    "slug": "filo",
+    "nombre": "Filo"
+  },
+  {
+    "slug": "melty",
+    "nombre": "Melty"
+  },
+  {
+    "slug": "yusuke",
+    "nombre": "Yusuke"
+  },
+  {
+    "slug": "kazuma",
+    "nombre": "Kazuma"
+  },
+  {
+    "slug": "kurama",
+    "nombre": "Kurama"
+  },
+  {
+    "slug": "hiei",
+    "nombre": "Hiei"
+  },
+  {
+    "slug": "toguro",
+    "nombre": "Toguro"
+  },
+  {
+    "slug": "emilia",
+    "nombre": "Emilia"
+  },
+  {
+    "slug": "rem-rezero",
+    "nombre": "Rem (Re:Zero)"
+  },
+  {
+    "slug": "ram",
+    "nombre": "Ram"
+  },
+  {
+    "slug": "beatrice",
+    "nombre": "Beatrice"
+  },
+  {
+    "slug": "santa-rimuru",
+    "nombre": "Santa Rimuru"
+  },
+  {
+    "slug": "santa-milim",
+    "nombre": "Santa Milim"
+  },
+  {
+    "slug": "santa-shion",
+    "nombre": "Santa Shion"
+  },
+  {
+    "slug": "new-years-rimuru",
+    "nombre": "New Years Rimuru"
+  },
+  {
+    "slug": "new-years-milim",
+    "nombre": "New Years Milim"
+  },
+  {
+    "slug": "hatsune-miku",
+    "nombre": "Hatsune Miku"
+  },
+  {
+    "slug": "sakura-miku",
+    "nombre": "Sakura Miku"
+  },
+  {
+    "slug": "yoh-asakura",
+    "nombre": "Yoh Asakura"
+  },
+  {
+    "slug": "anna-kyoyama",
+    "nombre": "Anna Kyoyama"
+  },
+  {
+    "slug": "ren-tao",
+    "nombre": "Ren Tao"
+  },
+  {
+    "slug": "hao",
+    "nombre": "Hao"
+  },
+  {
+    "slug": "rudeus",
+    "nombre": "Rudeus"
+  },
+  {
+    "slug": "roxy",
+    "nombre": "Roxy"
+  },
+  {
+    "slug": "sylphiette",
+    "nombre": "Sylphiette"
+  },
+  {
+    "slug": "eris",
+    "nombre": "Eris"
+  },
+  {
+    "slug": "natsu-dragneel",
+    "nombre": "Natsu Dragneel"
+  },
+  {
+    "slug": "lucy-heartfilia",
+    "nombre": "Lucy Heartfilia"
+  },
+  {
+    "slug": "gray-fullbuster",
+    "nombre": "Gray Fullbuster"
+  },
+  {
+    "slug": "erza",
+    "nombre": "Erza"
+  },
+  {
+    "slug": "nui-harime",
+    "nombre": "Nui Harime"
+  },
+  {
+    "slug": "fitoria",
+    "nombre": "Fitoria"
+  },
+  {
+    "slug": "takemichi",
+    "nombre": "Takemichi"
+  },
+  {
+    "slug": "mikey",
+    "nombre": "Mikey"
+  },
+  {
+    "slug": "draken",
+    "nombre": "Draken"
+  },
+  {
+    "slug": "chifuyu",
+    "nombre": "Chifuyu"
+  },
+  {
+    "slug": "mitsuya",
+    "nombre": "Mitsuya"
+  },
+  {
+    "slug": "empress",
+    "nombre": "Empress"
+  },
+  {
+    "slug": "deadmaster",
+    "nombre": "Deadmaster"
+  },
+  {
+    "slug": "strength",
+    "nombre": "Strength"
+  },
+  {
+    "slug": "ainz",
+    "nombre": "Ainz"
+  },
+  {
+    "slug": "albedo",
+    "nombre": "Albedo"
+  },
+  {
+    "slug": "shalltear",
+    "nombre": "Shalltear"
+  },
+  {
+    "slug": "narberal",
+    "nombre": "Narberal"
+  },
+  {
+    "slug": "illya",
+    "nombre": "Illya"
+  },
+  {
+    "slug": "miyu",
+    "nombre": "Miyu"
+  },
+  {
+    "slug": "chloe-fate",
+    "nombre": "Chloe (Fate)"
+  },
+  {
+    "slug": "rin-and-luvia",
+    "nombre": "Rin & Luvia"
+  },
+  {
+    "slug": "shirou-emiya",
+    "nombre": "Shirou Emiya"
+  },
+  {
+    "slug": "saber-alter",
+    "nombre": "Saber Alter"
+  },
+  {
+    "slug": "gabimaru",
+    "nombre": "Gabimaru"
+  },
+  {
+    "slug": "sagiri",
+    "nombre": "Sagiri"
+  },
+  {
+    "slug": "yuzuriha",
+    "nombre": "Yuzuriha"
+  },
+  {
+    "slug": "chobe",
+    "nombre": "Chobe"
+  },
+  {
+    "slug": "demon-lord-rimuru",
+    "nombre": "Demon Lord Rimuru"
+  },
+  {
+    "slug": "combat-form-milim",
+    "nombre": "Combat Form Milim"
+  },
+  {
+    "slug": "diablo",
+    "nombre": "Diablo"
+  },
+  {
+    "slug": "sunraku",
+    "nombre": "Sunraku"
+  },
+  {
+    "slug": "psyger-0",
+    "nombre": "Psyger-0"
+  },
+  {
+    "slug": "arthur-pencilgon",
+    "nombre": "Arthur Pencilgon"
+  },
+  {
+    "slug": "oikatzo",
+    "nombre": "OiKatzo"
+  },
+  {
+    "slug": "momon",
+    "nombre": "Momon"
+  },
+  {
+    "slug": "demiurge",
+    "nombre": "Demiurge"
+  },
+  {
+    "slug": "evileye",
+    "nombre": "Evileye"
+  },
+  {
+    "slug": "uzu-sanageyama",
+    "nombre": "Uzu Sanageyama"
+  },
+  {
+    "slug": "houka-inumuta",
+    "nombre": "Houka Inumuta"
+  },
+  {
+    "slug": "ira-gamagoori",
+    "nombre": "Ira Gamagoori"
+  },
+  {
+    "slug": "nonon-jakuzure",
+    "nombre": "Nonon Jakuzure"
+  },
+  {
+    "slug": "summer-illya",
+    "nombre": "Summer Illya"
+  },
+  {
+    "slug": "summer-miyu",
+    "nombre": "Summer Miyu"
+  },
+  {
+    "slug": "summer-chloe",
+    "nombre": "Summer Chloe"
+  },
+  {
+    "slug": "summer-bazett",
+    "nombre": "Summer Bazett"
+  },
+  {
+    "slug": "summer-luvia-and-rin",
+    "nombre": "Summer Luvia & Rin"
+  },
+  {
+    "slug": "summer-sakura",
+    "nombre": "Summer Sakura"
+  },
+  {
+    "slug": "shadow",
+    "nombre": "Shadow"
+  },
+  {
+    "slug": "alpha",
+    "nombre": "Alpha"
+  },
+  {
+    "slug": "beta",
+    "nombre": "Beta"
+  },
+  {
+    "slug": "delta",
+    "nombre": "Delta"
+  },
+  {
+    "slug": "demon-lord-samurai-rimuru",
+    "nombre": "Demon Lord Samurai Rimuru"
+  },
+  {
+    "slug": "shuna",
+    "nombre": "Shuna"
+  },
+  {
+    "slug": "veldora",
+    "nombre": "Veldora"
+  },
+  {
+    "slug": "shizu",
+    "nombre": "Shizu"
+  },
+  {
+    "slug": "kenshin-himura",
+    "nombre": "Kenshin Himura"
+  },
+  {
+    "slug": "sanosuke-sagara",
+    "nombre": "Sanosuke Sagara"
+  },
+  {
+    "slug": "saito-hajime",
+    "nombre": "Saito Hajime"
+  },
+  {
+    "slug": "makoto-shishio",
+    "nombre": "Makoto Shishio"
+  },
+  {
+    "slug": "hero-saitama",
+    "nombre": "Hero Saitama"
+  },
+  {
+    "slug": "misaka-mikoto",
+    "nombre": "Misaka Mikoto"
+  },
+  {
+    "slug": "touma-kamijou",
+    "nombre": "Touma Kamijou"
+  },
+  {
+    "slug": "accelerator",
+    "nombre": "Accelerator"
+  },
+  {
+    "slug": "index",
+    "nombre": "Index"
+  },
+  {
+    "slug": "frieren",
+    "nombre": "Frieren"
+  },
+  {
+    "slug": "fern",
+    "nombre": "Fern"
+  },
+  {
+    "slug": "stark",
+    "nombre": "Stark"
+  },
+  {
+    "slug": "ubel",
+    "nombre": "Ubel"
+  },
+  {
+    "slug": "okarun",
+    "nombre": "Okarun"
+  },
+  {
+    "slug": "momo",
+    "nombre": "Momo"
+  },
+  {
+    "slug": "aira",
+    "nombre": "Aira"
+  },
+  {
+    "slug": "jiji",
+    "nombre": "Jiji"
+  }
 ]
