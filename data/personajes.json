@@ -702,14 +702,14 @@
 {
   "slug": "herck",
   "nombre": "ハーク (Herck)",
-  "elemento": "Oscuridad",
+  "elemento": "Agua",
   "rol": "Breaker / Atacante",
-  "rareza": "Awaken",
+  "rareza": "Awaken / Dream Awaken",
   "descripcion": "Una entidad poderosa de oscuridad que destaca en romper resistencias. Especializado en debilitar al enemigo para que otros lo rematen.",
   "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714391/unit_detail_100576212_etgvqo.png",
   "actualizado_en": "2025-10-17T00:00:00Z",
   "voz": "Desconocido",
-  "raza": "Demonio / Oscuro",
+  "raza": "Demonio",
   "lanzamiento": {
     "jp": "??",
     "gl": "??"
@@ -717,25 +717,25 @@
   "true_weapon": "—",
   "slots": [
     {
+      "tipo": "Soporte",
+      "nivel": 6
+    },
+    {
       "tipo": "Físico",
       "nivel": 5
     },
     {
-      "tipo": "Defensa",
-      "nivel": 5
-    },
-    {
-      "tipo": "Soporte",
+      "tipo": "Magia",
       "nivel": 4
     }
   ],
   "stats": {
-    "hp": null,
-    "atk": null,
-    "def": null,
-    "tas_hp": null,
-    "tas_atk": null,
-    "tas_def": null
+    "hp": 7128,
+    "atk": 2376,
+    "def": 2609,
+    "tas_hp": 999,
+    "tas_atk": 366,
+    "tas_def": 401
   },
   "habilidades": [
     {
