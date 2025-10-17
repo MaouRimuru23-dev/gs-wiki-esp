@@ -388,6 +388,14 @@
 
       empty.classList.toggle('d-none', rows.length>0);
 
+        // Si no hay slug en la URL y la card está oculta, abre el primero
+      const hasSlug = new URLSearchParams(location.search).get('slug');
+      const formCardEl = document.getElementById('formCard');
+      if (!hasSlug && rows.length && formCardEl?.classList.contains('d-none')) {
+        selectForEdit(rows[0].slug);
+      }
+      
+
       // wiring acciones
       tbody.querySelectorAll('button').forEach(b=>{
         const act = b.dataset.act, slug = b.dataset.slug;
@@ -506,13 +514,6 @@
       }
     }
 
-    // Sincroniza visibilidad del contenedor card con el form interno de ui.js
-    const formCard = document.getElementById('formCard');
-    const observer = new MutationObserver(()=>{
-      const formVisible = !document.getElementById('formPersonaje')?.classList.contains('d-none');
-      formCard?.classList.toggle('d-none', !formVisible);
-    });
-    observer.observe(document.body, { attributes:true, subtree:true, attributeFilter:['class'] });
 
     // ===== Habilidades (tabla derecha) =====
     async function loadHabs(slug){
@@ -557,6 +558,9 @@
         initAdmin();
         adminInited = true;
       }
+      // fuerza visible el formulario por si initAdmin lo dejó oculto
+      document.getElementById('formPersonaje')?.classList.remove('d-none');
+      document.getElementById('formCard')?.classList.remove('d-none');
       loadList();
       initFromQuery();
     }
