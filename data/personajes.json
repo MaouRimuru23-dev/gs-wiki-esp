@@ -1,7 +1,8 @@
 [
   {
     "slug": "clyde",
-    "nombre": "Clyde"
+    "nombre": "Clyde",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664894/5_jpbhtz.png"
   },
   {
     "slug": "corsair",
