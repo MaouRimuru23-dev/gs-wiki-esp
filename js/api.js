@@ -1,14 +1,21 @@
-// === api.js (modo Flask demo, sin base de datos) ===
-// Lee datos desde los endpoints del servidor local (app.py)
+// === api.js (versión para GitHub Pages) ===
+// Lee directamente archivos JSON dentro del repo (sin backend)
 
+// Helper para rutas relativas según ubicación (index, subcarpeta, etc.)
+function getBasePath() {
+  const repoBase = "/gs-wiki-esp";  // cambia según tu ruta real en GitHub Pages
+  return location.pathname.startsWith(repoBase) ? repoBase : "";
+}
+const BASE = getBasePath();
+const DATA_PATH = `${BASE}/data`;  // carpeta donde pondrás los JSON
+
+export const TOKEN = "token-secreto-maou";
 export const slugify = (s) => s
   .toLowerCase()
   .normalize("NFD")
   .replace(/[\u0300-\u036f]/g, "")
   .replace(/[^a-z0-9]+/g, "-")
   .replace(/(^-|-$)/g, "");
-
-export const TOKEN = "token-secreto-maou";
 
 // -----------------------------------------------------
 // PERSONAJES
@@ -21,37 +28,30 @@ export async function listPersonajes({
   page = 1,
   pageSize = 12
 }) {
-  const res = await fetch("/api/personajes");
-  if (!res.ok) throw new Error("No se pudo obtener la lista de personajes");
+  const res = await fetch(`${DATA_PATH}/personajes.json`, { cache: "no-store" });
+  if (!res.ok) throw new Error("No se pudo obtener personajes.json");
   const all = await res.json();
 
   let rows = Array.isArray(all) ? all.slice() : [];
 
-  // Filtros
   if (q)
-    rows = rows.filter((r) =>
+    rows = rows.filter(r =>
       (r.nombre || "").toLowerCase().includes(q.toLowerCase())
     );
-  if (elemento) rows = rows.filter((r) => r.elemento === elemento);
+  if (elemento) rows = rows.filter(r => r.elemento === elemento);
   if (rol)
-    rows = rows.filter(
-      (r) => (r.rol || "").toLowerCase() === rol.toLowerCase()
-    );
+    rows = rows.filter(r => (r.rol || "").toLowerCase() === rol.toLowerCase());
 
-  // Orden
   if (order === "nombre")
     rows.sort((a, b) => (a.nombre || "").localeCompare(b.nombre || ""));
   else if (order === "rareza")
     rows.sort((a, b) => (a.rareza || "").localeCompare(b.rareza || ""));
   else
-    rows.sort(
-      (a, b) =>
-        new Date(b.actualizado_en || 0) - new Date(a.actualizado_en || 0)
-    );
+    rows.sort((a, b) => new Date(b.actualizado_en || 0) - new Date(a.actualizado_en || 0));
 
   const total = rows.length;
-  const from = (page - 1) * pageSize,
-    to = from + pageSize;
+  const from = (page - 1) * pageSize;
+  const to = from + pageSize;
   return { rows: rows.slice(from, to), total };
 }
 
@@ -59,82 +59,31 @@ export async function listPersonajes({
 // DETALLE DE PERSONAJE
 // -----------------------------------------------------
 export async function getPersonajeBySlug(slug) {
-  const res = await fetch(`/api/personajes/${slug}`);
-  if (!res.ok) throw new Error("Personaje no encontrado");
-  return res.json();
+  const res = await fetch(`${DATA_PATH}/personajes.json`);
+  if (!res.ok) throw new Error("personajes.json no encontrado");
+  const all = await res.json();
+  const p = all.find(r => r.slug === slug);
+  if (!p) throw new Error("Personaje no encontrado");
+  return p;
 }
 
 // -----------------------------------------------------
-// HABILIDADES (por slug)
+// HABILIDADES
 // -----------------------------------------------------
 export async function listHabilidades(slug) {
-  const res = await fetch(`/api/habilidades/${slug}`);
-  if (!res.ok) throw new Error("No se pudieron cargar las habilidades");
-  return res.json();
+  const res = await fetch(`${DATA_PATH}/habilidades.json`, { cache: "no-store" });
+  if (!res.ok) throw new Error("No se pudieron cargar habilidades.json");
+  const all = await res.json();
+  return all[slug] || [];
 }
 
 // -----------------------------------------------------
-// Funciones que todavía dependen de Supabase (placeholder)
+// Funciones locales de demo (mantén por compatibilidad)
 // -----------------------------------------------------
-export async function upsertPersonaje(payload) {
-  const res = await fetch("/api/personajes", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-ADMIN-TOKEN": TOKEN,
-    },
-    body: JSON.stringify(payload),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
-
-export async function uploadImage(file) {
-  if (!file) return null;
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result); // base64 temporal
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-
-export async function saveHabilidad(h) {
-  const slug = new URLSearchParams(location.search).get("slug");
-  const res = await fetch(`/api/habilidades/${encodeURIComponent(slug)}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-ADMIN-TOKEN": TOKEN,
-    },
-    body: JSON.stringify(h),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
-export async function deleteHabilidad(id) {
-  const slug = new URLSearchParams(location.search).get("slug");
-  const res = await fetch(`/api/habilidades/${encodeURIComponent(slug)}/${id}`, {
-    method: "DELETE",
-    headers: { "X-ADMIN-TOKEN": TOKEN },
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return true;
-}
-
-// -----------------------------------------------------
-// AUTENTICACIÓN DEMO (solo muestra/oculta interfaz)
-// -----------------------------------------------------
-export async function signIn(email, password) {
-  localStorage.setItem("demo_user", JSON.stringify({ email }));
-  return { data: { user: { email } } };
-}
-
-export async function signOut() {
-  localStorage.removeItem("demo_user");
-}
-
-export async function currentUser() {
-  const u = JSON.parse(localStorage.getItem("demo_user") || "null");
-  return u ? { email: u.email } : null;
-}
+export async function upsertPersonaje(p){ console.log("upsert demo",p); return p; }
+export async function uploadImage(f){ return null; }
+export async function saveHabilidad(h){ console.log("save hab demo",h); return h; }
+export async function deleteHabilidad(id){ console.log("delete hab demo",id); return true; }
+export async function signIn(email){ localStorage.setItem("demo_user",email); return {data:{user:{email}}}; }
+export async function signOut(){ localStorage.removeItem("demo_user"); }
+export async function currentUser(){ const u=localStorage.getItem("demo_user"); return u?{email:u}:{email:null}; }
