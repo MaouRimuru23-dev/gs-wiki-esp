@@ -701,70 +701,67 @@
 },
 {
   "slug": "herck",
-  "nombre": "ハーク (Herck)",
+  "nombre": "オーシャン・ユニファイアー ハーク (Ocean Unifier Herck)",
   "elemento": "Agua",
-  "rol": "Breaker / Atacante",
-  "rareza": "Awaken / Dream Awaken",
-  "descripcion": "Una entidad poderosa de oscuridad que destaca en romper resistencias. Especializado en debilitar al enemigo para que otros lo rematen.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714391/unit_detail_100576212_etgvqo.png",
+  "rol": "Breaker",
+  "rareza": "Awaken",
+  "descripcion": "Rey de los Gigantes del Mar. Maneja una lanza colosal y congela a sus enemigos con mareas gélidas. Especialista en Break y control por congelación.",
+  "portada_url": null,
   "actualizado_en": "2025-10-17T00:00:00Z",
-  "voz": "Desconocido",
-  "raza": "Demonio",
+  "voz": "最上嗣生 (Tsuguo Mogami)",
+  "raza": "Gigante",
   "lanzamiento": {
-    "jp": "??",
-    "gl": "??"
+    "jp": null,
+    "gl": null
   },
   "true_weapon": "—",
   "slots": [
-    {
-      "tipo": "Soporte",
-      "nivel": 6
-    },
-    {
-      "tipo": "Físico",
-      "nivel": 5
-    },
-    {
-      "tipo": "Magia",
-      "nivel": 4
-    }
+    { "tipo": "Físico", "nivel": 5 },
+    { "tipo": "Defensa", "nivel": 5 },
+    { "tipo": "Soporte", "nivel": 4 }
   ],
   "stats": {
-    "hp": 7128,
-    "atk": 2376,
-    "def": 2609,
-    "tas_hp": 999,
-    "tas_atk": 366,
-    "tas_def": 401
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "tas_hp": null,
+    "tas_atk": null,
+    "tas_def": null
   },
   "habilidades": [
     {
       "tipo": "Skill",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
+      "nombre": "パイクストリーム (Pike Stream)",
+      "descripcion": "1,800% Agua (Físico). Congela aleatoriamente al enemigo. CT 8s. Break 2,050."
     },
     {
       "tipo": "Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
+      "nombre": "カラミティウェイブ (Calamity Wave)",
+      "descripcion": "12,600% Agua (Mágico). −10% daño recibido por unidades de Agua (15s). Break 3,100."
     },
     {
       "tipo": "True Arts",
-      "nombre": "Desconocido",
-      "descripcion": "Desconocido"
+      "nombre": "カオスディザスター (Chaos Disaster)",
+      "descripcion": "28,000% Agua (Mágico). Durante 15s todos los ataques aliados pueden congelar al enemigo. Break 7,000."
     }
   ],
   "pasivas": [
-    "Pasiva típica de breaker (aumenta daño a break / debilita resistencias)",
-    "Otras pasivas de utilidad ofensiva"
+    "Human Killer Lv8: +80% daño contra Humanos.",
+    "Spirit Killer Lv8: +80% daño contra Espíritus.",
+    "HP≥50%: +80% daño propio (no acumula)."
   ],
   "resistencias": [],
   "sinergias": [
-    "Brilla en equipos con unidades que aprovechen break alto",
-    "Complementa bien unidades de daño puro que puedan rematar"
+    "Encaja en equipos de Agua que aprovechen Congelación.",
+    "Aporta Break altísimo para jefes susceptibles a control."
   ],
-  "notas": "No encontré datos concretos sobre Herck con Dream Awakening o estadísticas confiables en mis búsquedas rápidas.",
-  "fuentes": [],
+  "notas": "No se documenta Super Arts ni Dream Awakening en las fuentes consultadas para esta variante.",
+  "fuentes": [
+    { "nombre": "Grand Summoners Wiki – Ocean Unifier Herck", "url": "https://grandsummoners.fandom.com/wiki/Ocean_Unifier_Herck" },
+    { "nombre": "Grand Summoners Wiki – Sea Lord Herck (línea evolutiva)", "url": "https://grandsummoners.fandom.com/wiki/Sea_Lord_Herck" },
+    { "nombre": "GS Utopia – Herck (valores de Skill/Arts/True Arts)", "url": "https://gsutopia.fandom.com/wiki/Herck" },
+    { "nombre": "Grand Summoners Database – Herck (pasiva HP≥50%)", "url": "https://www.grandsummoners.info/units/Herck" }
+  ],
   "galeria": []
 },
 {
