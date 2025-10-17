@@ -62,7 +62,7 @@ export function initIndex(){
     );
     const items = [];
     items.push(li(Math.max(1,state.page-1), '«'));
-    for (let i=1;i<=pages && i<=6;i++) items.push(li(i));
+    for (let i=1;i<=pages && i<=50;i++) items.push(li(i));
     items.push(li(Math.min(pages,state.page+1), '»'));
     pag.innerHTML = items.join('');
     pag.querySelectorAll('a').forEach(a=>a.onclick=(e)=>{
