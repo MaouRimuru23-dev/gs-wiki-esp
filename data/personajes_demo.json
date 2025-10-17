@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "war-hero-fen",
+    "nombre": "War Hero Fen",
+    "elemento": "Tierra",
+    "rol": "Support",
+    "rareza": "ASND",
+    "descripcion": "Estratega de Gramenia y primer Ascendido. Batería de Arts Tipo A y +100% CRI al equipo.",
+    "portada_url": "C:\\Users\roberto_encarnacion\\OneDrive - Foxconn Industrial Internet in North America\\imagenes\\1116.png",
+    "actualizado_en": "2025-10-15T00:00:00Z"
+  },
+  {
+    "slug": "yuna-gambler",
+    "nombre": "ユナ (Yuna)",
+    "elemento": "Luz",
+    "rol": "Atacante Físico",
+    "rareza": "超覚醒",
+    "descripcion": "Vagabunda tahúr. Estado ‘爆運’ potencia su True/Super y le da gran CE y CR.",
+    "portada_url": "C:\\Users\\roberto_encarnacion\\OneDrive - Foxconn Industrial Internet in North America\\imagenes\\yuna.png",
+    "actualizado_en": "2025-10-15T00:00:00Z"
+  }
+]
