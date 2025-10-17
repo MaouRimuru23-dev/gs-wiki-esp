@@ -206,9 +206,9 @@
   "nombre": "クライド (Clyde)",
   "elemento": "Fuego",
   "rol": "Atacante Físico",
-  "rareza": "Awaken",
-  "descripcion": "Espadachín del Reino de Feorg que blande su espada con un ardiente sentido de justicia. Especialista en ataques críticos y daño de fuego continuo.",
-  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760667901/clyde_kkz9uf.png",
+  "rareza": "Dream Awaken",
+  "descripcion": "Espadachín del Reino de Feorg que ha trascendido sus límites a través del 'Sueño Ardiente'. Maestro del combate cuerpo a cuerpo y del daño crítico explosivo.",
+  "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664894/5_jpbhtz.png",
   "actualizado_en": "2025-10-17T00:00:00Z",
   "voz": "松岡禎丞 (Yoshitsugu Matsuoka)",
   "raza": "Humano",
@@ -232,38 +232,41 @@
     }
   ],
   "stats": {
-    "hp": 6750,
-    "atk": 2900,
-    "def": 2250,
-    "tas_hp": 1045,
-    "tas_atk": 540,
-    "tas_def": 410
+    "hp": 6950,
+    "atk": 3150,
+    "def": 2380,
+    "tas_hp": 1080,
+    "tas_atk": 565,
+    "tas_def": 430
   },
   "habilidades": [
     {
       "tipo": "Skill",
       "nombre": "ブレイジング・スラッシュ (Blazing Slash)",
-      "descripcion": "2,000% Fuego (Físico). Aumenta el daño CRIT propio 20% (6s). CT 8s."
+      "descripcion": "2,000% Fuego (Físico). Aumenta el daño crítico propio 20% (6s). CT 8s."
     },
     {
       "tipo": "Arts",
       "nombre": "フレア・インパクト (Flare Impact)",
-      "descripcion": "13,000% Fuego (Físico). Aumenta daño CRIT propio 50% (10s). Break 1,200."
+      "descripcion": "13,000% Fuego (Físico). Aumenta daño crítico propio 50% (10s). Break 1,200."
     },
     {
       "tipo": "True Arts",
       "nombre": "バーン・ブレイバー (Burn Braver)",
-      "descripcion": "48,000% Fuego (Físico). Aumenta daño de Fuego del grupo 40% (15s). Si se equipa su True Weapon, +50% daño CRIT (15s). Break 2,800."
+      "descripcion": "48,000% Fuego (Físico). Aumenta daño de Fuego del grupo 40% (15s). Si porta su True Weapon, +50% daño crítico (15s). Break 2,800."
     },
     {
       "tipo": "Super Arts",
       "nombre": "インフェルノ・レクイエム (Inferno Requiem)",
-      "descripcion": "120,000% Fuego (Físico). Aumenta daño CRIT de aliados 100% (20s) y otorga resistencia a Fuego +30%."
+      "descripcion": "120,000% Fuego (Físico). +100% daño crítico a aliados (20s) y resistencia a Fuego +30%."
     }
   ],
   "pasivas": [
+    "Dream Awakening: Al activarse, Clyde obtiene una de las siguientes rutas:",
+    "• Crimson Dream — Earth Killer Lv40: +200% daño contra enemigos de Tierra.",
+    "• Luminous Dream — Fine Condition CRI Rate UP Lv10: +100% tasa CRI cuando HP ≥80%.",
     "Fuego Maestro Lv7: +30% daño de Fuego.",
-    "Espíritu del Guerrero: +20% daño CRIT.",
+    "Espíritu del Guerrero: +20% daño CRI.",
     "Cuando HP ≥80%: +20% ATK y +15% DEF."
   ],
   "resistencias": [
@@ -271,10 +274,10 @@
     "Veneno +50%"
   ],
   "sinergias": [
-    "Excelente con generadores de Arts Tipo A (Fen, Weaver).",
-    "Sinergiza bien con unidades que buffean daño CRIT."
+    "Ideal con generadores de Arts Tipo A (Fen, Weaver).",
+    "Sinergiza con buffers de daño crítico como Vox y Yuna (Gambler)."
   ],
-  "notas": "Clyde es un DPS de fuego enfocado en daño crítico sostenido. Su True Arts es su fuente principal de daño y soporte elemental.",
+  "notas": "Clyde en su forma Dream Awaken obtiene una de dos rutas: Crimson (ofensiva) o Luminous (precisión y supervivencia). Ambas potencian su rol como DPS físico de fuego.",
   "fuentes": [
     {
       "nombre": "Altema",
@@ -290,5 +293,4 @@
     "./img/clyde_2.webp"
   ]
 }
-
 ]
