@@ -3,7 +3,7 @@
 
 // Helper para rutas relativas según ubicación (index, subcarpeta, etc.)
 function getBasePath() {
-  const repoBase = "/gs-wiki-esp";  // cambia según tu ruta real en GitHub Pages
+  const repoBase = "/gs-wiki-esp/";  // cambia según tu ruta real en GitHub Pages
   return location.pathname.startsWith(repoBase) ? repoBase : "";
 }
 const BASE = getBasePath();
@@ -87,3 +87,4 @@ export async function deleteHabilidad(id){ console.log("delete hab demo",id); re
 export async function signIn(email){ localStorage.setItem("demo_user",email); return {data:{user:{email}}}; }
 export async function signOut(){ localStorage.removeItem("demo_user"); }
 export async function currentUser(){ const u=localStorage.getItem("demo_user"); return u?{email:u}:{email:null}; }
+
