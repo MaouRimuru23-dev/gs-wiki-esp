@@ -159,13 +159,6 @@
       "descripcion": "Earth Killer Lv40\nAumenta el DMG a enemigos de la Tierra 200%",
       "orden": 0,
       "id": 1760752205397
-    },
-    {
-      "tipo": "Dream Awakening",
-      "nombre": "Luminous Dream",
-      "descripcion": "Aumeta tasa CRI en Condición Excelente Lv10\nLa tasa de CRI aumenta un 100% cuando la HP es del 80% o más.",
-      "orden": 0,
-      "id": 1760752284299
     }
   ]
 }
