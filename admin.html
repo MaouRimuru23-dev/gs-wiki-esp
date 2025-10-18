@@ -129,6 +129,38 @@
               <h5 class="m-0">Ficha de personaje</h5>
             </div>
             <div class="card-body">
+              <!-- PEGADO RÁPIDO (Ficha + Habilidades) -->
+              <div class="card mb-3" id="bulkCard">
+                <div class="card-header">
+                  <h5 class="m-0">Pegado rápido</h5>
+                  <small class="text-body-secondary">Pega aquí el texto con bloques <code>plaintext</code> que te paso.</small>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <h6 class="mb-1">Ficha del personaje</h6>
+                      <small class="text-body-secondary d-block mb-2">Incluye: elemento, raza, rol, voz, descripción, stats (hp/atk/def + lb), slots y slots mlb.</small>
+                      <textarea id="bulkFicha" class="form-control" rows="8" placeholder="Pega aquí los bloques de FICHA (uno por campo)."></textarea>
+                      <div class="mt-2 d-flex gap-2">
+                        <button id="bulkFichaBtn" class="btn btn-outline-primary btn-sm">Parsear Ficha → Form</button>
+                        <button id="bulkFichaGuardarBtn" class="btn btn-primary btn-sm">Parsear + Guardar Ficha</button>
+                      </div>
+                    </div>
+                  
+                    <div class="col-12">
+                      <hr>
+                      <h6 class="mb-1">Habilidades</h6>
+                      <small class="text-body-secondary d-block mb-2">Incluye: <em>skill nombre/efecto</em>, <em>arts nombre/efecto</em>, <em>true arts nombre/efecto</em>, <em>super arts nombre/efecto</em>, y pares de <em>pasiva nombre/efecto</em>.</small>
+                      <textarea id="bulkHabs" class="form-control" rows="10" placeholder="Pega aquí los bloques de HABILIDADES."></textarea>
+                      <div class="mt-2 d-flex gap-2">
+                        <button id="bulkHabsBtn" class="btn btn-outline-secondary btn-sm">Parsear Habilidades → Tabla</button>
+                        <button id="bulkHabsGuardarBtn" class="btn btn-success btn-sm">Parsear + Guardar Habilidades</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <form id="formPersonaje" class="row g-3">
                 <div class="col-md-8">
                   <label class="form-label">Nombre</label>
@@ -306,6 +338,7 @@
                   </div>
                 </div>
               </div>
+              
 
               <div class="text-end">
                 <small class="text-body-secondary">Slug actual: <span id="adminSlug">—</span></small>
@@ -341,7 +374,7 @@
     <!-- Módulo: inicializa tema + admin (tu ui.js) y añade la lógica del panel izquierdo -->
     <script type="module">
     import { slugify } from './js/api.js';
-    import { initTheme, initAdmin } from './js/ui.js';
+    import { initTheme, initAdmin} from './js/ui.js';
     import {
       listPersonajes,
       getPersonajeBySlug,
@@ -349,6 +382,12 @@
       deleteHabilidad,
       TOKEN
     } from './js/api.js';
+    import { upsertPersonaje, saveHabilidad, listHabilidades as apiListHabilidades } from './js/api.js';
+
+    window.upsertPersonaje  = upsertPersonaje;
+    window.saveHabilidad    = saveHabilidad;
+    window.listHabilidades  = apiListHabilidades;
+
 
     // ===== Inicialización UI base =====
     initTheme();
@@ -590,6 +629,8 @@ inNombre?.addEventListener('input', ()=>{
         initAdmin();
         adminInited = true;
       }
+      // activa pegado rápido
+      
       // fuerza visible el formulario por si initAdmin lo dejó oculto
       document.getElementById('formPersonaje')?.classList.remove('d-none');
       document.getElementById('formCard')?.classList.remove('d-none');
@@ -627,6 +668,7 @@ window.addEventListener('pageshow', (ev) => {
 });
 
   </script>
+  <script type="module" src="./js/bulkpaste.module.js"></script>
   </body>
   </div>
   </html>
