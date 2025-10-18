@@ -167,5 +167,107 @@
       "orden": 0,
       "id": 1760752284299
     }
+  ],
+  "touma-kamijou": [
+    {
+      "tipo": "Skill",
+      "nombre": "Kamijo Rush",
+      "descripcion": "2,300 % de daño de agua (físico). Aumenta su propia barra de Arts en 30. En la primera vez que se usa por batalla (o por oleada), añade 70 adicionales. \nCT 13s. \nBREAK 800",
+      "orden": 0,
+      "id": 1760754754650
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "I'll break that illusion.",
+      "descripcion": "Aumenta las “Arts” de todos los aliados. Durante 30 s, redirige el daño recibido por los aliados hacia él mismo, gana una barrera que niega hasta 25,000 de daño, y aumenta su resistencia mágica (MAG RES) en 35 %. Además, cada vez que activa el Arts, añade 10,000 % al multiplicador de su Super Arts (hasta un máximo de 150,000 %).",
+      "orden": 0,
+      "id": 1760754818336
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Surging Punishment",
+      "descripcion": "45,000 % de daño de agua (físico). Durante 30 s, aumenta el daño de todos los aliados contra enemigos de atributos Fuego / Luz / Oscuridad en un 200 %. BREAK 2000",
+      "orden": 0,
+      "id": 1760754856103
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Supernatural Shattering",
+      "descripcion": "150,000 % de daño de agua (físico). Aumenta sus propias Arts en 100. Durante 20 s, reduce la resistencia al daño (DMG RES) de los enemigos en 100 %. BREAK 2500",
+      "orden": 0,
+      "id": 1760754882857
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Imagine Breaker",
+      "descripcion": "Si recibe daño letal, evita que su HP baje de 1 por 5 s, y aumenta sus Arts en 100.",
+      "orden": 0,
+      "id": 1760754932072
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Skill CT Speed UP When Near-Death Lv2",
+      "descripcion": "Cuando esté en situación de “casi muerto” (near-death), acelera el tiempo de reutilización de su skill (Skill CT Speed) en 20 %.",
+      "orden": 0,
+      "id": 1760754984812
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Indomitable Fighting Spirit",
+      "descripcion": "Aumenta su resistencia a parálisis y congelación en 100 %.",
+      "orden": 0,
+      "id": 1760755001911
+    }
+  ],
+  "misaka-mikoto": [
+    {
+      "tipo": "Skill",
+      "nombre": "Electric Flash",
+      "descripcion": "3000 % de daño de Luz (mágico). Aumenta la barra de Arts en 40. \nCT 14s\nBREAK: 600",
+      "orden": 0,
+      "id": 1760755280167
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Iron Sand Sword",
+      "descripcion": "28,000 % de daño de Luz (mágico). Aumenta ATK y la velocidad de reutilización de skills (Skill CT speed) en 100 % por 60 s. \nBREAK: 800",
+      "orden": 0,
+      "id": 1760755319422
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Induced Explosion",
+      "descripcion": "70,000 % de daño de Luz (mágico). Aumenta las estadísticas de unidades de Luz en 50 % y reduce la resistencia a crítico (CRI resistance) de los enemigos en 100 % por 30 s. \nBREAK: 1500",
+      "orden": 0,
+      "id": 1760755350120
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Railgun",
+      "descripcion": "220,000 % de daño de Luz (mágico). Si su barra mágica equipada (Magic Equip gauge) está al 50 % o más después del uso de Super Arts, la recarga se llena. Reduce la resistencia a Luz del enemigo en 150 % por 25 s. \nBREAK: 2000",
+      "orden": 0,
+      "id": 1760755375406
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Electromaster",
+      "descripcion": "Si Misaka Mikoto no está afectada por estados alterados (status ailments), su daño (DMG) se incrementa en 100 %. \n\nRellena automáticamente la barra de Arts en +3 por segundo durante los primeros 90 s de la misión",
+      "orden": 0,
+      "id": 1760755419039
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Paralysis Resistance Master Lv10",
+      "descripcion": "Aumenta la reducción del tiempo de parálisis y la tasa de evasión de parálisis para todos los aliados en 100 %. (Solo aplicable una vez)",
+      "orden": 0,
+      "id": 1760755464191
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "DMG Boost Lv1",
+      "descripcion": "Incrementa el daño (DMG) en 1 % del ATK.",
+      "orden": 0,
+      "id": 1760755499009
+    }
   ]
 }
