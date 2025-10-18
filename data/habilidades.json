@@ -269,5 +269,43 @@
       "orden": 0,
       "id": 1760755499009
     }
-  ]
+  ],
+  "accelerator": [
+  {
+    "tipo": "Skill",
+    "nombre": "岩石飛ばし (Rock Throw)",
+    "descripcion": "10,000% Oscuridad (Mágico). CT 15s. BREAK 1,500."
+  },
+  {
+    "tipo": "Arts",
+    "nombre": "超風圧砲 (Super Air Pressure Cannon)",
+    "descripcion": "22,000% Oscuridad (Mágico). El siguiente Super Arts de todos los aliados inflige +100% de daño (unidades de Oscuridad obtienen +50% adicional). BREAK 2,000."
+  },
+  {
+    "tipo": "True Arts",
+    "nombre": "断絶岩 (Severing Rock)",
+    "descripcion": "60,000% Oscuridad (Mágico). Durante 25s: -50% Resistencia a Break del enemigo; aliados con HP ≥ 50% ganan +5 Arts/s. BREAK 5,000."
+  },
+  {
+    "tipo": "Super Arts",
+    "nombre": "黒い翼 (Black Wings)",
+    "descripcion": "150,000% Oscuridad (Mágico). Si se usa cuando el jefe NO está en Break: a mayor HP propia, mayor Break Power durante el Super (hasta +300%). Si se usa con el jefe en Break: duplica el multiplicador del propio Super Arts. BREAK 8,000."
+  },
+  {
+    "tipo": "Passive",
+    "nombre": "One Way Road",
+    "descripcion": "Cuando el Jefe entra en Break: por 30s, +5 Arts/s a todos los aliados y +300% daño de aliados (solo una vez)."
+  },
+  {
+    "tipo": "Passive",
+    "nombre": "Gauge Flow Lv3",
+    "descripcion": "Si no sufre estados alterados, +3 Arts/s a sí mismo."
+  },
+  {
+    "tipo": "Passive",
+    "nombre": "Human Killer Lv5",
+    "descripcion": "Daño propio contra Humanos +50%."
+  }
+]
+
 }
