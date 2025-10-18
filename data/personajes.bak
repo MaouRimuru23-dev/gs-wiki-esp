@@ -233,7 +233,37 @@
   },
   {
     "slug": "aristela",
-    "nombre": "Aristela"
+    "nombre": "Aristela",
+    "elemento": "Agua",
+    "rol": "Healer",
+    "rareza": "Dream Awakening",
+    "descripcion": "Una hechicera y miembro del aquelarre Grim Stella en la antigua Raktehelm. Poseia gran poder magico desde joven y llego a ser contada entre las Seis Brujas. En viaje para ampliar sus horizontes, oyo el rumor de dos Gigantes desbocados y, incapaz de ver sufrir a los aldeanos, partio hacia su fortaleza abandonada.",
+    "raza": "Espiritu",
+    "voz": "Rika Kinugawa",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760818353/unit_detail_101296212_urgqce.png",
+    "stats": {
+      "hp": 6074,
+      "atk": 2407,
+      "def": 2294,
+      "tas_hp": 769,
+      "tas_atk": 310,
+      "tas_def": 296
+    },
+    "slots": [
+      {
+        "tipo": "Curacion",
+        "nivel": 6
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 5
+      },
+      {
+        "tipo": "Soporte",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T20:17:51Z"
   },
   {
     "slug": "zoldes",
@@ -489,7 +519,37 @@
   },
   {
     "slug": "anna",
-    "nombre": "Anna"
+    "nombre": "Anna",
+    "elemento": "Fuego",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "Una guardiana legendaria que vela por la tribu humana desde la Antigua Guerra, elegida para protegerlos y guiarlos con su espada divina.",
+    "raza": "Dios",
+    "voz": "Arisa Sekine",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760816675/unit_detail_101926112_hsctvd.png",
+    "stats": {
+      "hp": 6220,
+      "atk": 2620,
+      "def": 2020,
+      "tas_hp": 943,
+      "tas_atk": 403,
+      "tas_def": 313
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Curación",
+        "nivel": 5
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T19:44:51Z"
   },
   {
     "slug": "sly",
@@ -605,7 +665,37 @@
   },
   {
     "slug": "alvina",
-    "nombre": "Alvina"
+    "nombre": "Alvina",
+    "elemento": "Agua",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "“Solo existe un recordatorio de que las dos hermanas lucharon codo con codo. Se cree que derrotaron juntas a los Demonios invasores, pero también hay documentos que establecen que Alvina actuó como aliada de los Demonios. Se dice que odiaba tanto a su padre, que la había abandonado, como a su media hermana nacida después; sin embargo, también existen textos que afirman que usó el poder de la oscuridad para proteger a su hermana menor. La verdad no está clara, pero hay historias que dicen que la hermana menor pasó sus últimos años aguardando a alguien.”",
+    "raza": "Humano",
+    "voz": "Hiromi Igarashi",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760813063/unit_detail_102306212_tkurx9.png",
+    "stats": {
+      "hp": 6550,
+      "atk": 2260,
+      "def": 2330,
+      "tas_hp": 992,
+      "tas_atk": 349,
+      "tas_def": 359
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T18:44:32Z"
   },
   {
     "slug": "palamicia",
@@ -665,7 +755,37 @@
   },
   {
     "slug": "altie",
-    "nombre": "Altie"
+    "nombre": "Altie",
+    "elemento": "Oscuridad",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "Una nigromante que arrasó ciudades y naciones durante la Guerra Antigua. Capaz de atrocidades sin fin siguiendo las órdenes de una amada demonio, solía llamar “amigos” a los espíritus de los muertos y despreciaba a los vivos como prisioneros de la carne.",
+    "raza": "Demonio",
+    "voz": "Saya Hirose",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760806668/unit_detail_102476511_wdayka.png",
+    "stats": {
+      "hp": 6300,
+      "atk": 2286,
+      "def": 1950,
+      "tas_hp": 955,
+      "tas_atk": 352,
+      "tas_def": 302
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 6
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T16:58:07Z"
   },
   {
     "slug": "berwick",
@@ -847,7 +967,37 @@
   },
   {
     "slug": "amane",
-    "nombre": "Amane"
+    "nombre": "Amane",
+    "elemento": "Luz",
+    "rol": "DPS",
+    "rareza": "Dream Awakening",
+    "descripcion": "“Una shinobi con prótesis que vivía en el pueblo de Yakuno, en el lejano Este. Aunque nació en el pueblo de Imari y la consideraban inútil y la maltrataban, fue abandonada en las montañas con ambas piernas cercenadas como parte de un entrenamiento secreto. Fue rescatada por la líder de Yakuno, una shinobi con brazo de Oni. Esta la invitó a vivir en el pueblo, le proporcionó piernas protésicas con las que Amane despertó su verdadero potencial. Finalmente logró convertirse en una shinobi de alto rango en el pueblo y en la mano derecha de la líder.”",
+    "raza": "Humano",
+    "voz": "Yu Serizawa",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760815091/unit_detail_102866412_knixky.png",
+    "stats": {
+      "hp": 5449,
+      "atk": 2128,
+      "def": 2046,
+      "tas_hp": 999,
+      "tas_atk": 408,
+      "tas_def": 386
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 6
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 5
+      },
+      {
+        "tipo": "Curación",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T19:21:10Z"
   },
   {
     "slug": "kisaragi",
@@ -913,7 +1063,37 @@
   },
   {
     "slug": "aluze",
-    "nombre": "Aluze"
+    "nombre": "Aluze",
+    "elemento": "Luz",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "“Hijo de una familia noble de la pequeña ciudad-estado oriental de Slevin. Su estricta educación y talento natural en intelecto y combate lo hicieron destacar desde joven. Al oír sobre un torneo de artes marciales en el lejano país de Gitun, huyó de casa con su arco de luz Leivachka, esperando encontrar un nuevo desafío.” (Traducción de la wiki)",
+    "raza": "Humano",
+    "voz": "Haruto Kuroki",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760811515/unit_detail_102956412_y0xmvp.png",
+    "stats": {
+      "hp": 6844,
+      "atk": 2800,
+      "def": 2322,
+      "tas_hp": 999,
+      "tas_atk": 430,
+      "tas_def": 358
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T18:28:49Z"
   },
   {
     "slug": "veronica",
@@ -957,7 +1137,37 @@
   },
   {
     "slug": "angelas",
-    "nombre": "Angelas"
+    "nombre": "Angelas",
+    "elemento": "Fuego",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "“Una descendiente de los Dragones, que pasó su infancia en un orfanato sin siquiera conocer los nombres o rostros de sus padres. Años después, se dice que fue entregada a la familia de un rico mercader de los dioses. Sin embargo, tanto el mercader como ella desaparecieron misteriosamente al cabo de unos años. Durante el tumulto del Reino de Gran Verge, fue vista empuñando una gran hacha al lado del rey. La expresión macabra de su rostro evocó recuerdos de pasados dolorosos para muchas personas.”",
+    "raza": "Dragon",
+    "voz": "Kaede Hondo",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760816284/unit_detail_103066112_w0yztq.png",
+    "stats": {
+      "hp": 5390,
+      "atk": 2392,
+      "def": 1947,
+      "tas_hp": 999,
+      "tas_atk": 458,
+      "tas_def": 375
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T19:38:15Z"
   },
   {
     "slug": "eagle",
@@ -981,7 +1191,37 @@
   },
   {
     "slug": "arcana",
-    "nombre": "Arcana"
+    "nombre": "Arcana",
+    "elemento": "Oscuridad",
+    "rol": "Support",
+    "rareza": "Ascend",
+    "descripcion": "El profesor del laboratorio Magistone del imperio Isliid. Es objeto de desagrado por parte de otros investigadores debido a su vestimenta extraña y actitud arrogante, pero sus articulos academicos son muy valorados. A pesar de su naturaleza cientifica, domina el combate y se adentra incluso en las minas para enfrentarse a monstruos.",
+    "raza": "Humano",
+    "voz": "Nobuhiko Okamoto",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760817770/unit_detail_103126512_bllosd.png",
+    "stats": {
+      "hp": 5368,
+      "atk": 1794,
+      "def": 1944,
+      "tas_hp": 999,
+      "tas_atk": 346,
+      "tas_def": 374
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": "Soporte",
+        "nivel": 5
+      },
+      {
+        "tipo": "Curacion",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T20:05:27Z"
   },
   {
     "slug": "ashleigh",
@@ -1005,7 +1245,37 @@
   },
   {
     "slug": "alulu",
-    "nombre": "Alulu"
+    "nombre": "Alulu",
+    "elemento": "Oscuridad",
+    "rol": "DPS",
+    "rareza": "Ascend",
+    "descripcion": "Una huérfana criada por un profesor de una academia en Minchenne (Bamint). Desde joven mostró gran talento para la magia, sobre todo con materia inorgánica. Amaba a su padre adoptivo y la magia que le enseñó; trabajaba en silencio perfeccionando sus artes, aunque la fuerte inclinación del país por las bellas artes la hizo sentirse fuera de lugar.",
+    "raza": "Humano",
+    "voz": "Ami Mizuno",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760811241/unit_detail_103186512_m3cu55.png",
+    "stats": {
+      "hp": 7000,
+      "atk": 2918,
+      "def": 2649,
+      "tas_hp": 999,
+      "tas_atk": 451,
+      "tas_def": 426
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": "Soporte",
+        "nivel": 5
+      },
+      {
+        "tipo": "Curación",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T18:14:13Z"
   },
   {
     "slug": "marika",
@@ -1231,7 +1501,37 @@
   },
   {
     "slug": "aristela-orbis",
-    "nombre": "Aristela Orbis"
+    "nombre": "Aristela Orbis",
+    "elemento": "Agua",
+    "rol": "Support",
+    "rareza": "Ascend",
+    "descripcion": "Una de las seis brujas que velan por la armonia de la magia en el mundo. Aristela alcanzo un nuevo nivel de poder tras fundirse con el orbe estelar, purificando su mana hasta alcanzar una forma divina. Ahora es capaz de manipular la corriente vital del agua para sanar y proteger incluso a aquellos al borde de la muerte.",
+    "raza": "Espiritu",
+    "voz": "Rika Kinugawa",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760666144/1145_ymh2xl.png",
+    "stats": {
+      "hp": 8550,
+      "atk": 3120,
+      "def": 2880,
+      "tas_hp": 1650,
+      "tas_atk": 620,
+      "tas_def": 540
+    },
+    "slots": [
+      {
+        "tipo": "",
+        "nivel": 6
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 5
+      },
+      {
+        "tipo": "Soporte",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T20:24:28Z"
   },
   {
     "slug": "demon-lord-vox",
@@ -1283,7 +1583,40 @@
   },
   {
     "slug": "anti-heroine-pola",
-    "nombre": "Anti-Heroine Pola"
+    "nombre": "Anti-Heroine Pola",
+    "elemento": "Tierra",
+    "rol": "DPS",
+    "rareza": "Ascend",
+    "descripcion": "Aprovecho su maleabilidad para entregarse a una nueva obsesion: el esgrima. La fuerza de su conviccion se traduce directamente en un poder real. Tambien es lo bastante adorable para captar las miradas y excitar el corazon de todos y cada uno.",
+    "raza": "Demonio",
+    "voz": "Nanoko Ota",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760817561/unit_detail_103817312_trbsbk.png",
+    "stats": {
+      "hp": 8500,
+      "atk": 3080,
+      "def": 3105,
+      "tas_hp": 1450,
+      "tas_atk": 610,
+      "tas_def": 590
+    },
+    "slots": [
+      {
+        "tipo": "",
+        "nivel": 5
+      },
+      {
+        "tipo": "",
+        "nivel": 5
+      },
+      {
+        "tipo": [
+          "Defensa",
+          "Soporte"
+        ],
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T20:00:19Z"
   },
   {
     "slug": "ultimate-paladin-roy",
@@ -1587,7 +1920,37 @@
   },
   {
     "slug": "anna-kyoyama",
-    "nombre": "Anna Kyoyama"
+    "nombre": "Anna Kyoyama",
+    "elemento": "Tierra",
+    "rol": "DPS",
+    "rareza": "Awakening",
+    "descripcion": "Una chamana con el poder de invocar espiritus shikigami. Famosa por su personalidad fuerte y su autoridad sobre Yoh Asakura, su objetivo es entrenarlo hasta convertirlo en el Shaman King.",
+    "raza": "Humano",
+    "voz": "Megumi Hayashibara",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760665766/911_lx5xnq.png",
+    "stats": {
+      "hp": 6948,
+      "atk": 2620,
+      "def": 2650,
+      "tas_hp": 999,
+      "tas_atk": 403,
+      "tas_def": 407
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 5
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T19:50:30Z"
   },
   {
     "slug": "ren-tao",
@@ -1877,7 +2240,40 @@
   },
   {
     "slug": "alpha",
-    "nombre": "Alpha"
+    "nombre": "Alpha",
+    "elemento": "Luz",
+    "rol": "Sub DPS",
+    "rareza": "Ascend",
+    "descripcion": "Una joven que Cid rescató del Culto de Diablos y curó su condición como una de las Poseídas. Desde entonces, dedicó su vida a apoyar su causa, liderando Shadow Garden contra el Culto. Sin embargo, nunca supo que todo lo que se le dijo era improvisada tontería.",
+    "raza": "Espiritu",
+    "voz": "Asami Seto",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760666594/1270_muejvh.png",
+    "stats": {
+      "hp": 7085,
+      "atk": 3362,
+      "def": 3413,
+      "tas_hp": 1309,
+      "tas_atk": 647,
+      "tas_def": 643
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 6
+      },
+      {
+        "tipo": "Curación",
+        "nivel": 5
+      },
+      {
+        "tipo": [
+          "Físico",
+          "Soporte"
+        ],
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T15:47:29Z"
   },
   {
     "slug": "beta",

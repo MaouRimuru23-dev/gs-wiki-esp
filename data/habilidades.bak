@@ -708,6 +708,578 @@
       "descripcion": "Velocidad de reutilización (CT) del equipo de curación +10 %.",
       "orden": 0,
       "id": 1760802570064
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Fatal Blow Lv5",
+      "descripcion": "CRI DMG +50 %.",
+      "orden": 0,
+      "id": 1760802582631
+    }
+  ],
+  "altie": [
+    {
+      "tipo": "Skill",
+      "nombre": "Charme Soire",
+      "descripcion": "CT: 10 s. 1800 % de daño Oscuridad (Mágico). Aumenta la barra de Arts propia en +5. BREAK: 900.",
+      "orden": 1,
+      "id": 1760810904249
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Squelette Soire",
+      "descripcion": "13000 % de daño Oscuridad (Mágico). Aumenta la potencia de Break según aliados y enemigos caídos (máx. +104 %). BREAK: 2000.",
+      "orden": 10,
+      "id": 1760810904293
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Soire Diable",
+      "descripcion": "20000 % de daño Oscuridad (Mágico). Llena la barra de Arts propia en +20 usando 15 % del HP de los aliados (excepto ella). Si aliados y enemigos caídos suman 13, daño +200 %. BREAK: 2500.",
+      "orden": 20,
+      "id": 1760810904313
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Curse Resistance Lv10",
+      "descripcion": "Reducción del tiempo de “maldición” y aumento de evasión ante maldición +100 %.",
+      "orden": 203,
+      "id": 1760810904353
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Auto-fill Arts Gauge Lv2",
+      "descripcion": "Recarga automática de la barra de Arts +2 por segundo.",
+      "orden": 204,
+      "id": 1760810904385
+    }
+  ],
+  "alulu": [
+    {
+      "tipo": "Skill",
+      "nombre": "Roccia Cadere",
+      "descripcion": "CT: 9 s. 2000 % de daño Oscuridad (Mágico). Aumenta su propio daño mágico +10 % por 5 s. BREAK: 1200.",
+      "orden": 1,
+      "id": 1760811270618
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Pietra Bugno",
+      "descripcion": "15000 % de daño Oscuridad (Mágico). Reduce la RES mágica del enemigo en −15 % por 15 s (acumulable). BREAK: 1400.",
+      "orden": 10,
+      "id": 1760811270660
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Castello Del Passo",
+      "descripcion": "44000 % de daño Oscuridad (Mágico). Durante 30 s, aumenta el daño recibido por todos los aliados +30 % y las activaciones de tus Arts **no consumen** Arts Gauge (efecto acumulable). BREAK: 2300.",
+      "orden": 20,
+      "id": 1760811270679
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Magic Resistance Lv2",
+      "descripcion": "Daño mágico recibido por parte del enemigo −10 %.",
+      "orden": 203,
+      "id": 1760811270729
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Giant Boss Killer Lv2",
+      "descripcion": "Daño +20 % contra Jefes Gigantes.",
+      "orden": 204,
+      "id": 1760811270758
+    }
+  ],
+  "aluze": [
+    {
+      "tipo": "Skill",
+      "nombre": "Piercing Flash",
+      "descripcion": "CT: 8 s. 1600 % de daño Luz (Físico). Aumenta la tasa de evasión de todos los aliados +5 % por 3 s. BREAK: 800.",
+      "orden": 1,
+      "id": 1760811924729
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Photon Impulse",
+      "descripcion": "18000 % de daño Luz (Físico). Aumenta tu daño en +30 % × número de enemigos al momento de activación por 5 s (máx. +180 %). BREAK: 1200.",
+      "orden": 10,
+      "id": 1760811924775
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Incandescent Flare",
+      "descripcion": "32000 % de daño Luz (Físico). Aumenta el daño de todos los aliados +40 % y la tasa de CRI de unidades de Luz +100 % por 15 s. BREAK: 2500.",
+      "orden": 20,
+      "id": 1760811924811
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Physical Evasion Rate UP Lv4",
+      "descripcion": "15–20 % de probabilidad de evadir ataques físicos (wiki lista Lv4 para AWK).",
+      "orden": 203,
+      "id": 1760811924850
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Skill CT Speed UP When Near-Death Lv5",
+      "descripcion": "Velocidad de recarga de Skill (CT) +50 % cuando está Near-Death.",
+      "orden": 204,
+      "id": 1760811924884
+    }
+  ],
+  "alvina": [
+    {
+      "tipo": "Skill",
+      "nombre": "Ice Clave",
+      "descripcion": "CT: 9 s. 2000 % de daño Agua (Físico). 30 % de probabilidad de congelar al enemigo por 3 s. BREAK: 1000.",
+      "orden": 1,
+      "id": 1760812976233
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Icicle Raid",
+      "descripcion": "17000 % de daño Agua (Mágico). Alta probabilidad de aplicar el estado “Congelación Absoluta” al enemigo. BREAK: 2200.",
+      "orden": 10,
+      "id": 1760812976283
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Violet Dragoon",
+      "descripcion": "28000 % de daño Oscuridad (Mágico). 100 % de probabilidad de causar “Enfermedad” al enemigo por 12 s. Durante 20 s, aumenta la generación de Arts propia +5/s. BREAK: 5000.",
+      "orden": 20,
+      "id": 1760812976334
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Evasion Rate UP Lv2",
+      "descripcion": "Aumenta la tasa de evasión +10 %.",
+      "orden": 203,
+      "id": 1760812976383
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Power to Protect",
+      "descripcion": "Daño +100 % contra enemigos en estado de Congelación o Congelación Absoluta.",
+      "orden": 204,
+      "id": 1760812976442
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Power of Darkness",
+      "descripcion": "Daño +100 % contra enemigos con el estado “Enfermedad”.",
+      "orden": 205,
+      "id": 1760812976493
+    }
+  ],
+  "amane": [
+    {
+      "tipo": "Skill",
+      "nombre": "首刈り (Kubikiri / Decapitación)",
+      "descripcion": "CT: 9 s. 1700 % de daño Luz (Físico). Aumenta la carga de Arts +10. Cada impacto crítico adicional genera +5 de carga. BREAK: 800.",
+      "orden": 1,
+      "id": 1760815236905
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "影喰い (Kagekui / Shadow Eater)",
+      "descripcion": "16000 % de daño Luz (Físico). Aumenta la precisión (Accuracy) de todos los aliados +50 % y tu daño crítico +150 % por 20 s. BREAK: 1300.",
+      "orden": 10,
+      "id": 1760815236962
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "玉響 (Tamayura)",
+      "descripcion": "Activa el estado Third Eye (カイガン) por 120 s. Dentro de ese estado, inflige 40000 % de daño Luz (Físico). Aumenta el daño de unidades Luz y Oscuridad +120 % por 20 s. BREAK: 2400.",
+      "orden": 20,
+      "id": 1760815237009
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Evasion Rate UP Lv3",
+      "descripcion": "Tasa de evasión propia +15 %.",
+      "orden": 203,
+      "id": 1760815237063
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Critical Rate UP Lv3",
+      "descripcion": "Tasa de crítico propia +30 %.",
+      "orden": 204,
+      "id": 1760815237111
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "光芒一閃 (Kōbō Issen)",
+      "descripcion": "Cuando está en estado Third Eye, precisión y tasa CRI +50 % y velocidad de recarga de Skill (CT) −50 %.",
+      "orden": 205,
+      "id": 1760815237152
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "蒼夢 (Sōmu / Aqueous Dream)",
+      "descripcion": "Velocidad de recarga de equipamiento +10 %. Cuando el enemigo tiene HP ≤ 30 %, daño +50 %.",
+      "orden": 206,
+      "id": 1760815237209
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "玉夢 (Gyokumu / Luminous Dream)",
+      "descripcion": "Daño +50 % frente a humanos. Daño +50 % frente a unidades de Oscuridad.",
+      "orden": 207,
+      "id": 1760815237252
+    }
+  ],
+  "angelas": [
+    {
+      "tipo": "Skill",
+      "nombre": "Axebomb",
+      "descripcion": "CT: 11 s. 2300 % de daño Fuego Fisico. Genera 1 Flama de Dragon (max. 5). 50 % de probabilidad de quemar al enemigo. BREAK: 600.",
+      "orden": 1,
+      "id": 1760816319143
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Explosive Layers",
+      "descripcion": "18000 % de daño Fuego Fisico. Genera 3 Flamas de Dragon (max. 5). Reduce la resistencia del enemigo a quemaduras en 50 % por 15 s. BREAK: 1000.",
+      "orden": 10,
+      "id": 1760816319202
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Flame Tornado Draft",
+      "descripcion": "30000 % de daño Fuego Fisico. Por cada Flama de Dragon activa, el medidor de Arts +20 y añade +10000 % de daño adicional por cada una. Las Flamas desaparecen tras el efecto. BREAK: 1500.",
+      "orden": 20,
+      "id": 1760816319251
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Critical to Burning Enemy",
+      "descripcion": "Tasa de critico +100 % contra enemigos en estado de quemadura.",
+      "orden": 203,
+      "id": 1760816319304
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Additional Attack Lv3",
+      "descripcion": "Daño +30 % cuando el enemigo esta en Break.",
+      "orden": 204,
+      "id": 1760816319353
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Master of the Dragon Flame",
+      "descripcion": "Por cada Flama de Dragon activa: resistencia al Fuego del enemigo −5 %. Ademas, inflige 350 % de daño Fuego Fisico por segundo por cada llama activa.",
+      "orden": 205,
+      "id": 1760816319401
+    }
+  ],
+  "anna": [
+    {
+      "tipo": "Skill",
+      "nombre": "Blazing Fire",
+      "descripcion": "CT: 9 s. 1600 % de daño Fuego Físico. Reduce la resistencia al quemado del enemigo en 20 % por 6 s. BREAK: 800.",
+      "orden": 1,
+      "id": 1760816712336
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "EXE Flare",
+      "descripcion": "7600 % de daño Fuego Físico. Alta probabilidad de causar Quemado al enemigo. Aumenta la resistencia al Veneno (Poison) de todos los aliados +80 % por 7 s. BREAK: 1600.",
+      "orden": 10,
+      "id": 1760816712381
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "EXE Flare Brave",
+      "descripcion": "20000 % de daño Fuego Físico. Alta probabilidad de quemar al enemigo. Reduce la barra de Arts del enemigo en 30. BREAK: 2600.",
+      "orden": 20,
+      "id": 1760816712432
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Poison Resistance Lv10",
+      "descripcion": "Reducción al tiempo de veneno y tasa de evasión de veneno +100 %.",
+      "orden": 203,
+      "id": 1760816712479
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Purification Flames",
+      "descripcion": "Tasa de crítico de todos los aliados +30 % (una sola vez).",
+      "orden": 204,
+      "id": 1760816712529
+    }
+  ],
+  "anna-kyoyama": [
+    {
+      "tipo": "Skill",
+      "nombre": "Silence",
+      "descripcion": "CT: 12 s. 1200 % de daño Tierra Magico. Reduce la evasion del enemigo -15 % por 8 s. BREAK: 600.",
+      "orden": 1,
+      "id": 1760817044865
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Spirit Taming",
+      "descripcion": "16000 % de daño Tierra Magico. Aumenta la barra de Arts de todos los aliados +20. Reduce el daño infligido por los enemigos -25 % por 15 s. BREAK: 1200.",
+      "orden": 10,
+      "id": 1760817044923
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Come, My Shikigami",
+      "descripcion": "40000 % de daño Tierra Magico. Todos los aliados ignoran 100 % de la defensa enemiga y aumentan el daño de unidades Tierra +60 % por 20 s. BREAK: 2500.",
+      "orden": 20,
+      "id": 1760817044976
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Equipment CT Speed UP Lv2",
+      "descripcion": "Velocidad de recarga de equipamiento +10 %.",
+      "orden": 203,
+      "id": 1760817045033
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Additional Attack Lv2",
+      "descripcion": "Daño +20 % cuando el enemigo esta en Break.",
+      "orden": 204,
+      "id": 1760817045085
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Fiancee",
+      "descripcion": "Aumenta el daño de unidades Fuego y Tierra +40 % una vez al inicio de la batalla.",
+      "orden": 205,
+      "id": 1760817045143
+    }
+  ],
+  "anti-heroine-pola": [
+    {
+      "tipo": "Skill",
+      "nombre": "Thorn Wind",
+      "descripcion": "CT: 12 s. 2500 % de daño Tierra Fisico. Cura a todos los aliados de Veneno. Aumenta la barra de Arts de los aliados +60 si se curaron de Veneno. BREAK: 600.",
+      "orden": 1,
+      "id": 1760817639287
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Ivy Soul",
+      "descripcion": "16000 % de daño Tierra Fisico. Aumenta todas las estadisticas de los aliados +30 % y reduce el daño recibido de enemigos con Veneno -30 % por 15 s. BREAK: 1000.",
+      "orden": 10,
+      "id": 1760817639340
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Verdant Slash",
+      "descripcion": "50000 % de daño Tierra Fisico. Reduce la resistencia al Veneno del enemigo -50 % y rellena automaticamente la barra de Arts de todos los aliados +4 si su HP es 50 % o mas por 30 s. BREAK: 2000.",
+      "orden": 20,
+      "id": 1760817639392
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Blossom Fury",
+      "descripcion": "150000 % de daño Tierra Fisico. 100 % de probabilidad de aplicar Veneno al enemigo por 30 s. Cuanto mayor sea el HP de Anti Heroine Pola al activar el Super Arts, mayor sera el daño Fisico de todos los aliados +30 % (maximo +150 %). BREAK: 3200.",
+      "orden": 30,
+      "id": 1760817639440
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Disease Resistance Lv10",
+      "descripcion": "Reduccion del tiempo de Enfermedad y tasa de evasion de Enfermedad +100 %.",
+      "orden": 204,
+      "id": 1760817639491
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Paralysis Resistance Lv10",
+      "descripcion": "Reduccion del tiempo de Paralisis y tasa de evasion de Paralisis +100 %.",
+      "orden": 205,
+      "id": 1760817639554
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Refined Witch of Funeral Flowers",
+      "descripcion": "Daño y poder de Break +100 % contra enemigos con Veneno.",
+      "orden": 206,
+      "id": 1760817639601
+    }
+  ],
+  "arcana": [
+    {
+      "tipo": "Skill",
+      "nombre": "Mad Magic",
+      "descripcion": "CT: 12 s. 1800 % de daño Oscuridad Magico. Reduce la sanacion del enemigo en 10 % por 5 s.",
+      "orden": 1,
+      "id": 1760817941024
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Magi Treasures",
+      "descripcion": "7700 % de daño Oscuridad Magico. Reduce el ATK, DEF y resistencia magica del enemigo en 33 % por 12 s.",
+      "orden": 10,
+      "id": 1760817941082
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Dark Resistance Lv4",
+      "descripcion": "Resistencia al daño de Oscuridad +20 %.",
+      "orden": 202,
+      "id": 1760817941124
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Evasion Rate UP When Near-Death Lv2",
+      "descripcion": "Tasa de evasion +10 % cuando esta en estado Near-Death.",
+      "orden": 203,
+      "id": 1760817941176
+    }
+  ],
+  "aristela": [
+    {
+      "tipo": "Skill",
+      "nombre": "Glacies Invers",
+      "descripcion": "CT: 9 s. 800 % de daño Agua Magia. Restaura 120 HP a todos los aliados. BREAK: 400.",
+      "orden": 1,
+      "id": 1760818693201
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Feene Aurora",
+      "descripcion": "Cura el 40 % del HP de todos los aliados y elimina estados anormales excepto Aturdimiento y Enfermedad.",
+      "orden": 10,
+      "id": 1760818693260
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Orbis Lacteus",
+      "descripcion": "40000 % de daño Agua Magia. Cura a todos los aliados 50 % de su HP y regenera 200 HP por segundo durante 20 s. BREAK: 2500.",
+      "orden": 20,
+      "id": 1760818693311
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Magic Resistance Lv5",
+      "descripcion": "Daño magico recibido -25 %.",
+      "orden": 203,
+      "id": 1760818693361
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Scholar of the Blue Flow",
+      "descripcion": "Max HP de todos los aliados +15 % y daño magico de todos los aliados +15 % (no acumulable).",
+      "orden": 204,
+      "id": 1760818693417
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "蒼夢 (Somu / Aqueous Dream)",
+      "descripcion": "Resistencia a Congelacion +100 % y potencia de curacion propia +25 %.",
+      "orden": 205,
+      "id": 1760818693468
+    }
+  ],
+  "aristela-orbis": [
+    {
+      "tipo": "Skill",
+      "nombre": "Misericordia",
+      "descripcion": "CT: 13 s. 2000 % de daño Agua Magia. Reduce la tasa de evasion del enemigo 20 % por 7 s. BREAK: 800.",
+      "orden": 1,
+      "id": 1760819044645
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Astrum Link",
+      "descripcion": "17000 % de daño Agua Magia. Rellena automaticamente la barra de Arts de todos los aliados +4/s durante 15 s. BREAK: 2000.",
+      "orden": 10,
+      "id": 1760819044690
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Liberatio",
+      "descripcion": "40000 % de daño Agua Magia. Reduce la resistencia magica y a Break del enemigo 80 % por 15 s. BREAK: 8000.",
+      "orden": 20,
+      "id": 1760819044738
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Nebula Plena",
+      "descripcion": "80000 % de daño Agua Magia. Cada vez que se usa, incrementa el daño de aliados de Agua +60 % (máx. +300 %). Aumenta todas las estadisticas de todos los aliados +30 % por 15 s. BREAK: 3000.",
+      "orden": 30,
+      "id": 1760819044786
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Poison Resistance Lv8",
+      "descripcion": "Reduccion del tiempo de Veneno y tasa de evasion de Veneno +80 %.",
+      "orden": 204,
+      "id": 1760819044836
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Additional Attack Lv7",
+      "descripcion": "Daño +70 % cuando el enemigo esta en Break.",
+      "orden": 205,
+      "id": 1760819044884
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Health Hacker",
+      "descripcion": "Daño y potencia de Break +30 % contra enemigos con HP 50 % o mas.",
+      "orden": 206,
+      "id": 1760819044919
+    }
+  ],
+  "arosdea": [
+    {
+      "tipo": "Skill",
+      "nombre": "Blaze Fang",
+      "descripcion": "CT: 8 s. 2500 % de daño Fuego Fisico. 30 % de probabilidad de aplicar Quemadura al enemigo. Aumenta el propio ATK +20 % durante 8 s. BREAK: 1200.",
+      "orden": 1,
+      "id": 1760819637459
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Infernal Rush",
+      "descripcion": "16000 % de daño Fuego Fisico. Aumenta el daño propio +100 % y la velocidad de carga de Arts +2/s durante 12 s. BREAK: 2200.",
+      "orden": 10,
+      "id": 1760819637515
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Crimson Rebellion",
+      "descripcion": "42000 % de daño Fuego Fisico. Aumenta el daño de unidades Fuego +50 % y reduce la resistencia al Fuego del enemigo -30 % durante 20 s. BREAK: 2500.",
+      "orden": 20,
+      "id": 1760819637571
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Burn Resistance Lv10",
+      "descripcion": "Reduccion del tiempo de Quemadura y tasa de evasion de Quemadura +100 %.",
+      "orden": 203,
+      "id": 1760819637619
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Critical Rate Lv8",
+      "descripcion": "Tasa de critico +40 %.",
+      "orden": 204,
+      "id": 1760819637669
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Flame Knight",
+      "descripcion": "Daño Fisico +30 % y daño contra enemigos en estado de Quemadura +50 %.",
+      "orden": 205,
+      "id": 1760819637719
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "紅夢 (Komu / Crimson Dream)",
+      "descripcion": "Cuando el HP esta por encima del 80 %, el daño aumenta +60 % y la velocidad de carga de Arts +1/s.",
+      "orden": 206,
+      "id": 1760819637779
     }
   ]
 }
