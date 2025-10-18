@@ -2,7 +2,36 @@
   {
     "slug": "clyde",
     "nombre": "Clyde",
-    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664894/5_jpbhtz.png"
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760664894/5_jpbhtz.png",
+    "elemento": "Fuego",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "",
+    "raza": "Humano",
+    "voz": "",
+    "stats": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "tas_hp": 0,
+      "tas_atk": 0,
+      "tas_def": 0
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 6
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Soporte",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T00:06:10Z"
   },
   {
     "slug": "corsair",
