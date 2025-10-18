@@ -6,16 +6,16 @@
     "elemento": "Fuego",
     "rol": "DPS",
     "rareza": "Awaken",
-    "descripcion": "",
+    "descripcion": "Aunque siendo uno de los 3 Maestros de la Espada, de repente desapareció de la historia. No está claro qué pasó con su vida después de la Guerra Antigua. Hay varios rumores sobre él, como ayudar a otros durante los tiempos difíciles después de la guerra, una batalla de vida y muerte con su maestro, o haber sido asesinado por el emperador de Isliid debido a su revuelta contra él. Sin embargo, hay una cosa en común, tenía un poder enorme incluso después de la guerra y un brillo intenso en sus ojos",
     "raza": "Humano",
-    "voz": "",
+    "voz": "Junji Majima",
     "stats": {
-      "hp": 0,
-      "atk": 0,
-      "def": 0,
-      "tas_hp": 0,
-      "tas_atk": 0,
-      "tas_def": 0
+      "hp": 6960,
+      "atk": 2772,
+      "def": 2138,
+      "tas_hp": 999,
+      "tas_atk": 425,
+      "tas_def": 330
     },
     "slots": [
       {
@@ -27,11 +27,11 @@
         "nivel": 5
       },
       {
-        "tipo": "Soporte",
+        "tipo": "Defensa",
         "nivel": 4
       }
     ],
-    "actualizado_en": "2025-10-18T00:06:10Z"
+    "actualizado_en": "2025-10-18T00:51:15Z"
   },
   {
     "slug": "corsair",
@@ -67,7 +67,37 @@
   },
   {
     "slug": "abaddon",
-    "nombre": "Abaddon"
+    "nombre": "Abaddon",
+    "elemento": "Oscuridad",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "",
+    "raza": "Demonio",
+    "voz": "",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760714487/unit_detail_100606512_qs58ek.png",
+    "stats": {
+      "hp": 7140,
+      "atk": 2852,
+      "def": 2008,
+      "tas_hp": 999,
+      "tas_atk": 437,
+      "tas_def": 311
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 6
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T00:41:45Z"
   },
   {
     "slug": "ragna",

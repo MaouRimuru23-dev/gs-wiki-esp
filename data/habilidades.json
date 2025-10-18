@@ -79,5 +79,72 @@
       "orden": 0,
       "id": 1760637367243
     }
+  ],
+  "abaddon": [
+    {
+      "tipo": "Arts",
+      "nombre": "Crypt -Misfortune and Misery",
+      "descripcion": "11000% Daño Oscuro DMG (Mágico). Reduce el ATQ del enemigo en un 30% durante 15s. BREAK 1600",
+      "orden": 0,
+      "id": 1760748148948
+    },
+    {
+      "tipo": "Skill",
+      "nombre": "Wicked Flying Slash",
+      "descripcion": "1800% Daño Oscuro DMG (Mágico). Probabilidad de cegar al enemigo. CT 8s. BREAK 650",
+      "orden": 0,
+      "id": 1760748222529
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Mausoleum - Dance of Destruction",
+      "descripcion": "35000% Daño Oscuro (Mágico). Aumenta el Daño a enemigos Dios y Demonio en un 100% durante 15s. BREAK 2300",
+      "orden": 0,
+      "id": 1760748265997
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "God Killer Lv10",
+      "descripcion": "DMG a los dioses 100% ARRIBA",
+      "orden": 0,
+      "id": 1760748313199
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Demon Killer Lv10",
+      "descripcion": "DMG a Demonios 100% ARRIBA",
+      "orden": 0,
+      "id": 1760748340466
+    }
+  ],
+  "clyde": [
+    {
+      "tipo": "Skill",
+      "nombre": "Fire Slasher",
+      "descripcion": "2000% Daño de Fuego (Físico). Aumenta la barra de Artes en 10. CT: 6s   BREAK1500",
+      "orden": 0,
+      "id": 1760748725679
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Inferno Blade",
+      "descripcion": "15000% Daño de Fuego (Físico). 50% de probabilidad de quemar al enemigo durante 10s. BREAK 2200",
+      "orden": 0,
+      "id": 1760748809965
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Extreme Crimson Flare",
+      "descripcion": "45000% Daño de Fuego (Físico). 100% de probabilidad de quemar al enemigo durante 15s. Aumenta la barra de Artes de todos los aliados en 20. BREAK 4800",
+      "orden": 0,
+      "id": 1760749387551
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Fire BE Output Lv4",
+      "descripcion": "AUMENTA la Salida de BE 20% para unidades de fuego (Solo una vez).",
+      "orden": 0,
+      "id": 1760749453405
+    }
   ]
 }
