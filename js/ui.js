@@ -119,7 +119,39 @@ export async function initPersonaje(){
 
     const slots = p.slots || [];            // [{tipo:'Físico',nivel:5}, ...]
     const stats = p.stats || {};            // {hp, atk, def, tas_hp, ...}
-    const pasivas = p.pasivas || [];        // ["texto...", ...]
+    // Pasivas: combinar p.pasivas (strings) + habilidades tipo 'Passive'
+const pasivasItems = [];
+
+// 1) pasivas tipo string "Nombre: descripción" (legacy)
+if (Array.isArray(p.pasivas)) {
+  for (const txt of p.pasivas) {
+    if (!txt) continue;
+    const [title, ...rest] = String(txt).split(':');
+    pasivasItems.push({
+      title: (title || '').trim(),
+      body: rest.length ? rest.join(':').trim() : ''
+    });
+  }
+}
+
+// 2) pasivas desde habilidades (tipo 'Passive')
+const pasivasHabs = (grupos['Passive'] || []);
+for (const h of pasivasHabs) {
+  pasivasItems.push({
+    title: (h.nombre || 'Passive').trim(),
+    body: (h.descripcion || '').trim()
+  });
+}
+
+// (Opcional) de-duplicar por título
+const seen = new Set(); 
+const uniques = [];
+for (const item of pasivasItems) {
+  const key = item.title.toLowerCase();
+  if (seen.has(key)) continue;
+  seen.add(key); uniques.push(item);
+}
+       // ["texto...", ...]
 
     // --- helpers de slots ---
     const norm = s => (s||'').toLowerCase()
@@ -274,24 +306,24 @@ export async function initPersonaje(){
         </div>
 
         <!-- Pasivas (derecha) -->
-        <div class="col-lg-3">
-          <div class="card"><div class="card-body">
-            <h2 class="h6">Pasivas</h2>
-            ${pasivas.length ? `
-              <div class="list-group list-group-flush">
-                ${pasivas.map((txt,i)=>`
-                  <a class="list-group-item list-group-item-action passive-item" data-bs-toggle="collapse" href="#passive${i}">
-                    <i class="bi bi-caret-right-fill me-1"></i> ${txt.split(':')[0]}
-                  </a>
-                  <div class="collapse text-body-secondary small px-3 pb-2" id="passive${i}">
-                    ${txt.includes(':') ? txt.split(':').slice(1).join(':').trim() : txt}
-                  </div>
-                `).join('')}
-              </div>
-            ` : `<div class="text-body-secondary">Sin pasivas.</div>`}
-          </div></div>
-        </div>
+<div class="col-lg-3">
+  <div class="card"><div class="card-body">
+    <h2 class="h6">Pasivas</h2>
+    ${uniques.length ? `
+      <div class="list-group list-group-flush">
+        ${uniques.map((it,i)=>`
+          <a class="list-group-item list-group-item-action passive-item" data-bs-toggle="collapse" href="#passive${i}">
+            <i class="bi bi-caret-right-fill me-1"></i> ${it.title || 'Passive'}
+          </a>
+          <div class="collapse text-body-secondary small px-3 pb-2" id="passive${i}">
+            ${it.body || ''}
+          </div>
+        `).join('')}
       </div>
+    ` : `<div class="text-body-secondary">Sin pasivas.</div>`}
+  </div></div>
+</div>
+
 
       <!-- Descripción completa (como Fandom) -->
       ${p.descripcion ? `
