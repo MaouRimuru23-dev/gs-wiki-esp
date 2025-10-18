@@ -353,7 +353,37 @@
   },
   {
     "slug": "alche",
-    "nombre": "Alche"
+    "nombre": "Alche",
+    "elemento": "Luz",
+    "rol": "Healer",
+    "rareza": "Awaken",
+    "descripcion": "Una doctora humana durante el período temprano de la Guerra Antigua. Trabajó en el laboratorio de los Dragones como parte del equipo médico y fue amada por todos por su espíritu dedicado. Aunque los humanos estaban bajo el control de los Dragones, los respetaba como especie de alto rango. Un día encontró a un dios moribundo y, sin dudarlo, lo atendió. Fue criticada por traer a un enemigo, pero nadie pudo reprochar su creencia de que “todos los heridos son iguales”. Por eso, los Dragones aceptaron su petición.",
+    "raza": "Humano",
+    "voz": "Mio Hayashimoto",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760801208/unit_detail_101736412_as4cno.png",
+    "stats": {
+      "hp": 5988,
+      "atk": 2275,
+      "def": 2479,
+      "tas_hp": 999,
+      "tas_atk": 387,
+      "tas_def": 436
+    },
+    "slots": [
+      {
+        "tipo": "Curación",
+        "nivel": 5
+      },
+      {
+        "tipo": "Soporte",
+        "nivel": 5
+      },
+      {
+        "tipo": "Curación",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T15:27:03Z"
   },
   {
     "slug": "louvet",
@@ -405,7 +435,37 @@
   },
   {
     "slug": "alma",
-    "nombre": "Alma"
+    "nombre": "Alma",
+    "elemento": "Tierra",
+    "rol": "Support",
+    "rareza": "Awaken",
+    "descripcion": "Una bruja misteriosa cuyo nombre aparece a lo largo de la historia. Los relatos de su presencia son tan extensos a lo largo de los siglos que los historiadores de Raktehelm creen que se trata de relatos de diferentes personas con el mismo nombre.",
+    "raza": "Demonio",
+    "voz": "Natsu Yorita",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760801942/unit_detail_101866312_b7m5xb.png",
+    "stats": {
+      "hp": 7082,
+      "atk": 2582,
+      "def": 2298,
+      "tas_hp": 999,
+      "tas_atk": 397,
+      "tas_def": 354
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T15:39:13Z"
   },
   {
     "slug": "sonije",
@@ -653,7 +713,37 @@
   },
   {
     "slug": "aesis",
-    "nombre": "Aesis"
+    "nombre": "Aesis",
+    "elemento": "Tierra",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "Una guerrera dragón venerada como una diosa en el campo de batalla.\nAesis fue consumida por el remordimiento tras ir en contra de su propia dignidad y traicionar a sus aliados.\nAunque lo hizo para proteger a una amiga de una batalla temeraria, aún así había engañado a una compañera de armas para que abandonara su unidad.\nEstaba preparada para enfrentar la ira de su amiga cuando se reencontraran, pero esta, comprendiendo la situación, la perdonó sin dudar y le dijo:\n“Gracias a ti, pude proteger a mi familia.”\n\nAl oír esas palabras, Aesis sintió que los años de inquietud que la habían atormentado desaparecían por completo.",
+    "raza": "Dragon",
+    "voz": "Misato Murai",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760794539/unit_detail_102596312_k1qzpu.png",
+    "stats": {
+      "hp": 6877,
+      "atk": 2881,
+      "def": 2500,
+      "tas_hp": 999,
+      "tas_atk": 442,
+      "tas_def": 330
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 6
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T13:37:04Z"
   },
   {
     "slug": "luda",
@@ -777,7 +867,37 @@
   },
   {
     "slug": "adele",
-    "nombre": "Adele"
+    "nombre": "Adele",
+    "elemento": "Luz",
+    "rol": "Healer",
+    "rareza": "Awaken",
+    "descripcion": "",
+    "raza": "Humano",
+    "voz": "Kaho Watanuki",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760793432/unit_detail_102916212_bxbdek.png",
+    "stats": {
+      "hp": 6355,
+      "atk": 2271,
+      "def": 2573,
+      "tas_hp": 963,
+      "tas_atk": 350,
+      "tas_def": 395
+    },
+    "slots": [
+      {
+        "tipo": "Curación",
+        "nivel": 5
+      },
+      {
+        "tipo": "Soporte",
+        "nivel": 5
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T13:20:00Z"
   },
   {
     "slug": "vermilia",
@@ -949,7 +1069,37 @@
   },
   {
     "slug": "airi",
-    "nombre": "Airi"
+    "nombre": "Airi",
+    "elemento": "Tierra",
+    "rol": "DPS",
+    "rareza": "Awaken",
+    "descripcion": "“La mayor espadachina de Valkia. Consigue resultados de clase alta en ejercicios militares, por lo que todos esperan que se convierta en la próxima sargento.”",
+    "raza": "Humano",
+    "voz": "Miyu Tomita",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760798456/unit_detail_103356312_p9cavf.png",
+    "stats": {
+      "hp": 7000,
+      "atk": 3150,
+      "def": 2510,
+      "tas_hp": 999,
+      "tas_atk": 482,
+      "tas_def": 386
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T14:41:27Z"
   },
   {
     "slug": "lyla",
@@ -1521,11 +1671,77 @@
   },
   {
     "slug": "ainz",
-    "nombre": "Ainz"
+    "nombre": "Ainz",
+    "elemento": "Oscuridad",
+    "rol": "Sub DPS",
+    "rareza": "Ascend",
+    "descripcion": "Cuando el mundo del juego se volvió realidad, el cuerpo de Satoru se transformó en el de Ainz. Con un carisma abrumador, percepción y misericordia, comanda a Nazarick como su máxima autoridad. O eso es el personaje que intenta mostrar, ayudado por su talento como el hechicero más fuerte",
+    "raza": "Demonio",
+    "voz": "Satoshi Hino",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760665957/1133_bk0wp3.png",
+    "stats": {
+      "hp": 7040,
+      "atk": 4062,
+      "def": 3076,
+      "tas_hp": 1330,
+      "tas_atk": 700,
+      "tas_def": 636
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 6
+      },
+      {
+        "tipo": "Soporte",
+        "nivel": 5
+      },
+      {
+        "tipo": [
+          "Curación",
+          "Soporte"
+        ],
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T13:51:56Z"
   },
   {
     "slug": "albedo",
-    "nombre": "Albedo"
+    "nombre": "Albedo",
+    "elemento": "Oscuridad",
+    "rol": "Tank",
+    "rareza": "Ascend",
+    "descripcion": "Un demonio también conocido como el Escudo entre los guardianes de Nazarick. Su armadura personalizada, Hermes Trimegisto, y su capacidad para anular magia de nivel superior tres veces le permiten desempeñar este papel.",
+    "raza": "Demonio",
+    "voz": "Yumi Hara",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760665940/1129_qpfnbu.png",
+    "stats": {
+      "hp": 7095,
+      "atk": 3045,
+      "def": 3625,
+      "tas_hp": 1340,
+      "tas_atk": 630,
+      "tas_def": 630
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 6
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 5
+      },
+      {
+        "tipo": [
+          "Físico",
+          "Defensa"
+        ],
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T14:48:20Z"
   },
   {
     "slug": "shalltear",
@@ -1661,7 +1877,40 @@
   },
   {
     "slug": "alpha",
-    "nombre": "Alpha"
+    "nombre": "Alpha",
+    "elemento": "Luz",
+    "rol": "Sub DPS",
+    "rareza": "Ascend",
+    "descripcion": "Una joven que Cid rescató del Culto de Diablos y curó su condición como una de las Poseídas. Desde entonces, dedicó su vida a apoyar su causa, liderando Shadow Garden contra el Culto. Sin embargo, nunca supo que todo lo que se le dijo era improvisada tontería.",
+    "raza": "Espiritu",
+    "voz": "Asami Seto",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760666594/1270_muejvh.png",
+    "stats": {
+      "hp": 7085,
+      "atk": 3362,
+      "def": 3413,
+      "tas_hp": 1309,
+      "tas_atk": 647,
+      "tas_def": 643
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 6
+      },
+      {
+        "tipo": "Curación",
+        "nivel": 5
+      },
+      {
+        "tipo": [
+          "Físico",
+          "Soporte"
+        ],
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T15:47:29Z"
   },
   {
     "slug": "beta",
@@ -1848,7 +2097,40 @@
   },
   {
     "slug": "aira",
-    "nombre": "Aira"
+    "nombre": "Aira",
+    "elemento": "Fuego",
+    "rol": "Support",
+    "rareza": "Ascend",
+    "descripcion": "Recibió el aura de Acrobatic Silky — o Acro-Silky — un yokai nombrado por sus gráciles movimientos y su largo cabello. Esto le otorgó los mismos poderes.",
+    "raza": "Espiritu",
+    "voz": "Ayane Sakura",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760669047/1338_t4bwb0.jpg",
+    "stats": {
+      "hp": 7045,
+      "atk": 3762,
+      "def": 3013,
+      "tas_hp": 1331,
+      "tas_atk": 652,
+      "tas_def": 624
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 6
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 5
+      },
+      {
+        "tipo": [
+          "Soporte",
+          "Curación"
+        ],
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T14:16:30Z"
   },
   {
     "slug": "jiji",

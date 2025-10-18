@@ -271,41 +271,450 @@
     }
   ],
   "accelerator": [
-  {
-    "tipo": "Skill",
-    "nombre": "岩石飛ばし (Rock Throw)",
-    "descripcion": "10,000% Oscuridad (Mágico). CT 15s. BREAK 1,500."
-  },
-  {
-    "tipo": "Arts",
-    "nombre": "超風圧砲 (Super Air Pressure Cannon)",
-    "descripcion": "22,000% Oscuridad (Mágico). El siguiente Super Arts de todos los aliados inflige +100% de daño (unidades de Oscuridad obtienen +50% adicional). BREAK 2,000."
-  },
-  {
-    "tipo": "True Arts",
-    "nombre": "断絶岩 (Severing Rock)",
-    "descripcion": "60,000% Oscuridad (Mágico). Durante 25s: -50% Resistencia a Break del enemigo; aliados con HP ≥ 50% ganan +5 Arts/s. BREAK 5,000."
-  },
-  {
-    "tipo": "Super Arts",
-    "nombre": "黒い翼 (Black Wings)",
-    "descripcion": "150,000% Oscuridad (Mágico). Si se usa cuando el jefe NO está en Break: a mayor HP propia, mayor Break Power durante el Super (hasta +300%). Si se usa con el jefe en Break: duplica el multiplicador del propio Super Arts. BREAK 8,000."
-  },
-  {
-    "tipo": "Passive",
-    "nombre": "One Way Road",
-    "descripcion": "Cuando el Jefe entra en Break: por 30s, +5 Arts/s a todos los aliados y +300% daño de aliados (solo una vez)."
-  },
-  {
-    "tipo": "Passive",
-    "nombre": "Gauge Flow Lv3",
-    "descripcion": "Si no sufre estados alterados, +3 Arts/s a sí mismo."
-  },
-  {
-    "tipo": "Passive",
-    "nombre": "Human Killer Lv5",
-    "descripcion": "Daño propio contra Humanos +50%."
-  }
-]
-
+    {
+      "tipo": "Skill",
+      "nombre": "岩石飛ばし (Rock Throw)",
+      "descripcion": "10,000% Oscuridad (Mágico). CT 15s. BREAK 1,500."
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "超風圧砲 (Super Air Pressure Cannon)",
+      "descripcion": "22,000% Oscuridad (Mágico). El siguiente Super Arts de todos los aliados inflige +100% de daño (unidades de Oscuridad obtienen +50% adicional). BREAK 2,000."
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "断絶岩 (Severing Rock)",
+      "descripcion": "60,000% Oscuridad (Mágico). Durante 25s: -50% Resistencia a Break del enemigo; aliados con HP ≥ 50% ganan +5 Arts/s. BREAK 5,000."
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "黒い翼 (Black Wings)",
+      "descripcion": "150,000% Oscuridad (Mágico). Si se usa cuando el jefe NO está en Break: a mayor HP propia, mayor Break Power durante el Super (hasta +300%). Si se usa con el jefe en Break: duplica el multiplicador del propio Super Arts. BREAK 8,000."
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "One Way Road",
+      "descripcion": "Cuando el Jefe entra en Break: por 30s, +5 Arts/s a todos los aliados y +300% daño de aliados (solo una vez)."
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Gauge Flow Lv3",
+      "descripcion": "Si no sufre estados alterados, +3 Arts/s a sí mismo."
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Human Killer Lv5",
+      "descripcion": "Daño propio contra Humanos +50%."
+    }
+  ],
+  "adele": [
+    {
+      "tipo": "Skill",
+      "nombre": "Lágrimas Centelleantes",
+      "descripcion": "CT 10 s. Recupera 200 HP a todos los aliados. Además, al aliado (excepto ella misma) con HP más bajo le recupera 5 % adicional de HP.",
+      "orden": 0,
+      "id": 1760793667301
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Splash Over",
+      "descripcion": "Recupera el 25 % del HP de todos los aliados. Durante 20 s, todos los aliados reciben regeneración de HP de +150. Los aliados de atributo Fuego reciben un +100 % adicional en la cantidad de recuperación por esta Arts.",
+      "orden": 0,
+      "id": 1760793704138
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Bubble Bomb Blast",
+      "descripcion": "Inflige 18 000 % de daño de Agua (mágico). Aumenta la barra de habilidad de Adele en +50. Además, durante 30 s aumenta la cantidad de HP que todos los aliados reciben en +50 %. BREAK 1200.",
+      "orden": 0,
+      "id": 1760793833325
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Vida de Luz",
+      "descripcion": "Cuando Adele es abatida, una sola vez, recupera el 100% del HP de todos los aliados (excepto ella misma) y durante 10 s reduce el daño recibido en 50%.",
+      "orden": 0,
+      "id": 1760793867487
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Resistencia a Sellado Lv10",
+      "descripcion": "Reducción del tiempo de sellado & tasa de evasión de sellado +100 %.",
+      "orden": 0,
+      "id": 1760793899998
+    }
+  ],
+  "aesis": [
+    {
+      "tipo": "Skill",
+      "nombre": "Sturz Flug",
+      "descripcion": "CT 16 s, daño ~4 000 % Tierra (físico) + incrementa su propia barra de Arts en +10",
+      "orden": 0,
+      "id": 1760794698720
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Rebellion Jäger",
+      "descripcion": "13 300 % daño Tierra (físico). Tiene posibilidad de infligir “Disease” al enemigo. Reduce la resistencia física del enemigo en -30 % por 10 s. BREAK 2000",
+      "orden": 0,
+      "id": 1760794728066
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Wüten Drachen",
+      "descripcion": "30 000 % daño Tierra (físico). Alta posibilidad de envenenar al enemigo. Aumenta el daño de todos los aliados Tierra en +50 % por 15 s. BREAK 2000",
+      "orden": 0,
+      "id": 1760794767187
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Fatal Blow Lv4",
+      "descripcion": "Aumento del daño crítico (CRI DMG) en +40 %",
+      "orden": 0,
+      "id": 1760794795457
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Critical to Poisoned Enemy",
+      "descripcion": "Tasa de Crítico (CRI rate) +100 % cuando el enemigo está “Envenenado”",
+      "orden": 0,
+      "id": 1760794826549
+    }
+  ],
+  "ainz": [
+    {
+      "tipo": "Skill",
+      "nombre": "Maximize Magic: Excess",
+      "descripcion": "CT: 12 s. 2 500 % de daño Oscuridad (Mágico). Reduce la resistencia mágica del enemigo en 20 % por 10 s",
+      "orden": 0,
+      "id": 1760795581257
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Hell Flame",
+      "descripcion": "20 000 % de daño Oscuridad (Mágico). 100 % de probabilidad de quemar al enemigo por 15 s. Si se quema, reduce la resistencia al Fuego y Oscuridad del enemigo en 40 % por 15 s. BREAK: 900.",
+      "orden": 0,
+      "id": 1760795610386
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Super-Tier Magic: Fallen Down",
+      "descripcion": "Llena automáticamente la barra de Arts de todos los aliados +4 por 20 s (y +2 adicional para unidades Demonio). Reduce la resistencia a Crítico (CRI RES) del enemigo en 100 % por 25 s. BREAK: 1 200.",
+      "orden": 0,
+      "id": 1760795633430
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "The goal of all life is death",
+      "descripcion": "170 000 % de daño Oscuridad (Mágico). Aumenta el daño crítico (CRI DMG) de todos los aliados en +100 % por 15 s, y +100 % adicional para unidades de Oscuridad. BREAK: 2 000.",
+      "orden": 0,
+      "id": 1760795657454
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "The Strongest Magic Caster",
+      "descripcion": "Cuando su HP está al 80 % o más, automáticamente llena +5 de la barra de Arts.",
+      "orden": 0,
+      "id": 1760795682539
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "CRI rate Master Lv2",
+      "descripcion": "Todos los aliados +20 % tasa de Crítico (CRI rate) — solo una vez.",
+      "orden": 0,
+      "id": 1760795755465
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Magic Resistance Lv4",
+      "descripcion": "Reduce el daño mágico (Magic DMG) recibido de enemigos en 20 %.",
+      "orden": 0,
+      "id": 1760795778710
+    }
+  ],
+  "aira": [
+    {
+      "tipo": "Skill",
+      "nombre": "Respectable Skill Kick",
+      "descripcion": "CT 14 s. 2 000 % Daño Fuego (Físico). Llena automáticamente la barra de Arts de todos los aliados en +5 por 6 s. BREAK 700.",
+      "orden": 0,
+      "id": 1760797033070
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Respectable Repeated Slams",
+      "descripcion": "20 000 % Daño Fuego (Físico). Después de usarla, aumenta el daño de un solo Super Arts de todos los aliados en +100 % y la precisión (Accuracy) en +70 %. BREAK  1000.",
+      "orden": 0,
+      "id": 1760797402875
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Kick of the Chosen One",
+      "descripcion": "50 000 % Daño Fuego (Físico). Cada vez que se usa, aumenta el ATK de las unidades de Fuego en +50 % (máx +200 %). También aumenta la velocidad de reutilización de Skill de todos los aliados en +100 % por 25 s. BREAK 1400.",
+      "orden": 0,
+      "id": 1760797432365
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Acrobatic Coup de Grace",
+      "descripcion": "150 000 % Daño Fuego (Físico). Reduce la resistencia al Fuego del enemigo en -160 % por 20 s. Si Aira es la líder, se añade un -80 % adicional. BREAK 1800.",
+      "orden": 0,
+      "id": 1760797456985
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Acrobatic Silky",
+      "descripcion": "Si los aliados tienen HP del 50 % o menos, el daño recibido por ellos se reduce en -30 % (solo una vez).",
+      "orden": 0,
+      "id": 1760797480356
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Evasion Rate UP Lv2",
+      "descripcion": "Aumenta la tasa de evasión en +10 %",
+      "orden": 0,
+      "id": 1760797505637
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Dual Boost Lv1",
+      "descripcion": "Daño (DMG) UP +1 % por cada 100 de ATK + DEF total.",
+      "orden": 0,
+      "id": 1760797527115
+    }
+  ],
+  "airi": [
+    {
+      "tipo": "Skill",
+      "nombre": "Hien Sozan",
+      "descripcion": "1000 % de daño Tierra (Físico). Aumenta daño +10 % durante 10 s (acumulable). CT: 12 s. BREAK: 500.",
+      "orden": 0,
+      "id": 1760798510464
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Getotsu Moushin",
+      "descripcion": "16000 % de daño Tierra (Físico). Activa Heavenly Fang Mode por 20 s. Si ya está activo, extiende su duración 20 s. BREAK: 800.",
+      "orden": 0,
+      "id": 1760798534737
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Ethereal Fang",
+      "descripcion": "45000 % de daño Tierra (Físico). Aumenta CRI rate +100 % durante 12 s. Si se usa en Heavenly Fang Mode, duplica su daño. BREAK: 2000.",
+      "orden": 0,
+      "id": 1760798561465
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Heavenly Fang",
+      "descripcion": "Heavenly Fang Mode: Skill CT velocidad & ATK +100 %.",
+      "orden": 0,
+      "id": 1760798581194
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Eliminate Lv2",
+      "descripcion": "Daño +20 % cuando el HP del enemigo está por debajo del 30 %.",
+      "orden": 0,
+      "id": 1760798597440
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Fatal Blow Lv3",
+      "descripcion": "CRI DMG +30 %.",
+      "orden": 0,
+      "id": 1760798612924
+    }
+  ],
+  "albedo": [
+    {
+      "tipo": "Skill",
+      "nombre": "Worm!",
+      "descripcion": "CT: 12 s. 2000 % de daño Oscuridad (Físico). Aumenta la barra de Arts en 30 (y +30 más cuando HP está al 70 % o más). BREAK: 400.",
+      "orden": 0,
+      "id": 1760798924961
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Utter trash!",
+      "descripcion": "23000 % de daño Oscuridad (Físico). Aumenta el daño de unidades Demonio en +10 % y reduce el daño recibido por unidades Demonio en -10 % cada vez que se usa Arts (acumulable hasta 30 %). BREAK: 600.",
+      "orden": 0,
+      "id": 1760798942432
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Know your place!",
+      "descripcion": "50000 % de daño Oscuridad (Físico). Niega todo el daño recibido por todos los aliados por un total de 10 000 y reduce el daño físico recibido por todos los aliados en -20 % por 30 s. BREAK: 1000.",
+      "orden": 0,
+      "id": 1760798957863
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Worthless...",
+      "descripcion": "120000 % de daño Oscuridad (Físico). Reduce todo el daño recibido por todos los aliados en -60 % por 12 s. Aumenta la tasa de Crítico (CRI rate) de todos los aliados en +100 % por 12 s. BREAK: 2000.",
+      "orden": 0,
+      "id": 1760798971818
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Pure-White Devil of Mercy",
+      "descripcion": "Arts gauge +300 y recuperación de HP de todos los aliados +50 % cuando está Near-Death (solo una vez).",
+      "orden": 0,
+      "id": 1760799008669
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Paralysis Resistance Lv10",
+      "descripcion": "Reducción de tiempo de parálisis y tasa de evasión de parálisis +100 %.",
+      "orden": 0,
+      "id": 1760799030286
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Freeze Resistance Lv10",
+      "descripcion": "Reducción de tiempo de congelación y tasa de evasión de congelación +100 %.",
+      "orden": 0,
+      "id": 1760799042877
+    }
+  ],
+  "alche": [
+    {
+      "tipo": "Skill",
+      "nombre": "Pure Prayer",
+      "descripcion": "Recupera 400 HP a todos los aliados. Aumenta la velocidad de reutilización de habilidades (Skill CT Speed) +20 % por 5 s.",
+      "orden": 0,
+      "id": 1760801249407
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Love Elixir",
+      "descripcion": "Recupera el 30 % del HP de todos los aliados & resucita a un aliado (con HP máximo reducido en 15 %) & sube la barra de Arts +100 (el HP máximo no bajará de 1).",
+      "orden": 0,
+      "id": 1760801265059
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Oracular Feather",
+      "descripcion": "19000 % de daño Luz (Mágico). Durante 15 s: regeneración automática de 200 HP para todos los aliados + aumento de daño de aliados en +30 %. Además, +30 % de daño contra enemigos de atributo débil.",
+      "orden": 0,
+      "id": 1760801280423
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Dark Resistance Lv4",
+      "descripcion": "Resistencia al atributo Oscuridad +20 %.",
+      "orden": 0,
+      "id": 1760801299378
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "HP Auto-recovery Lv9",
+      "descripcion": "Recuperación automática de HP (propia) de +18 por turno.",
+      "orden": 0,
+      "id": 1760801313168
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Disease Resistance Master Lv5",
+      "descripcion": "A todos los aliados: reducción del tiempo con “enfermedad” y tasa de evasión de enfermedad +50 % (solo una vez).",
+      "orden": 0,
+      "id": 1760801331024
+    }
+  ],
+  "alma": [
+    {
+      "tipo": "Skill",
+      "nombre": "Heaven’s Animus",
+      "descripcion": "CT: 9 s. 1800 % de daño Tierra (Mágico). Reduce el daño del enemigo en 10 % por 9 s.",
+      "orden": 0,
+      "id": 1760802025446
+    },
+    {
+      "tipo": "Arts",
+      "nombre": "Ancient Hour of Magic",
+      "descripcion": "14200 % de daño Tierra (Mágico). Reduce la resistencia mágica del enemigo en -20 % por 15 s.",
+      "orden": 0,
+      "id": 1760802040491
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Primordial Hour of Magic",
+      "descripcion": "24000 % de daño Tierra (Mágico). Reduce la resistencia mágica del enemigo en -50 % por 15 s. Si el enemigo es Humano, la barra de Arts propia se rellena +100.",
+      "orden": 0,
+      "id": 1760802054246
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Magic Resistance Lv6",
+      "descripcion": "Daño mágico recibido (Magic DMG) -30 %.",
+      "orden": 0,
+      "id": 1760802069277
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Auto-fill Arts Gauge Lv1",
+      "descripcion": "La barra de Arts se llena automáticamente +1.",
+      "orden": 0,
+      "id": 1760802085181
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "☆Star Time☆",
+      "descripcion": "Daño +30 % cuando su propio HP está 50 % o más.",
+      "orden": 0,
+      "id": 1760802100724
+    }
+  ],
+  "alpha": [
+    {
+      "tipo": "Arts",
+      "nombre": "Illusionary Blade",
+      "descripcion": "25000 % de daño Luz (Físico). Reduce la resistencia a Luz del enemigo en -60 % por 15 s. BREAK: 1200.",
+      "orden": 0,
+      "id": 1760802490610
+    },
+    {
+      "tipo": "Skill",
+      "nombre": "Fourfold Blade",
+      "descripcion": "CT: 11 s. 2500 % de daño Luz (Físico). Llena la barra de Arts en +20. +20 adicional cuando el HP es 80 % o más. BREAK: 700.",
+      "orden": 0,
+      "id": 1760802504931
+    },
+    {
+      "tipo": "True Arts",
+      "nombre": "Shining Blade",
+      "descripcion": "65000 % de daño Luz (Físico). Llena automáticamente la barra de Arts de todos los aliados +6 & reduce la resistencia a Crítico (CRI RES) del enemigo en -100 % por 25 s. BREAK: 1800.",
+      "orden": 0,
+      "id": 1760802517805
+    },
+    {
+      "tipo": "Super Arts",
+      "nombre": "Lightning Blade",
+      "descripcion": "150000 % de daño Luz (Físico). Aumenta el daño Físico de todos los aliados en +100 % por 30 s. El efecto aumenta si esta Super Arts se activa mientras una anterior aún está en efecto (máx +400 %). BREAK: 2500.",
+      "orden": 0,
+      "id": 1760802533149
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "First of the Seven Shadows",
+      "descripcion": "Recupera el HP de todos los aliados al 100 % cuando están en estado Near-Death (solo una vez). Todo el daño recibido por los aliados se reduce en -50 % por 10 s cuando están Near-Death (solo una vez).",
+      "orden": 0,
+      "id": 1760802551583
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Healing Equip CT Speed UP Lv2",
+      "descripcion": "Velocidad de reutilización (CT) del equipo de curación +10 %.",
+      "orden": 0,
+      "id": 1760802570064
+    },
+    {
+      "tipo": "Passive",
+      "nombre": "Fatal Blow Lv5",
+      "descripcion": "CRI DMG +50 %.",
+      "orden": 0,
+      "id": 1760802582631
+    }
+  ]
 }
