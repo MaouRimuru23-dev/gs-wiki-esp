@@ -1709,15 +1709,111 @@
   },
   {
     "slug": "misaka-mikoto",
-    "nombre": "Misaka Mikoto"
+    "nombre": "Misaka Mikoto",
+    "elemento": "Luz",
+    "rol": "Sub DPS",
+    "rareza": "Ascend",
+    "descripcion": "El as de Tokiwadai, también llamado el Electromaster. Su poder tiene una amplia gama de aplicaciones, como magnetizar hierro en el suelo para hacer armas o hackear equipos eléctricos. Su técnica característica es el Railgun, capaz de atravesar paredes de acero con facilidad. Originalmente era una deficiente de Nivel Uno, pero el trabajo duro la llevó a un talento casi inigualable.",
+    "raza": "Humano",
+    "voz": "Rina Satoh",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760751752/1316_qf0xxy.jpg",
+    "stats": {
+      "hp": 7161,
+      "atk": 4225,
+      "def": 2902,
+      "tas_hp": 1352,
+      "tas_atk": 726,
+      "tas_def": 602
+    },
+    "slots": [
+      {
+        "tipo": "Magia",
+        "nivel": 6
+      },
+      {
+        "tipo": "Magia",
+        "nivel": 5
+      },
+      {
+        "tipo": [
+          "Curación",
+          "Soporte"
+        ],
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T02:43:49Z"
   },
   {
     "slug": "touma-kamijou",
-    "nombre": "Touma Kamijou"
+    "nombre": "Touma Kamijou",
+    "elemento": "Agua",
+    "rol": "Tank",
+    "rareza": "Ascend",
+    "descripcion": "",
+    "raza": "Humano",
+    "voz": "Atsushi Abe",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760751715/1314_okmnpy.jpg",
+    "stats": {
+      "hp": 7755,
+      "atk": 2593,
+      "def": 3725,
+      "tas_hp": 1460,
+      "tas_atk": 544,
+      "tas_def": 646
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 6
+      },
+      {
+        "tipo": "Defensa",
+        "nivel": 5
+      },
+      {
+        "tipo": [
+          "Soporte",
+          "Defensa"
+        ],
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T02:30:04Z"
   },
   {
     "slug": "accelerator",
-    "nombre": "Accelerator"
+  "nombre": "Accelerator",
+  "elemento": "Oscuridad",
+  "rol": "Breaker",
+  "rareza": "Ascend",
+  "descripcion": "El Nivel 5 más fuerte de Ciudad Academia. Controla vectores para reflejar ataques y desatar una potencia abrumadora.",
+  "raza": "Humano",
+  "voz": "Nobuhiko Okamoto",
+    "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760751775/1320_cq20qi.jpg",
+    "stats": {
+      "hp": 0,
+      "atk": 0,
+      "def": 0,
+      "tas_hp": 0,
+      "tas_atk": 0,
+      "tas_def": 0
+    },
+    "slots": [
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 5
+      },
+      {
+        "tipo": "Físico",
+        "nivel": 4
+      }
+    ],
+    "actualizado_en": "2025-10-18T01:43:33Z"
   },
   {
     "slug": "index",

@@ -1783,37 +1783,40 @@
   },
   {
     "slug": "accelerator",
-  "nombre": "Accelerator",
-  "elemento": "Oscuridad",
-  "rol": "Breaker",
-  "rareza": "Ascend",
-  "descripcion": "El Nivel 5 más fuerte de Ciudad Academia. Controla vectores para reflejar ataques y desatar una potencia abrumadora.",
-  "raza": "Humano",
-  "voz": "Nobuhiko Okamoto",
+    "nombre": "Accelerator",
+    "elemento": "Oscuridad",
+    "rol": "Breaker",
+    "rareza": "Ascend",
+    "descripcion": "El Nivel 5 más fuerte de Ciudad Academia. Controla vectores para reflejar ataques y desatar una potencia abrumadora.",
+    "raza": "Humano",
+    "voz": "Nobuhiko Okamoto",
     "portada_url": "https://res.cloudinary.com/dbmcvwjg1/image/upload/v1760751775/1320_cq20qi.jpg",
     "stats": {
-      "hp": 0,
-      "atk": 0,
-      "def": 0,
-      "tas_hp": 0,
-      "tas_atk": 0,
-      "tas_def": 0
+      "hp": 7161,
+      "atk": 3703,
+      "def": 3174,
+      "tas_hp": 1352,
+      "tas_atk": 694,
+      "tas_def": 602
     },
     "slots": [
       {
-        "tipo": "Físico",
-        "nivel": 5
+        "tipo": "Magia",
+        "nivel": 6
       },
       {
         "tipo": "Físico",
         "nivel": 5
       },
       {
-        "tipo": "Físico",
+        "tipo": [
+          "Magia",
+          "Soporte"
+        ],
         "nivel": 4
       }
     ],
-    "actualizado_en": "2025-10-18T01:43:33Z"
+    "actualizado_en": "2025-10-18T02:58:16Z"
   },
   {
     "slug": "index",
