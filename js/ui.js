@@ -134,14 +134,19 @@ if (Array.isArray(p.pasivas)) {
   }
 }
 
-// 2) pasivas desde habilidades (tipo 'Passive')
-const pasivasHabs = (grupos['Passive'] || []);
+// 2) pasivas desde habilidades (tipo 'Passive' o 'Dream Awakening')
+const pasivasHabs = [
+  ...(grupos['Passive'] || []),
+  ...(grupos['Dream Awakening'] || [])
+];
+
 for (const h of pasivasHabs) {
   pasivasItems.push({
     title: (h.nombre || 'Passive').trim(),
     body: (h.descripcion || '').trim()
   });
 }
+
 
 // (Opcional) de-duplicar por título
 const seen = new Set(); 
