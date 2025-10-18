@@ -248,12 +248,14 @@ function parseBlocks(raw){
       const pairs = parseBlocks(tFicha.value);
       applyFichaToForm(pairs);
       alert('Ficha pegada en el formulario.');
+      tFicha.value = '';
     });
     btnFS?.addEventListener('click', async ()=>{
       const pairs = parseBlocks(tFicha.value);
       applyFichaToForm(pairs);
       await saveFichaFromForm();
       alert('Ficha parseada y guardada.');
+      tFicha.value = '';
     });
     btnHP?.addEventListener('click', ()=>{
       const pairs = parseBlocks(tHabs.value);
@@ -263,13 +265,17 @@ function parseBlocks(raw){
         list.innerHTML = habs.map(h=>`
           <tr><td>${h.tipo}</td><td>${h.nombre}</td><td>${h.descripcion}</td><td>${h.orden}</td>
           <td class="text-end"><span class="text-body-secondary small">previsualización</span></td></tr>`).join('');
+          tHabs.value='';
       }
+      
     });
     btnHS?.addEventListener('click', async ()=>{
       const pairs = parseBlocks(tHabs.value);
       const habs = parseHabs(pairs);
       await saveHabilidades(habs);
       alert('Habilidades parseadas y guardadas.');
+      tHabs.value = '';
+
     });
   }
 
